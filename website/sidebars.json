@@ -1,0 +1,12 @@
+{
+    "docs": {
+        "About": ["about"],
+        "Install": ["install"],
+        "User Guide": ["guide"],
+        "Cite": ["cite"],
+        "TUDO": ["tudo"]
+    },
+    "docs-other": {
+        "API": ["api"]
+    }
+}

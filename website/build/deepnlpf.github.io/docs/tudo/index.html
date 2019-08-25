@@ -1,0 +1,75 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Futute Updates · DeepNLPF</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;ul&gt;
+&lt;li&gt;Adicionar Plugins no site para compatilhamento com os usuários do framework.&lt;/li&gt;
+&lt;/ul&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Futute Updates · DeepNLPF"/><meta property="og:type" content="website"/><meta property="og:url" content="https://deepnlpf.github.iodeepnlpf.github.ioindex"/><meta property="og:description" content="&lt;ul&gt;
+&lt;li&gt;Adicionar Plugins no site para compatilhamento com os usuários do framework.&lt;/li&gt;
+&lt;/ul&gt;
+"/><meta property="og:image" content="https://deepnlpf.github.iodeepnlpf.github.io/img/octopussy.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://deepnlpf.github.iodeepnlpf.github.io/img/octopussy.svg"/><link rel="shortcut icon" href="deepnlpf.github.ioimg/favicon2.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://deepnlpf.github.iodeepnlpf.github.io/blog/atom.xml" title="DeepNLPF Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://deepnlpf.github.iodeepnlpf.github.io/blog/feed.xml" title="DeepNLPF Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="deepnlpf.github.iocss/main.css"/><script src="deepnlpf.github.iojs/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="deepnlpf.github.io"><img class="logo" src="deepnlpf.github.ioimg/octopussy_white.png" alt="DeepNLPF"/><h2 class="headerTitleWithLogo">DeepNLPF</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="deepnlpf.github.iodocs/about" target="_self">Docs</a></li><li class=""><a href="deepnlpf.github.iodocs/api" target="_self">API</a></li><li class=""><a href="deepnlpf.github.iodemo" target="_self">Demo</a></li><li class=""><a href="deepnlpf.github.iohelp" target="_self">Help</a></li><li class=""><a href="deepnlpf.github.ioblog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>TUDO</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">About</h3><ul class=""><li class="navListItem"><a class="navItem" href="deepnlpf.github.iodocs/about">About</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Install</h3><ul class=""><li class="navListItem"><a class="navItem" href="deepnlpf.github.iodocs/install">Install DeepNLPF</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">User Guide</h3><ul class=""><li class="navListItem"><a class="navItem" href="deepnlpf.github.iodocs/guide">Using DeepNLPF</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Cite</h3><ul class=""><li class="navListItem"><a class="navItem" href="deepnlpf.github.iodocs/cite">Published</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">TUDO</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="deepnlpf.github.iodocs/tudo">Futute Updates</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Futute Updates</h1></header><article><div><span><ul>
+<li><p>Adicionar Plugins no site para compatilhamento com os usuários do framework.</p></li>
+<li><p>Adicionar plugins pela interface do dashboard.</p></li>
+<li><p>Contrubue com uma anotador com base no pipeline custom selecionado pelo usuário.</p></li>
+<li><p>Adicionar leitura de arquivos JSON e CSV na classe load_file.</p></li>
+<li><p>Escrever documentação com base na documentação do Stanford CoreNLP.</p></li>
+<li><p>Add View Tree Brat
+<a href="https://gojs.net/latest/index.html">https://gojs.net/latest/index.html</a>
+<a href="http://spyysalo.github.io/conllu.js/">http://spyysalo.github.io/conllu.js/</a></p></li>
+<li><p>View DataBase DeepNLPF
+<a href="https://gojs.net/latest/samples/umlClass.html">https://gojs.net/latest/samples/umlClass.html</a></p></li>
+<li><p>Add View Parse Tree
+<a href="https://gojs.net/latest/samples/parseTree.html">https://gojs.net/latest/samples/parseTree.html</a></p></li>
+<li><p>Annotation Dataset Como Brat</p></li>
+<li><p>Notification Speech
+<a href="https://github.com/desbma/GoogleSpeech">https://github.com/desbma/GoogleSpeech</a></p></li>
+<li><p>Add Key in API RESTFul</p></li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="deepnlpf.github.iodocs/cite"><span class="arrow-prev">← </span><span>Published</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="deepnlpf.github.io" class="nav-home"><img src="deepnlpf.github.ioimg/octopussy_white.png" alt="DeepNLPF" width="66" height="58"/></a><div><h5>Docs</h5><a href="deepnlpf.github.iodocs/en/doc1.html">Getting Started</a><a href="deepnlpf.github.iodocs/en/doc2.html">Guides</a><a href="deepnlpf.github.iodocs/en/doc3.html">API Reference</a></div><div><h5>Community</h5><a href="deepnlpf.github.ioen/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="deepnlpf.github.ioblog">Blog</a><a href="#">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2019 DeepNLP Framework.</section></footer></div></body></html>
