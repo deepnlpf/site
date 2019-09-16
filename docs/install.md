@@ -9,6 +9,7 @@ DeepNLPF has been implemented and tested on the [Ubuntu](https://ubuntu.com/) 19
 
 ### Requirement System
 - This software requires java 8 (JRE 1.8) or higher version.
+- Python 3.7
 
 ### Install Dependecies Using Pip
 

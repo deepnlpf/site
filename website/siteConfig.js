@@ -22,7 +22,7 @@ const siteConfig = {
     title: 'DeepNLPF', // Title for your website.
     tagline: 'A Framework for Integrating Linguistic Analysis and Semantic Annotation of Text Documents.',
     url: 'https://deepnlpf.github.io', // Your website URL
-    baseUrl: 'deepnlpf.github.io', // Base URL for your project */
+    baseUrl: '/site/', // Base URL for your project */
     // For github.io type URLs, you would set the url and baseUrl like:
     //   url: 'https://facebook.github.io',
     //   baseUrl: '/test-site/',
@@ -37,6 +37,7 @@ const siteConfig = {
     // For no header links in the top nav bar -> headerLinks: [],
     headerLinks: [
         { doc: 'about', label: 'Docs' },
+        { doc: 'plugins', label: 'Plugins' },
         { doc: 'api', label: 'API' },
         { page: 'demo', label: 'Demo' },
         { page: 'help', label: 'Help' },
@@ -72,7 +73,7 @@ const siteConfig = {
     */
 
     // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-    copyright: `Copyright © ${new Date().getFullYear()} DeepNLP Framework.`,
+    copyright: `Copyright © ${new Date().getFullYear()} DeepNLPF.`,
 
     highlight: {
         // Highlight.js theme to use for syntax highlighting in code blocks.

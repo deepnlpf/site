@@ -15,18 +15,49 @@
       "cite": {
         "title": "Published"
       },
+      "cogcompnlp": {
+        "title": "CogCompNLP"
+      },
+      "freeling": {
+        "title": "FreeLing"
+      },
       "guide": {
         "title": "Using DeepNLPF"
       },
       "install": {
         "title": "Install DeepNLPF"
       },
+      "plugins": {
+        "title": "Plugins"
+      },
+      "pywsd": {
+        "title": "PyWSD"
+      },
+      "quanteda": {
+        "title": "Quanteda"
+      },
+      "semafor": {
+        "title": "SEMAFOR"
+      },
+      "spacy": {
+        "title": "SpaCy"
+      },
+      "stanfordcorenlp": {
+        "title": "Stanford CoreNLP"
+      },
+      "supwsd": {
+        "title": "SupWSD"
+      },
       "tudo": {
         "title": "Futute Updates"
+      },
+      "wordnet": {
+        "title": "WordNet"
       }
     },
     "links": {
       "Docs": "Docs",
+      "Plugins": "Plugins",
       "API": "API",
       "Demo": "Demo",
       "Help": "Help",
@@ -38,7 +69,17 @@
       "User Guide": "User Guide",
       "Cite": "Cite",
       "TUDO": "TUDO",
-      "API": "API"
+      "API": "API",
+      "Plugins": "Plugins",
+      "SupWSD": "SupWSD",
+      "CogCompNLP": "CogCompNLP",
+      "FreeLing": "FreeLing",
+      "Stanford CoreNLP": "Stanford CoreNLP",
+      "PyWSD": "PyWSD",
+      "SEMAFOR": "SEMAFOR",
+      "SpaCy": "SpaCy",
+      "Quanteda": "Quanteda",
+      "WordNet": "WordNet"
     }
   },
   "pages-strings": {

@@ -8,5 +8,17 @@
     },
     "docs-other": {
         "API": ["api"]
+    },
+    "dosc-plugins": {
+        "Plugins": ["plugins"],
+        "SupWSD": ["supwsd"],
+        "CogCompNLP": ["cogcompnlp"],
+        "FreeLing": ["freeling"],
+        "Stanford CoreNLP": ["stanfordcorenlp"],
+        "PyWSD": ["pywsd"],
+        "SEMAFOR": ["semafor"],
+        "SpaCy": ["spacy"],
+        "Quanteda": ["quanteda"],
+        "WordNet": ["wordnet"]
     }
 }
