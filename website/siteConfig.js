@@ -22,13 +22,13 @@ const siteConfig = {
     title: 'DeepNLPF', // Title for your website.
     tagline: 'A Framework for Integrating Linguistic Analysis and Semantic Annotation of Text Documents.',
     url: 'https://deepnlpf.github.io', // Your website URL
-    baseUrl: 'documentation', // Base URL for your project */
+    baseUrl: '/site/', // Base URL for your project */
     // For github.io type URLs, you would set the url and baseUrl like:
     //   url: 'https://facebook.github.io',
     //   baseUrl: '/test-site/',
 
     // Used for publishing and more
-    projectName: 'documentation',
+    projectName: 'site',
     organizationName: 'deepnlpf',
     // For top-level user or org sites, the organization is still the same.
     // e.g., for the https://JoelMarcey.github.io site, it would be set like...
