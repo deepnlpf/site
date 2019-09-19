@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>DeepNLPF Blog</title>
+        <link>https://deepnlpf.github.iodocumentationblog</link>
+        <description>The best place to stay up-to-date with the latest DeepNLPF news and events.</description>
+        <lastBuildDate>Thu, 01 Jan 1970 00:00:00 GMT</lastBuildDate>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <generator>Feed for Node.js</generator>
+        <image>
+            <title>DeepNLPF Blog</title>
+            <url>https://deepnlpf.github.iodocumentationimg/octopussy_white.png</url>
+            <link>https://deepnlpf.github.iodocumentationblog</link>
+        </image>
+        <copyright>Copyright © 2019 DeepNLPF.</copyright>
+        <item>
+            <title><![CDATA[New Version 1.0.0]]></title>
+            <link>https://deepnlpf.github.iodocumentationblog/2019/8/30/new-version-1.0.0.html</link>
+            <guid>https://deepnlpf.github.iodocumentationblog/2019/8/30/new-version-1.0.0.html</guid>
+            <pubDate>Thu, 01 Jan 1970 00:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Soon the first version of DeepNLPF will be published.</p> ]]></description>
+        </item>
+    </channel>
+</rss>
