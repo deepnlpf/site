@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://deepnlpf.github.io/site/blog</id>
+    <title>DeepNLPF Blog</title>
+    <updated>1970-01-01T00:00:00Z</updated>
+    <generator>Feed for Node.js</generator>
+    <link rel="alternate" href="https://deepnlpf.github.io/site/blog"/>
+    <subtitle>The best place to stay up-to-date with the latest DeepNLPF news and events.</subtitle>
+    <logo>https://deepnlpf.github.io/site/img/octopussy_white.png</logo>
+    <rights>Copyright © 2019 DeepNLPF.</rights>
+    <entry>
+        <title type="html"><![CDATA[New Version 1.0.0]]></title>
+        <id>https://deepnlpf.github.io/site/blog/2019/8/30/new-version-1.0.0.html</id>
+        <link href="https://deepnlpf.github.io/site/blog/2019/8/30/new-version-1.0.0.html">
+        </link>
+        <updated>1970-01-01T00:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>Soon the first version of DeepNLPF will be published.</p> ]]></summary>
+        <author>
+            <name>RodriguesFAS</name>
+            <uri>http://twitter.com/fas_rodrigues</uri>
+        </author>
+    </entry>
+</feed>
