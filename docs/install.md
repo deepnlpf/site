@@ -5,28 +5,25 @@ title: Install DeepNLPF
 
 DeepNLPF has been implemented and tested on the [Ubuntu](https://ubuntu.com/) 19.04 operating system. It may work on other systems like Windwons and MacOS at your own risk, it is important to consider the dependencies of external PLN tools.
 
-## Install
+## Install Auto Using Shell Script
+- Download the installation file [here](https://github.com/deepnlpf/scripts-install).
+
+        git clone https://github.com/deepnlpf/scripts-install.git
+        cd scripts-install
+        sh install-deepnlpf.sh
 
 ### Requirement System
 - This software requires java 8 (JRE 1.8) or higher version.
 - Python 3.7
+- MongoDB
+- MongoDB Compass
+- Git
+- Anaconda Python 3.7
 
-### Install Dependecies Using Pip
+### Other Dependecies
 
-    pip install isodate
-
-### Install Using Shell Script
-
-Download the installation file [Download file script](#)
-
-    sudo chmod x+ install.sh
-
-    ./intall.sh
+    isodate
 
 ### Install DeepNLPF Using Docker
 
 Comming soon.
-
-## Configuration
-
-### Config Path Tool PLN External

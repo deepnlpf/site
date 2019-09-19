@@ -6,8 +6,8 @@
     "tagline": "A Framework for Integrating Linguistic Analysis and Semantic Annotation of Text Documents.",
     "docs": {
       "about": {
-        "title": "About",
-        "sidebar_label": "About"
+        "title": "About DeepNLPF",
+        "sidebar_label": "DeepNLPF"
       },
       "api": {
         "title": "API RESTFul"
@@ -17,6 +17,9 @@
       },
       "cogcompnlp": {
         "title": "CogCompNLP"
+      },
+      "configuration": {
+        "title": "Configuration DeepNLPF"
       },
       "freeling": {
         "title": "FreeLing"
@@ -66,6 +69,7 @@
     "categories": {
       "About": "About",
       "Install": "Install",
+      "Configuration": "Configuration",
       "User Guide": "User Guide",
       "Cite": "Cite",
       "TUDO": "TUDO",

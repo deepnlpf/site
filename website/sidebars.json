@@ -2,6 +2,7 @@
     "docs": {
         "About": ["about"],
         "Install": ["install"],
+        "Configuration": ["configuration"],
         "User Guide": ["guide"],
         "Cite": ["cite"],
         "TUDO": ["tudo"]
