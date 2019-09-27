@@ -3,7 +3,25 @@ id: guide
 title: Using DeepNLPF
 ---
 
-## Create App
+## >> Command Line Interface - CLI
+
+### Help
+    
+    deepnlpf -h
+
+### List Plugins
+
+    deepnlpf --plugins all
+
+### Run Pipeline
+
+    deepnlpf --pipeline <custom_pipeline.json>
+
+### 
+
+## >> Application Program Interface - API
+
+## Create APP
 
 ## Corpus
 
