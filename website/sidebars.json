@@ -5,6 +5,7 @@
         "Configuration": ["configuration"],
         "User Guide": ["guide"],
         "Cite": ["cite"],
+        "Credits": ["credits"],
         "TUDO": ["tudo"]
     },
     "docs-other": {

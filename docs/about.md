@@ -1,7 +1,7 @@
 ---
 id: about
-title: About DeepNLPF
-sidebar_label: DeepNLPF
+title: What is DeepNLPF?
+sidebar_label: What is DeepNLPF?
 ---
 
 ## Abstract

@@ -1,64 +1,61 @@
 ---
 id: install
-title: Install DeepNLPF
+title: How to install?
 ---
 
 DeepNLPF has been implemented and tested using the [Ubuntu](https://ubuntu.com/) 19.04 operating system. However, it may work on other similar linux versions or Windows and MacOS if it satisfies the dependencies on external NLP tools mentioned below "at your own risk".
 
 ## Semi Automatic Install
-- Download the installation file [here](https://github.com/deepnlpf/scripts-install).
+Script for semi automatic installation.
+Download the installation file [here](https://github.com/deepnlpf/scripts-install).
 
-        git clone https://github.com/deepnlpf/scripts-install.git
-        cd scripts-install
-        sh install-deepnlpf.sh
+        $ git clone https://github.com/deepnlpf/scripts-install.git
+        $ cd scripts-install
+        $ sh install-deepnlpf.sh
 
 ## Manual Install
 
+Manual installation step by step.
+
 ### Install Requirement System
 
-- Install Anaconda
+* Install Anaconda
 
-🐙>> Download Anaconda Python 3.7
+  Download Anaconda Python 3.7
         
-        wget https://repo.anaconda.com/archive/Anaconda3-2019.07-Linux-x86_64.sh
+        $ wget https://repo.anaconda.com/archive/Anaconda3-2019.07-Linux-x86_64.sh
 
-🐙>> Installing Anaconda Python 3.7
+  Installing Anaconda Python 3.7
         
-        bash Anaconda3-2019.07-Linux-x86_64.sh
+        $ bash Anaconda3-2019.07-Linux-x86_64.sh
 
-🐙>> Activate Installation
+  Activate Installation
         
-        source ~/.bashrc
+        $ source ~/.bashrc
 
-🐙>> Test Installation
+  Test Installation
         
-        conda list
+        $ conda list
 
-- Install MongoDB
+* Install MongoDB
 
-🐙>> Installing MongoDB
+  Installing MongoDB
 
-        sudo apt install -y mongodb
+        $ sudo apt install -y mongodb
 
-🐙>> Enable MongoDB
+  Enable MongoDB
 
-        systemctl enable mongodb
+        $ systemctl enable mongodb
 
-- Unzip
+* Unzip - Installing Unzip
 
-🐙>> Installing Unzip
+        $ sudo apt-get install unzip
 
-        sudo apt-get install unzip
+* Git - Installing Git
 
-- Git
+        $ sudo apt install git
 
-🐙>> Installing Git
-
-        sudo apt install git
-
-- Java
-
-🐙>> Installing Java 8
+* Java - Installing Java 8
 
         sudo apt-get install -y software-properties-common
         
@@ -72,40 +69,40 @@ DeepNLPF has been implemented and tested using the [Ubuntu](https://ubuntu.com/)
 
 ### Download, Install and Config Dependecies DeepnLPF
 
-🐙>> Create Project DeepNLPF Virtualenv
+Create Project DeepNLPF Virtualenv
 
-        conda create -n deepnlpf python=3.7 anaconda
+        $ conda create -n deepnlpf python=3.7 anaconda
 
-🐙>> Activate env deepnlpf
+Activate env deepnlpf
 
-        conda activate deepnlpf
+        $ conda activate deepnlpf
 
-🐙>> Create directory nlptools in dir /home/
+ Create directory nlptools in dir /home/
 
-        mkdir nlptools && cd nlptools
+        $ mkdir nlptools && cd nlptools
 
-🐙>> Downloading third party NLP tools
+Downloading third party NLP tools
 
-🐙>>> Downloading Stanford CoreNLP
+Downloading Stanford CoreNLP
 
-        wget http://rodriguesfas.com.br/deepnlpf/nlptools/stanford-corenlp-full-2018-10-05.zip
+        $ wget http://rodriguesfas.com.br/deepnlpf/nlptools/stanford-corenlp-full-2018-10-05.zip
         
-        unzip stanford-corenlp-full-2018-10-05.zip
+        $ unzip stanford-corenlp-full-2018-10-05.zip
 
-🐙>>> Downloading SEMAFOR
+Downloading SEMAFOR
 
-        wget http://rodriguesfas.com.br/deepnlpf/nlptools/semafor.zip
+        $ wget http://rodriguesfas.com.br/deepnlpf/nlptools/semafor.zip
         
-        unzip semafor.zip
+        $ unzip semafor.zip
 
-🐙>>> Config SEMAFOR
+Config SEMAFOR
 
-        cd semafor/bin
+        $ cd semafor/bin
         
-        rm -r config.sh
+        $ rm -r config.sh
         
-        echo -e '#!/bin/sh \
-            \n\nexport BASE_DIR="/home/tool-nlp" \
+        $ echo -e '#!/bin/sh \
+            \n\nexport BASE_DIR="/home/nlptools" \
             \nexport SEMAFOR_HOME="${BASE_DIR}/semafor" \
             \nexport CLASSPATH=".:${SEMAFOR_HOME}/target/Semafor-3.0-alpha-04.jar" \
             \nexport JAVA_HOME_BIN="/usr/lib/jvm/java-8-oracle/bin" \
@@ -118,29 +115,31 @@ DeepNLPF has been implemented and tested using the [Ubuntu](https://ubuntu.com/)
             \necho "MALT_MODEL_DIR=${MALT_MODEL_DIR}" \
             '>> config.sh
 
-🐙>>> Downloads Models SEMAFOR, path: home/user/nlptools/semafor
+Downloads Models SEMAFOR, path: home/user/nlptools/semafor
 
-        mkdir -p models
+        $ mkdir -p models
 
-        cd models
+        $ cd models
 
-        wget http://www.ark.cs.cmu.edu/SEMAFOR/semafor_malt_model_20121129.tar.gz
+        $ wget http://www.ark.cs.cmu.edu/SEMAFOR/semafor_malt_model_20121129.tar.gz
 
-        tar -vzxf semafor_malt_model_20121129.tar.gz
+        $ tar -vzxf semafor_malt_model_20121129.tar.gz
 
-🐙>>> Install Maven SEMAFOR
+Install Maven SEMAFOR
 
-        sudo apt-get install maven -y
+        $ sudo apt-get install maven -y
 
-        mvn package
+        $ mvn package
 
-🐙>> Downloading DeepNLPF, path: /home/user/
+Downloading DeepNLPF, path: /home/user/
 
-        git clone https://RodriguesFAS@bitbucket.org/RodriguesFAS/deepnlpf.git
+> Private repository. You need a password to download this. Ask the developer.
 
-🐙>> Installing Dependecies Project
+        $ git clone https://RodriguesFAS@bitbucket.org/RodriguesFAS/deepnlpf.git
 
-        sudo pip install pathos &&
+Installing Dependecies Project
+
+        $ sudo pip install pathos &&
             pip install bson || pip install -U bson &&
             pip install gogo &&
             pip install pygogo &&
@@ -167,4 +166,4 @@ DeepNLPF has been implemented and tested using the [Ubuntu](https://ubuntu.com/)
 
 ## Docker Install
 
-Comming soon.
+> Comming soon.
