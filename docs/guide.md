@@ -60,6 +60,16 @@ or Complete Structure
                                 document_02.txt
                                 ..
 
+Sentences must be saved in the TXT file, one per line.
+For the doc: ```document_1.txt``` You have the following sentences one after another.
+
+        1 A misty ridge uprises from the surge.
+        2 The author of a keygen uses a disassembler to look at the raw assembly code.
+        3 The child was carefully wrapped and bound into the cradle by means of a cord.
+        4 The system as described above has its greatest application in an arrayed configuration of antenna elements.
+        5 The student association is the voice of the undergraduate student population of the State University of New York at Buffalo.
+
+
 You must use the command: ```python deepnlpf --savecorpus <path_dir_corpus> >``` by passing the path of your corpus directory as an argument, as per the example below.
 
     $ deepnlpf --savecorpus /home/user/corpus/aclImdb
@@ -171,6 +181,8 @@ Used the command deepnlf viewannotation <_id_corpus> for view annotation process
 ## Corpus
 
 ### Save Corpus
+
+
 ### Delete Corpus
 ### Selected Corpus
 
@@ -180,16 +192,6 @@ Used the command deepnlf viewannotation <_id_corpus> for view annotation process
 
 ## Statistics
 ### 
-
-## DashBoard
-
-### Run Server
-
-    python run_api_restful.py
-
-### Run Client
-
-    python run.py
 
 ## Plugin
 

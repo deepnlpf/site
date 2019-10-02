@@ -3,11 +3,16 @@ id: api
 title: API RESTFul
 ---
 
-## API Guide
+DeepNLPF has a RESTFul API that allows you to use your services through a graphical user interface (GUI) or consume services through POS, GET, ect requests.
 
-To start the DepeN LPF RESTFul API to consume services through POS, GET, ect requests. Go to the deepnlpf directory and run the following command to run the server.
+## Start Service API
+The following command is required to start the service.
 
-    python run_api_restful.py
+    $ deepnlpf --api start
+
+By accessing the address: ```http://127.0.0.1:5000/``` you will see a screen like this informing you that the API has been successfully started and is ready to use.
+
+![API DeepNLPF Online](https://deepnlpf.github.io/site/img/api_online.png)
 
 ## Examples
 
@@ -17,7 +22,7 @@ Here are some examples of how you might be consuming this service.
 ### Registe New Corpus
 Request GET Upload New Corpus
     
-    http://127.0.0.1:5000/corpus_upload?path_corpus=path/<dataset_name.txt>.
+    http://127.0.0.1:5000/corpus_upload?path_corpus=path_dir_corpus
 
 Response GET Upload New Corpus
     

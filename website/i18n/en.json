@@ -24,6 +24,9 @@
       "credits": {
         "title": "Some thanks!"
       },
+      "dashboard": {
+        "title": "DashBoard"
+      },
       "freeling": {
         "title": "FreeLing"
       },
@@ -78,6 +81,7 @@
       "Credits": "Credits",
       "TUDO": "TUDO",
       "API": "API",
+      "DashBoard": "DashBoard",
       "Plugins": "Plugins",
       "SupWSD": "SupWSD",
       "CogCompNLP": "CogCompNLP",

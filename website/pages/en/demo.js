@@ -19,7 +19,10 @@ function Demo(props) {
           <header className="postHeader">
             <h1>DeepNLPF DashBoard Demo Online</h1>
           </header>
-          <p>This project is maintained by a dedicated group of people.</p>
+          <p>
+            This project is maintained by a dedicated group of people. <br/>
+            Coming soon!
+          </p>
         </div>
     </div>
   );

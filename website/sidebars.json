@@ -9,7 +9,8 @@
         "TUDO": ["tudo"]
     },
     "docs-other": {
-        "API": ["api"]
+        "API": ["api"],
+        "DashBoard": ["dashboard"]
     },
     "dosc-plugins": {
         "Plugins": ["plugins"],
