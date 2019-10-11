@@ -11,4 +11,12 @@ Nowadays companies are implementing new business models that depend heavily on N
 
 ## Pipeline
 
+## Developed With
+
+![Docusaurus](https://deepnlpf.github.io/site/img/credits/docusaurus.png)
+![Flask](https://deepnlpf.github.io/site/img/credits/flask.png)
+![GraphQL](https://deepnlpf.github.io/site/img/credits/graphql.png)
+![MongoDB](https://deepnlpf.github.io/site/img/credits/mongodb.png)
+![Python](https://deepnlpf.github.io/site/img/credits/python.png)
+
 

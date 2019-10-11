@@ -5,14 +5,18 @@ title: API RESTFul
 
 DeepNLPF has a RESTFul API that allows you to use your services through a graphical user interface (GUI) or consume services through POS, GET, ect requests.
 
-## Start Service API
+## Start Service
 The following command is required to start the service.
 
-    $ deepnlpf --api start
+    $ deepnlpf --server start
 
 By accessing the address: ```http://127.0.0.1:5000/``` you will see a screen like this informing you that the API has been successfully started and is ready to use.
 
 ![API DeepNLPF Online](https://deepnlpf.github.io/site/img/api_online.png)
+
+## Stop Service
+
+    Press CTRL+C to quit
 
 ## Examples
 

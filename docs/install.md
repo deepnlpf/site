@@ -5,6 +5,10 @@ title: How to install?
 
 DeepNLPF has been implemented and tested using the [Ubuntu](https://ubuntu.com/) 19.04 operating system. However, it may work on other similar linux versions or Windows and MacOS if it satisfies the dependencies on external NLP tools mentioned below "at your own risk".
 
+## System requirements
+* Operating Systems: Linux (64-bit)
+* Disk Space: ~ MB (does not include disk space for IDE/tools).
+
 ## Semi Automatic Install
 Script for semi automatic installation.
 Download the installation file [here](https://github.com/deepnlpf/scripts-install).
