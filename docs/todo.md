@@ -41,6 +41,7 @@ https://github.com/desbma/GoogleSpeech
 - [] [MVC for Flask Application](https://medium.com/@shravan007.c/mvc-for-flask-application-a636e6f58d72)
 
 - [] [GraphQL](https://graphql.org/)
+https://graphene-python.org/
 
 - [] [SSplit StanfodCoreNLP]()
     Pré processamento de dados usando o ssplit do corenlp para identificar as sentenças e salvr no banco de dados. Devido a limitação do tamanho do burf, ele deve analizar o tamanho do documento e dividir quando for necessário.

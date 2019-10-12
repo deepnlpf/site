@@ -3,6 +3,10 @@ id: supwsd
 title: SupWSD
 ---
 
+<a href="" target="_blank">
+    <img src="" data-canonical-src="" width="170" height="60" />
+</a>
+
 Python Implementations of Word Sense Disambiguation (WSD) Technologies.
 
 - [Site Oficial](https://supwsd.net/supwsd/)
