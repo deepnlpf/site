@@ -1,0 +1,202 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>How to install? · DeepNLPF</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="DeepNLPF has been implemented and tested using the [Ubuntu](https://ubuntu.com/) 19.04 operating system. However, it may work on other similar linux versions or Windows and MacOS if it satisfies the dependencies on external NLP tools mentioned below &quot;at your own risk&quot;."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="How to install? · DeepNLPF"/><meta property="og:type" content="website"/><meta property="og:url" content="https://deepnlpf.github.io/site/"/><meta property="og:description" content="DeepNLPF has been implemented and tested using the [Ubuntu](https://ubuntu.com/) 19.04 operating system. However, it may work on other similar linux versions or Windows and MacOS if it satisfies the dependencies on external NLP tools mentioned below &quot;at your own risk&quot;."/><meta property="og:image" content="https://deepnlpf.github.io/site/img/octopussy.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://deepnlpf.github.io/site/img/octopussy.svg"/><link rel="shortcut icon" href="/site/img/favicon2.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://deepnlpf.github.io/site/blog/atom.xml" title="DeepNLPF Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://deepnlpf.github.io/site/blog/feed.xml" title="DeepNLPF Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/site/js/scrollSpy.js"></script><link rel="stylesheet" href="/site/css/main.css"/><script src="/site/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/site/"><img class="logo" src="/site/img/octopussy_white.png" alt="DeepNLPF"/><h2 class="headerTitleWithLogo">DeepNLPF</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/site/docs/about" target="_self">Docs</a></li><li class=""><a href="/site/docs/plugins" target="_self">Plugins</a></li><li class=""><a href="/site/docs/api" target="_self">API</a></li><li class=""><a href="/site/demo" target="_self">Demo</a></li><li class=""><a href="/site/help" target="_self">Help</a></li><li class=""><a href="/site/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Install</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">About</h3><ul class=""><li class="navListItem"><a class="navItem" href="/site/docs/about">What is DeepNLPF?</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Install</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/site/docs/install">How to install?</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Configuration</h3><ul class=""><li class="navListItem"><a class="navItem" href="/site/docs/configuration">What should I configure?</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">User Guide</h3><ul class=""><li class="navListItem"><a class="navItem" href="/site/docs/guide">How to begin?</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Cite</h3><ul class=""><li class="navListItem"><a class="navItem" href="/site/docs/cite">Published</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Credits</h3><ul class=""><li class="navListItem"><a class="navItem" href="/site/docs/credits">Some thanks!</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">TUDO</h3><ul class=""><li class="navListItem"><a class="navItem" href="/site/docs/tudo">Futute Updates</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">How to install?</h1></header><article><div><span><p>DeepNLPF has been implemented and tested using the <a href="https://ubuntu.com/">Ubuntu</a> 19.04 operating system. However, it may work on other similar linux versions or Windows and MacOS if it satisfies the dependencies on external NLP tools mentioned below &quot;at your own risk&quot;.</p>
+<h2><a class="anchor" aria-hidden="true" id="system-requirements"></a><a href="#system-requirements" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>System requirements</h2>
+<ul>
+<li>Operating Systems: Linux (64-bit)</li>
+<li>Disk Space: ~ MB (does not include disk space for IDE/tools).</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="semi-automatic-install"></a><a href="#semi-automatic-install" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Semi Automatic Install</h2>
+<p>Script for semi automatic installation.
+Download the installation file <a href="https://github.com/deepnlpf/scripts-install">here</a>.</p>
+<pre><code class="hljs">    $ git clone https://github.com/deepnlpf/scripts-install.git
+    $ cd scripts-install
+    $ sh install-deepnlpf.sh
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="manual-install"></a><a href="#manual-install" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Manual Install</h2>
+<p>Manual installation step by step.</p>
+<h3><a class="anchor" aria-hidden="true" id="install-requirement-system"></a><a href="#install-requirement-system" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Install Requirement System</h3>
+<ul>
+<li><p>Install Anaconda</p>
+<p>Download Anaconda Python 3.7</p>
+<pre><code class="hljs">  $ wget https://repo.anaconda.com/archive/Anaconda3-2019.07-Linux-x86_64.sh
+</code></pre>
+<p>Installing Anaconda Python 3.7</p>
+<pre><code class="hljs">  $ bash Anaconda3-2019.07-Linux-x86_64.sh
+</code></pre>
+<p>Activate Installation</p>
+<pre><code class="hljs">  $ source ~/.bashrc
+</code></pre>
+<p>Test Installation</p>
+<pre><code class="hljs">  $ conda list
+</code></pre></li>
+<li><p>Install MongoDB</p>
+<p>Installing MongoDB</p>
+<pre><code class="hljs">  $ sudo apt install -y mongodb
+</code></pre>
+<p>Enable MongoDB</p>
+<pre><code class="hljs">  $ systemctl enable mongodb
+</code></pre></li>
+<li><p>Unzip - Installing Unzip</p>
+<pre><code class="hljs">  $ sudo apt-get install unzip
+</code></pre></li>
+<li><p>Git - Installing Git</p>
+<pre><code class="hljs">  $ sudo apt install git
+</code></pre></li>
+<li><p>Java - Installing Java 8</p>
+<pre><code class="hljs">  sudo apt-get install -y software-properties-common
+  
+  sudo add-apt-repository ppa:webupd8team/java
+  
+  sudo apt-get update
+  
+  sudo echo oracle-java7-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
+  
+  sudo apt-get install -y oracle-java8-installer
+</code></pre></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="download-install-and-config-dependecies-deepnlpf"></a><a href="#download-install-and-config-dependecies-deepnlpf" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Download, Install and Config Dependecies DeepnLPF</h3>
+<p>Create Project DeepNLPF Virtualenv</p>
+<pre><code class="hljs">    $ conda create -n deepnlpf python=3.7 anaconda
+</code></pre>
+<p>Activate env deepnlpf</p>
+<pre><code class="hljs">    $ conda activate deepnlpf
+</code></pre>
+<p>Create directory nlptools in dir /home/</p>
+<pre><code class="hljs">    $ mkdir nlptools &amp;&amp; cd nlptools
+</code></pre>
+<p>Downloading third party NLP tools</p>
+<p>Downloading Stanford CoreNLP</p>
+<pre><code class="hljs">    $ wget http://rodriguesfas.com.br/deepnlpf/nlptools/stanford-corenlp-full-2018-10-05.zip
+    
+    $ unzip stanford-corenlp-full-2018-10-05.zip
+</code></pre>
+<p>Downloading SEMAFOR</p>
+<pre><code class="hljs">    $ wget http://rodriguesfas.com.br/deepnlpf/nlptools/semafor.zip
+    
+    $ unzip semafor.zip
+</code></pre>
+<p>Config SEMAFOR</p>
+<pre><code class="hljs">    $ cd semafor/bin
+    
+    $ rm -r config.sh
+    
+    $ echo -e '#!/bin/sh \
+        \n\nexport BASE_DIR=&quot;/home/nlptools&quot; \
+        \nexport SEMAFOR_HOME=&quot;${BASE_DIR}/semafor&quot; \
+        \nexport CLASSPATH=&quot;.:${SEMAFOR_HOME}/target/Semafor-3.0-alpha-04.jar&quot; \
+        \nexport JAVA_HOME_BIN=&quot;/usr/lib/jvm/java-8-oracle/bin&quot; \
+        \nexport MALT_MODEL_DIR=&quot;${BASE_DIR}/semafor/models/semafor_malt_model_20121129&quot; \
+        \nexport TURBO_MODEL_DIR=&quot;{BASE_DIR}/semafor/models/turbo_20130606&quot; \
+        \n\necho &quot;Environment variables:&quot; \
+        \necho &quot;SEMAFOR_HOME=${SEMAFOR_HOME}&quot; \
+        \necho &quot;CLASSPATH=${CLASSPATH}&quot; \
+        \necho &quot;JAVA_HOME_BIN=${JAVA_HOME_BIN}&quot; \
+        \necho &quot;MALT_MODEL_DIR=${MALT_MODEL_DIR}&quot; \
+        '&gt;&gt; config.sh
+</code></pre>
+<p>Downloads Models SEMAFOR, path: home/user/nlptools/semafor</p>
+<pre><code class="hljs">    $ mkdir -p models
+
+    $ cd models
+
+    $ wget http://www.ark.cs.cmu.edu/SEMAFOR/semafor_malt_model_20121129.tar.gz
+
+    $ tar -vzxf semafor_malt_model_20121129.tar.gz
+</code></pre>
+<p>Install Maven SEMAFOR</p>
+<pre><code class="hljs">    $ sudo apt-get install maven -y
+
+    $ mvn package
+</code></pre>
+<p>Downloading DeepNLPF, path: /home/user/</p>
+<blockquote>
+<p>Private repository. You need a password to download this. Ask the developer.</p>
+</blockquote>
+<pre><code class="hljs">    $ git clone https://RodriguesFAS@bitbucket.org/RodriguesFAS/deepnlpf.git
+</code></pre>
+<p>Installing Dependecies Project</p>
+<pre><code class="hljs">    $ sudo pip install pathos &amp;&amp;
+        pip install bson || pip install -U bson &amp;&amp;
+        pip install gogo &amp;&amp;
+        pip install pygogo &amp;&amp;
+        pip install tqdm &amp;&amp;
+        pip install json2xml &amp;&amp;
+        pip install isodate &amp;&amp;
+        pip install requests &amp;&amp;
+        pip install future &amp;&amp;
+
+        pip install pymongo || conda install -c anaconda pymongo &amp;&amp;
+        pip install mongoengine || conda install -c conda-forge mongoengine &amp;&amp;
+
+        pip install flask &amp;&amp;
+        pip install flask_socketio &amp;&amp;
+
+        conda install -c anaconda pandas &amp;&amp;
+        pip install plotly &amp;&amp;
+
+        pip install pywsd &amp;&amp; 
+        pip install supwsd &amp;&amp; 
+        pip install stanfordcorenlp &amp;&amp; 
+        pip install nltk &amp;&amp; python -c &quot;import nltk; nltk.download('all')&quot; &amp;&amp; 
+        conda install -c conda-forge spacy &amp;&amp; python -m spacy download en_core_web_sm
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="docker-install"></a><a href="#docker-install" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Docker Install</h2>
+<blockquote>
+<p>Comming soon.</p>
+</blockquote>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/site/docs/about"><span class="arrow-prev">← </span><span class="function-name-prevnext">What is DeepNLPF?</span></a><a class="docs-next button" href="/site/docs/configuration"><span>What should I configure?</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#system-requirements">System requirements</a></li><li><a href="#semi-automatic-install">Semi Automatic Install</a></li><li><a href="#manual-install">Manual Install</a><ul class="toc-headings"><li><a href="#install-requirement-system">Install Requirement System</a></li><li><a href="#download-install-and-config-dependecies-deepnlpf">Download, Install and Config Dependecies DeepnLPF</a></li></ul></li><li><a href="#docker-install">Docker Install</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/site/" class="nav-home"><img src="/site/img/octopussy_white.png" alt="DeepNLPF" width="66" height="58"/></a><div><h5>Docs</h5><a href="/site/docs/en/doc1.html">Getting Started</a><a href="/site/docs/en/doc2.html">Guides</a><a href="/site/docs/en/doc3.html">API Reference</a></div><div><h5>Community</h5><a href="/site/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a></div><div><h5>More</h5><a href="/site/blog">Blog</a><a href="#">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2019 DeepNLPF.</section></footer></div></body></html>

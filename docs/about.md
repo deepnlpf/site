@@ -29,9 +29,9 @@ Nowadays companies are implementing new business models that depend heavily on N
     <a href="https://www.mongodb.com/" target="_blank">
         <img src="https://deepnlpf.github.io/site/img/credits/mongodb.png" data-canonical-src="https://deepnlpf.github.io/site/img/credits/mongodb.png" width="140" height="50" />
     </a>
-    <a href="https://graphql.org/" target="_blank">
+    <!--a href="https://graphql.org/" target="_blank">
         <img src="https://deepnlpf.github.io/site/img/credits/graphql.png" data-canonical-src="https://deepnlpf.github.io/site/img/credits/graphql.png" width="170" height="60" />
-    </a>
+    </a-->
 </div>
 
 
