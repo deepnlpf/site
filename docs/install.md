@@ -6,15 +6,17 @@ title: How to install?
 DeepNLPF has been implemented and tested using the [Ubuntu](https://ubuntu.com/) 19.04 operating system. However, it may work on other similar linux versions or Windows and MacOS if it satisfies the dependencies on external NLP tools mentioned below "at your own risk".
 
 ## System requirements
-* Operating Systems: Linux (64-bit)
+* Operating Systems: Linux (64-bit).
+* Memoria RAM: 16GB.
 * Disk Space: ~ MB (does not include disk space for IDE/tools).
 
 ## Semi Automatic Install
 Script for semi automatic installation.
 Download the installation file [here](https://github.com/deepnlpf/scripts-install).
 
+        $ /home/$USER/
         $ git clone https://github.com/deepnlpf/scripts-install.git
-        $ cd scripts-install
+        $ cd scripts-install/script/
         $ sh install-deepnlpf.sh
 
 ## Manual Install
@@ -23,7 +25,7 @@ Manual installation step by step.
 
 ### Install Requirement System
 
-* Install Anaconda
+* [Install Anaconda](https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart)
 
   Download Anaconda Python 3.7
         
@@ -41,9 +43,7 @@ Manual installation step by step.
         
         $ conda list
 
-* Install MongoDB
-
-  Installing MongoDB
+* [Install MongoDB](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/)
 
         $ sudo apt install -y mongodb
 
@@ -51,25 +51,21 @@ Manual installation step by step.
 
         $ systemctl enable mongodb
 
-* Unzip - Installing Unzip
+* Installing Unzip
 
         $ sudo apt-get install unzip
 
-* Git - Installing Git
+* Installing Git
 
         $ sudo apt install git
 
-* Java - Installing Java 8
+* Installing Java 8
 
-        sudo apt-get install -y software-properties-common
-        
-        sudo add-apt-repository ppa:webupd8team/java
-        
-        sudo apt-get update
-        
-        sudo echo oracle-java7-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
-        
-        sudo apt-get install -y oracle-java8-installer
+        $ sudo add-apt-repository ppa:openjdk-r/ppa
+        $ sudo apt-get install openjdk-8-jdk
+        $ sudo update-alternatives --config java
+        $ sudo update-alternatives --config java
+        $ java -version
 
 ### Download, Install and Config Dependecies DeepnLPF
 
@@ -93,23 +89,26 @@ Downloading Stanford CoreNLP
         
         $ unzip stanford-corenlp-full-2018-10-05.zip
 
-Downloading SEMAFOR
+Downloading [SEMAFOR](http://www.cs.cmu.edu/~ark/SEMAFOR/)
+
+        $ cd /home/$user/nlptools/
 
         $ wget http://rodriguesfas.com.br/deepnlpf/nlptools/semafor.zip
         
-        $ unzip semafor.zip
+        $ unzip semafor.zip && rm -r semafor.zip && mv semafor-master semafor
 
 Config SEMAFOR
 
-        $ cd semafor/bin
-        
-        $ rm -r config.sh
+- Replace JAVA_HOME BIN with your path.
+
+        $ cd semafor/bin && rm -r config.sh
         
         $ echo -e '#!/bin/sh \
-            \n\nexport BASE_DIR="/home/nlptools" \
+            \n\nexport USER="fasr"
+            \nexport BASE_DIR="/home/${USER}/nlptools" \
             \nexport SEMAFOR_HOME="${BASE_DIR}/semafor" \
             \nexport CLASSPATH=".:${SEMAFOR_HOME}/target/Semafor-3.0-alpha-04.jar" \
-            \nexport JAVA_HOME_BIN="/usr/lib/jvm/java-8-oracle/bin" \
+            \nexport JAVA_HOME_BIN="/usr/lib/jvm/java-8-openjdk-amd64/bin" \
             \nexport MALT_MODEL_DIR="${BASE_DIR}/semafor/models/semafor_malt_model_20121129" \
             \nexport TURBO_MODEL_DIR="{BASE_DIR}/semafor/models/turbo_20130606" \
             \n\necho "Environment variables:" \
@@ -119,23 +118,19 @@ Config SEMAFOR
             \necho "MALT_MODEL_DIR=${MALT_MODEL_DIR}" \
             '>> config.sh
 
-Downloads Models SEMAFOR, path: home/user/nlptools/semafor
+Downloads Models SEMAFOR, path: /home/$user/nlptools/semafor
 
-        $ mkdir -p models
+        $ mkdir -p models && cd models && wget http://www.ark.cs.cmu.edu/SEMAFOR/semafor_malt_model_20121129.tar.gz
 
-        $ cd models
-
-        $ wget http://www.ark.cs.cmu.edu/SEMAFOR/semafor_malt_model_20121129.tar.gz
-
-        $ tar -vzxf semafor_malt_model_20121129.tar.gz
+        $ tar -vzxf semafor_malt_model_20121129.tar.gz && rm -r semafor_malt_model_20121129.tar.gz 
 
 Install Maven SEMAFOR
 
-        $ sudo apt-get install maven -y
+        $ sudo apt install maven -y
 
         $ mvn package
 
-Downloading DeepNLPF, path: /home/user/
+Downloading DeepNLPF, path: /home/$user/
 
 > Private repository. You need a password to download this. Ask the developer.
 
@@ -143,30 +138,30 @@ Downloading DeepNLPF, path: /home/user/
 
 Installing Dependecies Project
 
-        $ sudo pip install pathos &&
-            pip install bson || pip install -U bson &&
-            pip install gogo &&
-            pip install pygogo &&
-            pip install tqdm &&
-            pip install json2xml &&
-            pip install isodate &&
-            pip install requests &&
-            pip install future &&
+        $ pip install pathos &&
+          pip install bson || pip install -U bson &&
+          pip install gogo &&
+          pip install pygogo &&
+          pip install tqdm &&
+          pip install json2xml &&
+          pip install isodate &&
+          pip install requests &&
+          pip install future &&
 
-            pip install pymongo || conda install -c anaconda pymongo &&
-            pip install mongoengine || conda install -c conda-forge mongoengine &&
+          pip install pymongo || conda install -c anaconda pymongo &&
+          pip install mongoengine || conda install -c conda-forge mongoengine &&
 
-            pip install flask &&
-            pip install flask_socketio &&
+          pip install flask &&
+          pip install flask_socketio &&
 
-            conda install -c anaconda pandas &&
-            pip install plotly &&
+          conda install -c anaconda pandas &&
+          pip install plotly &&
 
-            pip install pywsd && 
-            pip install supwsd && 
-            pip install stanfordcorenlp && 
-            pip install nltk && python -c "import nltk; nltk.download('all')" && 
-            conda install -c conda-forge spacy && python -m spacy download en_core_web_sm
+          pip install pywsd && 
+          pip install supwsd && 
+          pip install stanfordcorenlp && 
+          pip install nltk && python -c "import nltk; nltk.download('all')" && 
+          conda install -c conda-forge spacy && python -m spacy download en_core_web_sm
 
 ## Docker Install
 

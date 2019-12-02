@@ -57,21 +57,23 @@
         </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">How to install?</h1></header><article><div><span><p>DeepNLPF has been implemented and tested using the <a href="https://ubuntu.com/">Ubuntu</a> 19.04 operating system. However, it may work on other similar linux versions or Windows and MacOS if it satisfies the dependencies on external NLP tools mentioned below &quot;at your own risk&quot;.</p>
 <h2><a class="anchor" aria-hidden="true" id="system-requirements"></a><a href="#system-requirements" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>System requirements</h2>
 <ul>
-<li>Operating Systems: Linux (64-bit)</li>
+<li>Operating Systems: Linux (64-bit).</li>
+<li>Memoria RAM: 16GB.</li>
 <li>Disk Space: ~ MB (does not include disk space for IDE/tools).</li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="semi-automatic-install"></a><a href="#semi-automatic-install" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Semi Automatic Install</h2>
 <p>Script for semi automatic installation.
 Download the installation file <a href="https://github.com/deepnlpf/scripts-install">here</a>.</p>
-<pre><code class="hljs">    $ git clone https://github.com/deepnlpf/scripts-install.git
-    $ cd scripts-install
+<pre><code class="hljs">    $ /home/$USER/
+    $ git clone https://github.com/deepnlpf/scripts-install.git
+    $ cd scripts-install/script/
     $ sh install-deepnlpf.sh
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="manual-install"></a><a href="#manual-install" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Manual Install</h2>
 <p>Manual installation step by step.</p>
 <h3><a class="anchor" aria-hidden="true" id="install-requirement-system"></a><a href="#install-requirement-system" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Install Requirement System</h3>
 <ul>
-<li><p>Install Anaconda</p>
+<li><p><a href="https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart">Install Anaconda</a></p>
 <p>Download Anaconda Python 3.7</p>
 <pre><code class="hljs">  $ wget https://repo.anaconda.com/archive/Anaconda3-2019.07-Linux-x86_64.sh
 </code></pre>
@@ -84,29 +86,24 @@ Download the installation file <a href="https://github.com/deepnlpf/scripts-inst
 <p>Test Installation</p>
 <pre><code class="hljs">  $ conda list
 </code></pre></li>
-<li><p>Install MongoDB</p>
-<p>Installing MongoDB</p>
+<li><p><a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/">Install MongoDB</a></p>
 <pre><code class="hljs">  $ sudo apt install -y mongodb
 </code></pre>
 <p>Enable MongoDB</p>
 <pre><code class="hljs">  $ systemctl enable mongodb
 </code></pre></li>
-<li><p>Unzip - Installing Unzip</p>
+<li><p>Installing Unzip</p>
 <pre><code class="hljs">  $ sudo apt-get install unzip
 </code></pre></li>
-<li><p>Git - Installing Git</p>
+<li><p>Installing Git</p>
 <pre><code class="hljs">  $ sudo apt install git
 </code></pre></li>
-<li><p>Java - Installing Java 8</p>
-<pre><code class="hljs">  sudo apt-get install -y software-properties-common
-  
-  sudo add-apt-repository ppa:webupd8team/java
-  
-  sudo apt-get update
-  
-  sudo echo oracle-java7-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
-  
-  sudo apt-get install -y oracle-java8-installer
+<li><p>Installing Java 8</p>
+<pre><code class="hljs">  $ sudo add-apt-repository ppa:openjdk-r/ppa
+  $ sudo apt-get install openjdk-8-jdk
+  $ sudo update-alternatives --config java
+  $ sudo update-alternatives --config java
+  $ java -version
 </code></pre></li>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="download-install-and-config-dependecies-deepnlpf"></a><a href="#download-install-and-config-dependecies-deepnlpf" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Download, Install and Config Dependecies DeepnLPF</h3>
@@ -125,75 +122,75 @@ Download the installation file <a href="https://github.com/deepnlpf/scripts-inst
     
     $ unzip stanford-corenlp-full-2018-10-05.zip
 </code></pre>
-<p>Downloading SEMAFOR</p>
-<pre><code class="hljs">    $ wget http://rodriguesfas.com.br/deepnlpf/nlptools/semafor.zip
+<p>Downloading <a href="http://www.cs.cmu.edu/~ark/SEMAFOR/">SEMAFOR</a></p>
+<pre><code class="hljs">    $ cd /home/$user/nlptools/
+
+    $ wget http://rodriguesfas.com.br/deepnlpf/nlptools/semafor.zip
     
-    $ unzip semafor.zip
+    $ unzip semafor.zip &amp;&amp; rm -r semafor.zip &amp;&amp; mv semafor-master semafor
 </code></pre>
 <p>Config SEMAFOR</p>
-<pre><code class="hljs">    $ cd semafor/bin
-    
-    $ rm -r config.sh
-    
-    $ echo -e '#!/bin/sh \
-        \n\nexport BASE_DIR=&quot;/home/nlptools&quot; \
-        \nexport SEMAFOR_HOME=&quot;${BASE_DIR}/semafor&quot; \
-        \nexport CLASSPATH=&quot;.:${SEMAFOR_HOME}/target/Semafor-3.0-alpha-04.jar&quot; \
-        \nexport JAVA_HOME_BIN=&quot;/usr/lib/jvm/java-8-oracle/bin&quot; \
-        \nexport MALT_MODEL_DIR=&quot;${BASE_DIR}/semafor/models/semafor_malt_model_20121129&quot; \
-        \nexport TURBO_MODEL_DIR=&quot;{BASE_DIR}/semafor/models/turbo_20130606&quot; \
-        \n\necho &quot;Environment variables:&quot; \
-        \necho &quot;SEMAFOR_HOME=${SEMAFOR_HOME}&quot; \
-        \necho &quot;CLASSPATH=${CLASSPATH}&quot; \
-        \necho &quot;JAVA_HOME_BIN=${JAVA_HOME_BIN}&quot; \
-        \necho &quot;MALT_MODEL_DIR=${MALT_MODEL_DIR}&quot; \
-        '&gt;&gt; config.sh
-</code></pre>
-<p>Downloads Models SEMAFOR, path: home/user/nlptools/semafor</p>
-<pre><code class="hljs">    $ mkdir -p models
+<ul>
+<li><p>Replace JAVA_HOME BIN with your path.</p>
+<pre><code class="hljs">  $ cd semafor/bin &amp;&amp; rm -r config.sh
+  
+  $ echo -e '#!/bin/sh \
+      \n\nexport USER=&quot;fasr&quot;
+      \nexport BASE_DIR=&quot;/home/${USER}/nlptools&quot; \
+      \nexport SEMAFOR_HOME=&quot;${BASE_DIR}/semafor&quot; \
+      \nexport CLASSPATH=&quot;.:${SEMAFOR_HOME}/target/Semafor-3.0-alpha-04.jar&quot; \
+      \nexport JAVA_HOME_BIN=&quot;/usr/lib/jvm/java-8-openjdk-amd64/bin&quot; \
+      \nexport MALT_MODEL_DIR=&quot;${BASE_DIR}/semafor/models/semafor_malt_model_20121129&quot; \
+      \nexport TURBO_MODEL_DIR=&quot;{BASE_DIR}/semafor/models/turbo_20130606&quot; \
+      \n\necho &quot;Environment variables:&quot; \
+      \necho &quot;SEMAFOR_HOME=${SEMAFOR_HOME}&quot; \
+      \necho &quot;CLASSPATH=${CLASSPATH}&quot; \
+      \necho &quot;JAVA_HOME_BIN=${JAVA_HOME_BIN}&quot; \
+      \necho &quot;MALT_MODEL_DIR=${MALT_MODEL_DIR}&quot; \
+      '&gt;&gt; config.sh
+</code></pre></li>
+</ul>
+<p>Downloads Models SEMAFOR, path: /home/$user/nlptools/semafor</p>
+<pre><code class="hljs">    $ mkdir -p models &amp;&amp; cd models &amp;&amp; wget http://www.ark.cs.cmu.edu/SEMAFOR/semafor_malt_model_20121129.tar.gz
 
-    $ cd models
-
-    $ wget http://www.ark.cs.cmu.edu/SEMAFOR/semafor_malt_model_20121129.tar.gz
-
-    $ tar -vzxf semafor_malt_model_20121129.tar.gz
+    $ tar -vzxf semafor_malt_model_20121129.tar.gz &amp;&amp; rm -r semafor_malt_model_20121129.tar.gz 
 </code></pre>
 <p>Install Maven SEMAFOR</p>
-<pre><code class="hljs">    $ sudo apt-get install maven -y
+<pre><code class="hljs">    $ sudo apt install maven -y
 
     $ mvn package
 </code></pre>
-<p>Downloading DeepNLPF, path: /home/user/</p>
+<p>Downloading DeepNLPF, path: /home/$user/</p>
 <blockquote>
 <p>Private repository. You need a password to download this. Ask the developer.</p>
 </blockquote>
 <pre><code class="hljs">    $ git clone https://RodriguesFAS@bitbucket.org/RodriguesFAS/deepnlpf.git
 </code></pre>
 <p>Installing Dependecies Project</p>
-<pre><code class="hljs">    $ sudo pip install pathos &amp;&amp;
-        pip install bson || pip install -U bson &amp;&amp;
-        pip install gogo &amp;&amp;
-        pip install pygogo &amp;&amp;
-        pip install tqdm &amp;&amp;
-        pip install json2xml &amp;&amp;
-        pip install isodate &amp;&amp;
-        pip install requests &amp;&amp;
-        pip install future &amp;&amp;
+<pre><code class="hljs">    $ pip install pathos &amp;&amp;
+      pip install bson || pip install -U bson &amp;&amp;
+      pip install gogo &amp;&amp;
+      pip install pygogo &amp;&amp;
+      pip install tqdm &amp;&amp;
+      pip install json2xml &amp;&amp;
+      pip install isodate &amp;&amp;
+      pip install requests &amp;&amp;
+      pip install future &amp;&amp;
 
-        pip install pymongo || conda install -c anaconda pymongo &amp;&amp;
-        pip install mongoengine || conda install -c conda-forge mongoengine &amp;&amp;
+      pip install pymongo || conda install -c anaconda pymongo &amp;&amp;
+      pip install mongoengine || conda install -c conda-forge mongoengine &amp;&amp;
 
-        pip install flask &amp;&amp;
-        pip install flask_socketio &amp;&amp;
+      pip install flask &amp;&amp;
+      pip install flask_socketio &amp;&amp;
 
-        conda install -c anaconda pandas &amp;&amp;
-        pip install plotly &amp;&amp;
+      conda install -c anaconda pandas &amp;&amp;
+      pip install plotly &amp;&amp;
 
-        pip install pywsd &amp;&amp; 
-        pip install supwsd &amp;&amp; 
-        pip install stanfordcorenlp &amp;&amp; 
-        pip install nltk &amp;&amp; python -c &quot;import nltk; nltk.download('all')&quot; &amp;&amp; 
-        conda install -c conda-forge spacy &amp;&amp; python -m spacy download en_core_web_sm
+      pip install pywsd &amp;&amp; 
+      pip install supwsd &amp;&amp; 
+      pip install stanfordcorenlp &amp;&amp; 
+      pip install nltk &amp;&amp; python -c &quot;import nltk; nltk.download('all')&quot; &amp;&amp; 
+      conda install -c conda-forge spacy &amp;&amp; python -m spacy download en_core_web_sm
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="docker-install"></a><a href="#docker-install" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Docker Install</h2>
 <blockquote>

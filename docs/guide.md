@@ -18,29 +18,41 @@ Or use if installed.
 
     $ deepnlpf --command args
 
-All of the following examples assume that you have installed the Framework CLI. Change the commands if you want to use without installing the CLI.
+All of the following examples assume that you have installed the Framework CLI. Change the commands if you want to use without <a href="https://deepnlpf.github.io/site/docs/configuration#config-cli-deepnlpf">installing the CLI</a>. 
 
 ### Help
     
     $ deepnlpf -h
 
-### List Plugins
+### List Plugins Install
 
     $ deepnlpf --plugins all
+
+    freeling
+    stanfordcorenlp
+    pywsd
+    spacy
+    quanteda
+    semafor
+    deepnlp
+    cogcomp
+    wordnet
+    supwsd
+    helloworld
 
 ### Save New Corpus
 To save a corpus, it must be organized in one of the two directory structures shown below.
 
 Simple structure
 
-    /home/user/corpus/
+    /home/$user/path_corpus/
                         document_1.txt
                         document_2.txt
                         ..
 
 or Complete Structure
 
-    /home/user/corpus/
+    /home/$user/path_corpus/
                         train/
                             pos/
                                 document_01.txt
@@ -67,12 +79,12 @@ For the doc: ```document_1.txt``` You have the following sentences one after ano
         2 The author of a keygen uses a disassembler to look at the raw assembly code.
         3 The child was carefully wrapped and bound into the cradle by means of a cord.
         4 The system as described above has its greatest application in an arrayed configuration of antenna elements.
-        5 The student association is the voice of the undergraduate student population of the State University of New York at Buffalo.
+        5 The student association is the vpath_oice of the undergraduate student population of the State University of New York at Buffalo.
 
 
 You must use the command: ```python deepnlpf --savecorpus <path_dir_corpus> >``` by passing the path of your corpus directory as an argument, as per the example below.
 
-    $ deepnlpf --savecorpus /home/user/corpus/aclImdb
+    $ deepnlpf --savecorpus /home/$user/path_corpus/aclImdb
 
     corpus: aclImdb
     ├── train:
@@ -96,10 +108,6 @@ Lists all corpus saved in the database.
     │  id_corpus: 5d8f576dd54e23a38cb3e819
     │  register: 2019-09-28 09:51:57.850000
     ..
-
-### Show Infor Corpus
-
-    $ deepnlpf --infocorpus <_id_corpus>
 
 ### Delete Corpus
 Used the command ```deepnlpf --deletecorpus <_id_corpus>``` for delete a specific corpus.
@@ -148,11 +156,6 @@ Example file ```customs_pipeline_example.json``` in /deepnlpf/example/ .
             {
                 "freeling": {
                     "pipeline": ["wsd", "svo_triples_srl"]
-                }
-            },
-            {
-                "quanteda": {
-                    "pipeline": ["frequency"]
                 }
             }
         }]

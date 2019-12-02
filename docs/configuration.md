@@ -7,6 +7,15 @@ title: What should I configure?
 
 Access ```/deepnlpf/config/config.py```
 
+#### Config
+Config Host to Server API and Client DashBoard.
+
+    CONFIG = {
+        'host': '127.0.0.1',
+        'port_server': 5000,
+        'port_dashboard': 5001,
+    }
+
 #### Debug
 
 Used ```True``` or ```False```.
@@ -53,8 +62,8 @@ Access ```/deepnlpf/config/notification.py```
 
         TELEGRAM = {
             'SEND_MSG': False,
-            'TOKEN': '793078363:AAFs0Ie_-1_iLw9GGpJ4vnihbWo4K77aiLY',
-            'CHAT_ID': '604669808',
+            'TOKEN': 'YOUR_TOKEN',
+            'CHAT_ID': 'YOU_CHAT_ID',
         }
 
 * Email

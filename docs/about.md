@@ -18,13 +18,13 @@ Nowadays companies are implementing new business models that depend heavily on N
         <img src="https://deepnlpf.github.io/site/img/credits/docusaurus.png" data-canonical-src="https://deepnlpf.github.io/site/img/credits/docusaurus.png" width="100" height="70" />
     </a>
     <a href="https://www.python.org/" target="_blank">
-        <img src="https://deepnlpf.github.io/site/img/credits/python.png" data-canonical-src="https://deepnlpf.github.io/site/img/credits/python.png" width="50" height="50" />
+        <img src="https://deepnlpf.github.io/site/img/credits/python.png" data-canonical-src="https://deepnlpf.github.io/site/img/credits/python.png" width="150" height="60" />
     </a>
     <a href="https://palletsprojects.com/p/flask/" target="_blank">
         <img src="https://deepnlpf.github.io/site/img/credits/flask.png" data-canonical-src="https://deepnlpf.github.io/site/img/credits/flask.png" width="100" height="70" />
     </a>
     <a href="https://palletsprojects.com/p/jinja/" target="_blank">
-        <img src="https://deepnlpf.github.io/site/img/credits/jinja.png" data-canonical-src="https://deepnlpf.github.io/site/img/credits/jinja.png" width="140" height="50" />
+        <img src="https://deepnlpf.github.io/site/img/credits/jinja.png" data-canonical-src="https://deepnlpf.github.io/site/img/credits/jinja.png" width="140" height="60" />
     </a>
     <a href="https://www.mongodb.com/" target="_blank">
         <img src="https://deepnlpf.github.io/site/img/credits/mongodb.png" data-canonical-src="https://deepnlpf.github.io/site/img/credits/mongodb.png" width="140" height="50" />
@@ -32,6 +32,11 @@ Nowadays companies are implementing new business models that depend heavily on N
     <!--a href="https://graphql.org/" target="_blank">
         <img src="https://deepnlpf.github.io/site/img/credits/graphql.png" data-canonical-src="https://deepnlpf.github.io/site/img/credits/graphql.png" width="170" height="60" />
     </a-->
+    <a href="https://pynsource.com/" target="_blank">
+        <img src="https://deepnlpf.github.io/site/img/credits/pynsource.png" data-canonical-src="https://deepnlpf.github.io/site/img/credits/pynsource.png" width="170" height="60" />
+    </a>
+
+    Pynsource
 </div>
 
 
