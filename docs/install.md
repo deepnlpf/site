@@ -19,15 +19,12 @@ DeepNLPF has been implemented and tested using the [Ubuntu](https://ubuntu.com/)
 
 ## [Pip](https://pypi.org/project/pip/) install
 
-        $ pip install deepnlpf
+        $ pip install deepnlpframework
         $ deepnlpf --install stanfordcorenlp
 
 ## [Anaconda](https://www.anaconda.com/) install
 
 > Comming soon.
-
-        $ conda install deepnlpf
-        $ deepnlpf --install stanfordcorenlp
 
 ## Virtual Machine
 
