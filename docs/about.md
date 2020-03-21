@@ -32,11 +32,10 @@ Nowadays companies are implementing new business models that depend heavily on N
     <!--a href="https://graphql.org/" target="_blank">
         <img src="https://deepnlpf.github.io/site/img/credits/graphql.png" data-canonical-src="https://deepnlpf.github.io/site/img/credits/graphql.png" width="170" height="60" />
     </a-->
-    <a href="https://pynsource.com/" target="_blank">
-        <img src="https://deepnlpf.github.io/site/img/credits/pynsource.png" data-canonical-src="https://deepnlpf.github.io/site/img/credits/pynsource.png" width="170" height="60" />
+    <a href="https://pynsource.com/" target="_blank" title="Pynsource">
+        <img src="https://deepnlpf.github.io/site/img/credits/pynsource.png" data-canonical-src="https://deepnlpf.github.io/site/img/credits/pynsource.png" width="80" height="60" />
     </a>
 
-    Pynsource
 </div>
 
 

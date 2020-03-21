@@ -2,8 +2,8 @@
     "docs": {
         "About": ["about"],
         "Install": ["install"],
-        "Configuration": ["configuration"],
         "User Guide": ["guide"],
+        "Benchmarking": ["benchmarking"],
         "Cite": ["cite"],
         "Credits": ["credits"],
         "TUDO": ["tudo"]
@@ -13,15 +13,15 @@
         "DashBoard": ["dashboard"]
     },
     "dosc-plugins": {
-        "Plugins": ["plugins"],
-        "SupWSD": ["supwsd"],
+        "Welcome": ["plugins"],
         "CogCompNLP": ["cogcompnlp"],
         "FreeLing": ["freeling"],
-        "Stanford CoreNLP": ["stanfordcorenlp"],
         "PyWSD": ["pywsd"],
+        "Quanteda": ["quanteda"],
+        "SupWSD": ["supwsd"],
+        "Stanford CoreNLP": ["stanfordcorenlp"],
         "SEMAFOR": ["semafor"],
         "SpaCy": ["spacy"],
-        "Quanteda": ["quanteda"],
         "WordNet": ["wordnet"]
     }
 }

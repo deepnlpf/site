@@ -8,17 +8,40 @@ CLI - use through command line interface.
 API - allows the creation of applications using the resources of the framework.
 DashBoard - allows the use of the framework through a graphical interface.
 
+## Getting Started
+
+To see DeepnlpF custom pipeline in action, you can launch the Python interactive interpreter, and try the following commands:
+
+    >>> from deepnlpf.pipeline import Pipeline
+    >>> custom_pipeline = """
+        {
+            "tools": [{
+                "stanfordcorenlp": {
+                    "pipeline": [
+                        "tokenize",
+                        "ssplit",
+                        "pos",
+                        "lemma",
+                        "ner",
+                        "parse",
+                        "depparse",
+                        "truecase",
+                        "dcoref"
+                    ]
+                }
+            }]
+        }
+        """
+
+    >>> sentence = "Barack Obama was born in Hawaii."
+    >>> nlp = Pipeline(raw_text=sentence, json_string=custom_pipeline)
+    >>> nlp.annotate()
+
 ## Command Line Interface - CLI
 
+> Comming soon.
+
 Use the CLI as follows if you have not installed the Framework locally.
-
-    $ python cli.py --command args
-
-Or use if installed.
-
-    $ deepnlpf --command args
-
-All of the following examples assume that you have installed the Framework CLI. Change the commands if you want to use without <a href="https://deepnlpf.github.io/site/docs/configuration#config-cli-deepnlpf">installing the CLI</a>. 
 
 ### Help
     
@@ -196,6 +219,20 @@ Used the command deepnlf viewannotation <_id_corpus> for view annotation process
 ## Statistics
 ### 
 
-## Plugin
+## Start DashBoard
 
-### Create Plugin
+> Comming soon.
+
+Consider it inside the ```deepnlpf``` folder to execute the commands.
+
+Start API
+
+    $ deepnlpf --api start
+
+Access the following IP [127.0.0.1:5000](127.0.0.1:5000) to check if the server is active.
+
+Starde Client
+
+    $ deepnlpf --dashboard start
+
+Access the following IP [127.0.0.1:5001](127.0.0.1:5001) access the dashboard.

@@ -12,6 +12,9 @@
       "api": {
         "title": "API RESTFul"
       },
+      "benchmarking": {
+        "title": "Stude Profile"
+      },
       "cite": {
         "title": "Published"
       },
@@ -37,7 +40,7 @@
         "title": "How to install?"
       },
       "plugins": {
-        "title": "Plugins"
+        "title": "Welcome Plugin Repositories"
       },
       "pywsd": {
         "title": "PyWSD"
@@ -75,22 +78,22 @@
     "categories": {
       "About": "About",
       "Install": "Install",
-      "Configuration": "Configuration",
       "User Guide": "User Guide",
+      "Benchmarking": "Benchmarking",
       "Cite": "Cite",
       "Credits": "Credits",
       "TUDO": "TUDO",
       "API": "API",
       "DashBoard": "DashBoard",
-      "Plugins": "Plugins",
-      "SupWSD": "SupWSD",
+      "Welcome": "Welcome",
       "CogCompNLP": "CogCompNLP",
       "FreeLing": "FreeLing",
-      "Stanford CoreNLP": "Stanford CoreNLP",
       "PyWSD": "PyWSD",
+      "Quanteda": "Quanteda",
+      "SupWSD": "SupWSD",
+      "Stanford CoreNLP": "Stanford CoreNLP",
       "SEMAFOR": "SEMAFOR",
       "SpaCy": "SpaCy",
-      "Quanteda": "Quanteda",
       "WordNet": "WordNet"
     }
   },
