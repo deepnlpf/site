@@ -13,41 +13,27 @@ Python Implementations of Word Sense Disambiguation (WSD) Technologies.
 - [Demo Online](https://supwsd.net/supwsd/demo.jsp)
 - [Github](https://github.com/SI3P/supWSD)
 
+> Under construction!
+
+# Install supWSD
+
+    $ pip install supwsd
+
 # Install Plugin
 
-## Download Plugin
+    $ deepnlpf --install supwsd
 
-[Download Plugin](#)
-
-## Install Using Pip
-
-    pip install supwsd
-
-## Pipeline
-
-### Pipeline Online
-
-    custom_pipeline_supwsd = {
-        'tools': [
-            {
-                'supwsd': {
-                    'pipeline': ['wsd_online']
-                }
-            },
-        ]
-    }
-
-### Pipeline Offline
-
-    custom_pipeline_supwsd = {
-        'tools': [
-            {
-                'supwsd': {
-                    'pipeline': ['wsd_offline']
-                }
-            },
-        ]
-    }
-
-## Version Tests
-supwsd-1.2.2
+# Pipeline
+```
+{
+    "tools": [
+        {
+            "supwsd": {
+                "pipeline": [
+                    "wsd"
+                ]
+            }
+        }
+    ]
+}
+```

@@ -39,6 +39,9 @@
       "install": {
         "title": "How to install?"
       },
+      "opensesame": {
+        "title": "Open Sesame"
+      },
       "plugins": {
         "title": "Welcome Plugin Repositories"
       },

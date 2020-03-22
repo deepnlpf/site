@@ -3,8 +3,29 @@ id: quanteda
 title: Quanteda
 ---
 
-...
+- [Site Oficial](#)
+- [Demo Online](#)
+- [Github](#)
 
-<a href="" target="_blank">
-    <img src="" data-canonical-src="" width="170" height="60" />
-</a>
+> Under construction!
+
+# [Install Quanteda](https://tutorials.quanteda.io/introduction/install/)
+
+# Install Plugin
+
+    $ deepnlpf --install quanteda
+
+# Pipeline
+```
+{
+    "tools": [
+        {
+            "quanteda": {
+                "pipeline": [
+                    "frequency"
+                ]
+            }
+        }
+    ]
+}
+```

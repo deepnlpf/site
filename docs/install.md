@@ -13,9 +13,9 @@ DeepNLPF has been implemented and tested using the [Ubuntu](https://ubuntu.com/)
 
 <b>Software</b>
 * Operating Systems: Linux [Ubuntu 19.04](https://ubuntu.com/) (64-bit).
-* [Python version 3.7]() 
-* [Java version 8]()
-* [Required MongoDB](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/)
+* [Python 3.7]() 
+* [Java 8]()
+* [MongoDB](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/)
 
 ## [Pip](https://pypi.org/project/pip/) install
 

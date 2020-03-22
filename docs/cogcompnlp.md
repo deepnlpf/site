@@ -9,23 +9,24 @@ CogComp-NLP provides a suite of state-of-the-art Natural Language Processing (NL
 [Demo Online](http://macniece.seas.upenn.edu:4004/) <br/>
 [Github](https://github.com/CogComp) <br/>
 
-## Install Plugin
+> Under construction!
 
-### Command line installation. <br/>
-```deepnlpf cli.py install-plugin cogcompnlp```
+> Requires internet connection to function.
 
-### Manual Installation
+# Install Plugin
 
-## Supported Analytics
+    $ deepnlpf --install cogcompnlp
 
-```SHALLOW_PARSE```
-```NER_ONTONOTES```
-```SRL_NOM```
-```SRL_VERB```
-```SRL_PREP```
+# Pipeline
 
-> Yes run. Missing offline.
-
-<a href="" target="_blank">
-    <img src="" data-canonical-src="" width="170" height="60" />
-</a>
+```
+{
+    "tools": [
+        {
+            "cogcomp": {
+                "pipeline": ["SRL_NOM", "SRL_VERB", "SRL_PREP"]
+            }
+        }
+    ]
+}
+```
