@@ -9,8 +9,6 @@ CogComp-NLP provides a suite of state-of-the-art Natural Language Processing (NL
 [Demo Online](http://macniece.seas.upenn.edu:4004/) <br/>
 [Github](https://github.com/CogComp) <br/>
 
-> Under construction!
-
 > Requires internet connection to function.
 
 # Install Plugin
@@ -23,7 +21,7 @@ CogComp-NLP provides a suite of state-of-the-art Natural Language Processing (NL
 {
     "tools": [
         {
-            "cogcomp": {
+            "cogcompnlp": {
                 "pipeline": ["SRL_NOM", "SRL_VERB", "SRL_PREP"]
             }
         }

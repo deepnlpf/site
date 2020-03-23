@@ -13,8 +13,6 @@ SEMAFOR: Semantic Analysis of Frame Representations
 - [Demo Online](#)
 - [Github](https://github.com/Noahs-ARK/semafor)
 
-> Under construction!
-
 # Install Plugin
 
     $ deepnlpf --install semafor
@@ -22,8 +20,8 @@ SEMAFOR: Semantic Analysis of Frame Representations
 # Pipeline
 ```
 {
-    "corpus_id": "",
     "lang": "en",
+    "threads": 4,
     "tools": [
         {
             "semafor": {

@@ -101,7 +101,9 @@ class Index extends React.Component {
         className="productShowcaseSection paddingBottom"
         style={{textAlign: 'center'}}>
         <h2>Features</h2>
-        <MarkdownBlock>...</MarkdownBlock>
+        <MarkdownBlock>
+          Know the main features of the DeepNLP framework.
+        </MarkdownBlock>
       </div>
     );
 
@@ -126,7 +128,7 @@ class Index extends React.Component {
               'DeepNLPF has a very simple solution for you to use natural language processing in your web, mobile or desktop application reducing the computational cost. Using the API we have provided you make this hard work for us and consume only the results of the analysis that interests you.',
             image: `${baseUrl}img/api.png`,
             imageAlign: 'right',
-            title: 'API RESTFul',
+            title: 'API',
           },
         ]}
       </Block>
@@ -169,7 +171,7 @@ class Index extends React.Component {
           },
           {
             content: 'DeepNLPF includes parallel processing strategies and multithreads to ensure maximum performance. Through the approach taken it is possible to process extremely large texts.',
-            image: `${baseUrl}img/cloud_servers.jpg`,
+            image: `${baseUrl}img/parallell-pipeline.svg`,
             imageAlign: 'top',
             title: 'Parallel Processing',
           },
