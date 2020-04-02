@@ -1,5 +1,10 @@
 # UserGuide
 
+# Create project anaconda
+
+    $ conda create -n deepnlpfsite python=3.5 anaconda
+    $ conda activate deepnlpfsite
+
 # Run
     cd website
     npm start
@@ -11,4 +16,4 @@
 # Publish the Site
 - [Tutorial Publish the Site](https://docusaurus.io/docs/en/next/tutorial-publish-site)
     
-       GIT_USER=rodriguesfas CURRENT_BRANCH=master npm run publish-gh-pages
+    GIT_USER=rodriguesfas CURRENT_BRANCH=master npm run publish-gh-pages
