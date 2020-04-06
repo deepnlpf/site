@@ -3,7 +3,7 @@ id: api
 title: API REST
 ---
 
-DeepNLPF has a REST API that allows you to use its services through POS, GET, PUT and DELETE requests. This makes it possible for applications running on low performance computers to take advantage of this technology, leaving the processing overhead to the server.
+DeepNLPF has a HTTP RESTful that allows you to use its services through POS, GET, PUT and DELETE requests. This makes it possible for applications running on low performance computers to take advantage of this technology, leaving the processing overhead to the server.
 
 ## Start Service
 The following command is required to start the service.

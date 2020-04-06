@@ -71,15 +71,16 @@
       },
       "wordnet": {
         "title": "WordNet"
+      },
+      "worldwide": {
+        "title": "worldwide"
       }
     },
     "links": {
-      "Docs": "Docs",
-      "Plugins": "Plugins",
+      "DOC": "DOC",
+      "PLUGIN": "PLUGIN",
       "API": "API",
-      "Demo": "Demo",
-      "Help": "Help",
-      "Blog": "Blog"
+      "HELP": "HELP"
     },
     "categories": {
       "About": "About",

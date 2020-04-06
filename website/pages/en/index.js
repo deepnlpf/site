@@ -107,14 +107,46 @@ class Index extends React.Component {
       </div>
     );
 
-    const DeepBot = () => (
+    const Features = () => (
+      <Block layout="fourColumn">
+        {[
+          {
+            content: 'DeepNLPF provides a component for integrating and customizing linguistic analysis. When building Plugins, you can add any PLN tool, regardless of the programming language in which it was created.',
+            image: `${baseUrl}img/pipeline.png`,
+            imageAlign: 'top',
+            title: 'Custom Pipeline',
+          },
+          {
+            content: 'DeepNLPF includes parallel processing strategies and multithreads to ensure maximum performance. Through the approach taken it is possible to process extremely large texts.',
+            image: `${baseUrl}img/parallell-pipeline.svg`,
+            imageAlign: 'top',
+            title: 'Parallel Processing',
+          },
+        ]}
+      </Block>
+    );
+
+    const LearnHow = () => (
+      <Block background="light">
+        {[
+          {
+            content: 'DeepNLPF contains a DashBoard that allows you to view and process textual data without writing any lines of code and with few settings, choosing from various linguistic analyzes coming from a number of successful PLN tools.',
+            image: `${baseUrl}img/dashboard.png`,
+            imageAlign: 'right',
+            title: 'DashBoard',
+          },
+        ]}
+      </Block>
+    );
+
+    const Plugins = () => (
       <Block id="try">
         {[
           {
-            content: "You don't have to spend hours shipping the computer waiting for your dataset to finish processing. Deepbot is responsible for keeping you informed about everything that happens during processing, you are the one who chooses the best way that it can do this, either through (Telegram, Email, Desktop Notifications or even by voice). What's up! liked? Take your time to relax, let DeepBot take care of everything for you.",
-            image: `${baseUrl}img/bot_notification.png`,
+            content: "DeepNLPF has a flexible plugin architecture, allowing the integration of various third party PLN tools, regardless of the programming language in which it was built, it can be integrated into the analysis pipeline.",
+            image: `${baseUrl}img/plugins22.png`,
             imageAlign: 'left',
-            title: 'DeepBot',
+            title: 'Plugin in Play',
           },
         ]}
       </Block>
@@ -134,46 +166,27 @@ class Index extends React.Component {
       </Block>
     );
 
-    const Plugins = () => (
+    const DeepBot = () => (
       <Block id="try">
         {[
           {
-            content: "DeepNLPF has a flexible plugin architecture, allowing the integration of various third party PLN tools, regardless of the programming language in which it was built, it can be integrated into the analysis pipeline.",
-            image: `${baseUrl}img/plugins22.png`,
+            content: "You don't have to spend hours shipping the computer waiting for your dataset to finish processing. Deepbot is responsible for keeping you informed about everything that happens during processing, you are the one who chooses the best way that it can do this, either through (Telegram, Email, Desktop Notifications or even by voice). What's up! liked? Take your time to relax, let DeepBot take care of everything for you.",
+            image: `${baseUrl}img/bot_notification.png`,
             imageAlign: 'left',
-            title: 'Plugin in Play',
+            title: 'DeepBot',
           },
         ]}
       </Block>
     );
 
-    const LearnHow = () => (
-      <Block background="light">
+    const Benchmarks = () => ( //dark
+      <Block background="light"> 
         {[
           {
-            content: 'DeepNLPF contains a DashBoard that allows you to view and process textual data without writing any lines of code and with few settings, choosing from various linguistic analyzes coming from a number of successful PLN tools.',
-            image: `${baseUrl}img/dashboard.png`,
+            content: 'We evaluated DeepNLPF by running a set of NLP tools with some linguistic analysis. We realized that when these tools are instantiated from DeepNLPF we have a reduced execution time, due to the processing strategies (multithreads and parallelism) applied.',
+            image: `${baseUrl}img/evaluated.png`,
             imageAlign: 'right',
-            title: 'DashBoard',
-          },
-        ]}
-      </Block>
-    );
-
-    const Features = () => (
-      <Block layout="fourColumn">
-        {[
-          {
-            content: 'DeepNLPF provides a component for integrating and customizing linguistic analysis. When building Plugins, you can add any PLN tool, regardless of the programming language in which it was created.',
-            image: `${baseUrl}img/pipeline.png`,
-            imageAlign: 'top',
-            title: 'Custom Pipeline',
-          },
-          {
-            content: 'DeepNLPF includes parallel processing strategies and multithreads to ensure maximum performance. Through the approach taken it is possible to process extremely large texts.',
-            image: `${baseUrl}img/parallell-pipeline.svg`,
-            imageAlign: 'top',
-            title: 'Parallel Processing',
+            title: 'Benchmarks',
           },
         ]}
       </Block>
@@ -218,6 +231,7 @@ class Index extends React.Component {
           <Plugins />
           <API />
           <DeepBot />
+          <Benchmarks />
         </div>
       </div>
     );

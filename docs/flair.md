@@ -19,6 +19,13 @@ A very simple framework for state-of-the-art NLP. Developed by Humboldt Universi
 
     $ deepnlpf --install flair
 
+# [Suport Language](https://github.com/flairNLP/flair#comparison-with-state-of-the-art)
+
+English: ```en``` <br/>
+German: ```de``` <br/>
+Dutch: ``` ``` <br/>
+Polish: ``` ``` <br/>
+
 # Pipeline
 ```
 {
@@ -26,13 +33,9 @@ A very simple framework for state-of-the-art NLP. Developed by Humboldt Universi
         {
             "flair": {
                 "pipeline": [
-                    "pos",
-                    "tag",
-                    "shape",
-                    "is_alpha",
-                    "is_title",
-                    "like_num",
-                    "label"
+                    "tokenizer",
+                    "postag",
+                    "semantic_frame"
                 ]
             }
         }
