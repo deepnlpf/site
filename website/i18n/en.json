@@ -10,10 +10,16 @@
         "sidebar_label": "What is DeepNLPF?"
       },
       "api": {
-        "title": "API REST"
+        "title": "API RESTful"
       },
       "benchmarking": {
-        "title": "Stude Profile"
+        "title": "Benchmarking"
+      },
+      "cite": {
+        "title": "Published"
+      },
+      "cli": {
+        "title": "CLI Commands"
       },
       "cogcompnlp": {
         "title": "CogCompNLP"
@@ -27,6 +33,9 @@
       "dashboard": {
         "title": "DashBoard"
       },
+      "donate": {
+        "title": "Donate"
+      },
       "flair": {
         "title": "Flair"
       },
@@ -37,7 +46,7 @@
         "title": "How to begin?"
       },
       "install": {
-        "title": "How to install?"
+        "title": "Installation"
       },
       "opensesame": {
         "title": "Open Sesame"
@@ -77,18 +86,15 @@
       }
     },
     "links": {
-      "DOC": "DOC",
+      "ABOUT": "ABOUT",
+      "GUIDE": "GUIDE",
       "PLUGINS": "PLUGINS",
-      "API": "API",
       "HELP": "HELP"
     },
     "categories": {
-      "About": "About",
       "Install": "Install",
       "User Guide": "User Guide",
-      "Benchmarking": "Benchmarking",
-      "API": "API",
-      "DashBoard": "DashBoard",
+      "About": "About",
       "Welcome": "Welcome",
       "CogCompNLP": "CogCompNLP",
       "Flair": "Flair",

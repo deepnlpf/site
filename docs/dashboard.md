@@ -3,20 +3,15 @@ id: dashboard
 title: DashBoard
 ---
 
+> Under construction!
+
 DeepNLPF DashBoard makes it possible to use its resources through a GUI. As such, it is not necessary to write any line of code to test the tools integrated into the framework.
 
 ## Start Client DashBoard
-Run the following command to start the application.
 
-    $ deepnlpf --dasboard start
-
-By accessing the address: http://127.0.0.1:5001/ you will see a screen.
+[Download](https://github.com/deepnlpf/dashboard.git) the dashboard and open the ```index.html``` file in your browser.
 
 ![DashBoard DeepNLPF Online](https://deepnlpf.github.io/site/img/dashboard_online.png)
-
-## Stop Client DashBoard
-
-    Press CTRL+C to quit
 
 ## Menu Annotation
 

@@ -1,6 +1,6 @@
 ---
 id: install
-title: How to install?
+title: Installation
 ---
 
 <div align="center">

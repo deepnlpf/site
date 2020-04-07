@@ -36,11 +36,11 @@ const siteConfig = {
 
     // For no header links in the top nav bar -> headerLinks: [],
     headerLinks: [
-        { doc: 'about', label: 'DOC' },
+        { doc: 'about', label: 'ABOUT' },
+        { doc: 'install', label: 'GUIDE' },
         { doc: 'plugins', label: 'PLUGINS' },
-        { doc: 'api', label: 'API' },
-        //{ page: 'demo', label: 'DEMO' },
         { page: 'help', label: 'HELP' },
+        //{ page: 'demo', label: 'DEMO' },
         //{ blog: true, label: 'BLOG' },
         //{ page: 'worldwide', label: 'WORLDWIDE' },
     ],
@@ -60,18 +60,16 @@ const siteConfig = {
     },
 
     /* Custom fonts for website */
-    /*
     fonts: {
-      myFont: [
-        "Times New Roman",
-        "Serif"
-      ],
-      myOtherFont: [
-        "-apple-system",
-        "system-ui"
-      ]
+        myFont: [
+            "Times New Roman",
+            "Serif"
+        ],
+        myOtherFont: [
+            "-apple-system",
+            "system-ui"
+        ]
     },
-    */
 
     // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
     copyright: `Copyright © ${new Date().getFullYear()} DeepNLPF.`,

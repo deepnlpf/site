@@ -1,15 +1,32 @@
 {
     "docs": {
-        "About": ["about"],
         "Install": ["install"],
-        "User Guide": ["guide"],
-        "Benchmarking": ["benchmarking"]
+        "User Guide": [
+            "guide", {
+                "type": "subcategory",
+                "ids": [
+                    "guide",
+                    "cli",
+                    "api",
+                    "dashboard",
+                    "benchmarking"
+                ]
+            }
+        ]
     },
-    "docs-other": {
-        "API": ["api"],
-        "DashBoard": ["dashboard"]
+    "docs-about": {
+        "About": [
+            "about", {
+                "type": "subcategory",
+                "ids": [
+                    "about",
+                    "donate",
+                    "cite"
+                ]
+            }
+        ]
     },
-    "dosc-plugins": {
+    "docs-plugins": {
         "Welcome": ["plugins"],
         "CogCompNLP": ["cogcompnlp"],
         "Flair": ["flair"],

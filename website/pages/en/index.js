@@ -181,19 +181,6 @@ class Index extends React.Component {
       </Block>
     );
 
-    const Benchmarks = () => ( //dark
-      <Block background="light"> 
-        {[
-          {
-            content: 'We evaluated DeepNLPF by running a set of NLP tools with some linguistic analysis. We realized that when these tools are instantiated from DeepNLPF we have a reduced execution time, due to the processing strategies (multithreads and parallelism) applied.',
-            image: `${baseUrl}img/evaluated.png`,
-            imageAlign: 'right',
-            title: 'Benchmarks',
-          },
-        ]}
-      </Block>
-    );
-
     const Showcase = () => {
       if ((siteConfig.users || []).length === 0) {
         return null;
@@ -233,7 +220,6 @@ class Index extends React.Component {
           <Plugins />
           <API />
           <DeepBot />
-          <Benchmarks />
         </div>
       </div>
     );
