@@ -35,6 +35,13 @@ For DeepNLPF to work it needs a natural language processing tool at its base tha
 
 > Comming soon.
 
+## From Source
+Alternatively, you can also install from source via DeepNLPF git repository, which will give you more flexibility in developing on top of DeepNLPF. For this option, run.
+
+        $ git clone https://github.com/deepnlpf/deepnlpf.git
+        $ cd deepnlpf
+        $ pip install -e .
+
 ## Virtual Machine
 
 > Comming soon.
