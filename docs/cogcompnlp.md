@@ -16,17 +16,44 @@ CogComp-NLP provides a suite of state-of-the-art Natural Language Processing (NL
 
     $ deepnlpf --install cogcompnlp
 
+## Suport Language
+
+English: ```en``` <br/>
+
 ## Pipeline
 
 ```
 {
+    "lang": "en",
     "tools": [
         {
             "cogcompnlp": {
                 "pipeline": [
-                    "SRL_NOM", 
-                    "SRL_VERB", 
-                    "SRL_PREP"
+                        "POS", 
+                        "LEMMA", 
+                        "SHALLOW_PARSE", 
+                        "DEP", 
+                        "NER_CONLL", 
+                        "NER_ONTONOTES",
+                        "STANFORD_PARSE", 
+                        "STANFORD_DEP", 
+                        "SRL_VERB", 
+                        "SRL_NOM", 
+                        "SRL_PREP", 
+                        "SRL_COMMA",
+                        "QUANTIFIER", 
+                        "VERB_SENSE", 
+                        "RELATION",
+                        "LAZY_INITIALIZATION",
+                        "SRL_INTERNAL_PREPROCESSOR", 
+                        "SPLIT_ON_DASH",
+						"SENTENCE_PIPELINE", 
+                        "TIMEX3", 
+                        "MENTION", 
+                        "TRANSLITERATION",
+                        "DATALESS_ESA", 
+                        "DATALESS_W2V", 
+                        "QUESTION_TYPER"
                     ]
             }
         }

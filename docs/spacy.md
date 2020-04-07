@@ -13,18 +13,23 @@ Industrial-Strength Natural Language Processing.
 - [Demo Online](#)
 - [Github](#)
 
-# Install SpaCy
+## Install SpaCy
 
     $ pip install -U spacy
     $ python -m spacy download en_core_web_sm
 
-# Install Plugin
+## Install Plugin
 
     $ deepnlpf --install spacy
 
-# Pipeline
+## Suport Language
+
+English: ```en``` <br/>
+
+## Pipeline
 ```
 {
+    "lang": "en",
     "tools": [
         {
             "spacy": {

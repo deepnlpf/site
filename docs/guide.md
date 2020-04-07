@@ -3,10 +3,25 @@ id: guide
 title: How to begin?
 ---
 
-DeepNLPF has three uses. <br>
-- <b>CLI Commands</b>: use through command line interface. <br>
-- <b>API RESTFul</b>: allows the creation of applications using the resources of the framework. <br>
-- <b>DashBoard</b>: allows the use of the framework through a graphical interface. <br>
+For DeepNLPF to work, it needs a natural language processing tool. It works with [Stanza](https://stanfordnlp.github.io/stanza) or [Stanford CoreNLP](https://stanfordnlp.github.io/CoreNLP/). Install one of the bases to get started.
+
+## Install Stanza NLP Tool Base
+
+By default we use Stanza as a base NLP tool. Therefore, it is necessary to install language modules. In this case we will install the English language. If you need another language, see which ones are available [here](https://stanfordnlp.github.io/stanza/models.html#human-languages-supported-by-stanza).
+
+    $ pip install stanza
+    $ python -c "import stanza; stanza.download('en')" # download English model.
+    $ deepnlpf --install stanza #install wrapper stanza.
+
+## Install Stanford CoreNLP Tool Base
+
+However, if you prefer you can also use Stanford CoreNLP as a base. To do this, simply execute the command on the terminal. If not, skip this step.
+        
+    $ deepnlpf --install stanfordcorenlp
+
+Now that you have Stanford CoreNLP installed, when you want to use it as a base plugin, use the ```plugin_base``` parameter.
+
+    $ nlp = Pipeline(plugin_base='stanfordcorenlp' , raw_text=sentences, json_string=custom_pipeline_string)
 
 ## Getting Started
 
@@ -15,18 +30,16 @@ To see DeepNLPF custom pipeline in action, you can launch the Python interactive
     >>> from deepnlpf.pipeline import Pipeline
     >>> custom_pipeline = """
         {
+            "lang": "en",
             "tools": [{
-                "stanfordcorenlp": {
+                "stanza": {
                     "pipeline": [
                         "tokenize",
-                        "ssplit",
+                        "mwt",
                         "pos",
                         "lemma",
                         "ner",
-                        "parse",
-                        "depparse",
-                        "truecase",
-                        "dcoref"
+                        "depparse"
                     ]
                 }
             }]
@@ -47,6 +60,8 @@ or indented
     >>> import json
     >>> print(json.dumps(annotation, indent=4))
 
-## Install Plugins
+## Custom Pipeline
+
+## Install Others Plugins
 
 More Plugins, cccess the [official plugin repository](https://deepnlpf.github.io/site/docs/plugins) and try out other NLP tools.

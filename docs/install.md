@@ -42,11 +42,11 @@ If you prefer, download and install the dependencies from our [script](https://g
 
     $ bash install_requeriments_deepnlpf.sh
 
-## Pip install
+## Pip
 
     $ pip install deepnlpframework
 
-## Anaconda install
+## Anaconda
 
 > Comming soon.
 
@@ -61,16 +61,6 @@ Alternatively, you can also install from source via DeepNLPF git repository, whi
 
 > Comming soon.
 
-## Docker install
+## Docker
 
 > Comming soon.
-
-## Install Tool NLP Base
-
-For DeepNLPF to work it needs a natural language processing tool at its base that we take from [Stanza](https://stanfordnlp.github.io/stanza/). However, you can use Stanford CoreNLP as a base. To do this, simply execute the command in the terminal.
-        
-    $ deepnlpf --install stanfordcorenlp
-
-Now that you have Stanford CoreNLP installed, when you want to use it as a base plugin, use the ```plugin_base``` parameter.
-
-    $ nlp = Pipeline(plugin_base='stanfordcorenlp' , raw_text=sentences, json_string=custom_pipeline_string)

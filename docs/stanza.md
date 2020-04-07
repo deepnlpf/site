@@ -12,13 +12,20 @@ Stanza is a Python natural language analysis package. It contains tools, which c
 - [Site Oficial](https://stanfordnlp.github.io/stanza/)
 - [Github](https://github.com/stanfordnlp/stanza)
 
-# Install Plugin
+## Install Plugin
 
     $ deepnlpf --install stanza
+    $ python stanza.download('en') #download English model
+    $ deepnlpf --install stanza #install wrapper stanza
 
-# Pipeline
+## Suport Language
+
+English: ```en``` <br/>
+
+## Pipeline
 ```
 {
+    "lang": "en",
     "tools": [{
         "stanza": {
             "pipeline": [

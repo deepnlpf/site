@@ -15,28 +15,34 @@ Here you can find information about FreeLing, an open source language analysis t
 
 > Under construction!
 
-# Install FreeLing NLP
+## Install FreeLing NLP
 
     $ 
 
-# Install Plugin
+## Install Plugin
 
     $ deepnlpf --install freeling
 
-# Pipeline
-```
-{
-    "tools": [{
-        "freeling": {
-            "pipeline": [
-                "wsd",
-                "svo_triples_srl",
-                "wordnet_sumo"
-            ]
-        }
-    }]
-}
-```
+## Suport Language
+
+English: ```en``` <br/>
+
+## Pipeline
+
+    ```
+    {
+        "lang": "en",
+        "tools": [{
+            "freeling": {
+                "pipeline": [
+                    "wsd",
+                    "svo_triples_srl",
+                    "wordnet_sumo"
+                ]
+            }
+        }]
+    }
+    ```
 
 
 

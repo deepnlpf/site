@@ -14,13 +14,18 @@ Stanford CoreNLP provides a set of human language technology tools. It can give 
 - [Demo Online](https://corenlp.run/)
 - [Github](https://github.com/stanfordnlp/CoreNLP)
 
-# Install Plugin
+## Install Plugin
 
     $ deepnlpf --install stanfordcorenlp
 
-# Pipeline
+## Suport Language
+
+English: ```en``` <br/>
+
+## Pipeline
 ```
 {
+    "lang": "en",
     "tools": [{
         "stanfordcorenlp": {
             "pipeline": [

@@ -9,11 +9,15 @@ title: WordNet
 
 > Under construction!
 
-# Install Plugin
+## Install Plugin
 
     $ deepnlpf --install 
 
-# Pipeline
+## Suport Language
+
+English: ```en``` <br/>
+
+## Pipeline
 ```
 
 ```

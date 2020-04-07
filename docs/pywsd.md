@@ -15,13 +15,18 @@ Python Implementations of Word Sense Disambiguation (WSD) Technologies.
 
 > Under construction!
 
-# Install Plugin
+## Install Plugin
 
     $ deepnlpf --install pywsd
 
-# Pipeline
+## Suport Language
+
+English: ```en``` <br/>
+
+## Pipeline
 ```
 {
+    "lang": "en",
     "tools": [
         {
             "pywsd": {

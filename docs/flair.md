@@ -11,24 +11,25 @@ A very simple framework for state-of-the-art NLP. Developed by Humboldt Universi
 
 - [Github](https://github.com/flairNLP/flair)
 
-# Install Flayr
+## Install Flayr
 
     $ pip install flair
 
-# Install Plugin
+## Install Plugin
 
     $ deepnlpf --install flair
 
-# [Suport Language](https://github.com/flairNLP/flair#comparison-with-state-of-the-art)
+## [Suport Language](https://github.com/flairNLP/flair#comparison-with-state-of-the-art)
 
 English: ```en``` <br/>
 German: ```de``` <br/>
 Dutch: ``` ``` <br/>
 Polish: ``` ``` <br/>
 
-# Pipeline
+## Pipeline
 ```
 {
+    "lang": "en",
     "tools": [
         {
             "flair": {

@@ -18,13 +18,18 @@ The normal way from CRAN, using your R GUI. If you prefer to install [RStudio](h
 
     $ install.packages("quanteda") 
 
-# Install Plugin
+## Install Plugin
 
     $ deepnlpf --install quanteda
 
-# Pipeline
+## Suport Language
+
+English: ```en``` <br/>
+
+## Pipeline
 ```
 {
+    "lang": "en",
     "tools": [
         {
             "quanteda": {

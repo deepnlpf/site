@@ -5,6 +5,8 @@ title: CLI Commands
 
 > Under construction!
 
+<b>CLI Commands</b>: use through command line interface. <br>
+
 ### Help
     
     $ deepnlpf -h

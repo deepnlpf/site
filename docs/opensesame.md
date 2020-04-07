@@ -13,11 +13,15 @@ A frame-semantic parsing system based on a softmax-margin SegRNN.
 
 > Under construction!
 
-# Install Plugin
+## Install Plugin
 
     $ deepnlpf --install opensesame
 
-# Pipeline
+## Suport Language
+
+English: ```en``` <br/>
+
+## Pipeline
 ```
 {
     "lang": "en",

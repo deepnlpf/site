@@ -6,7 +6,7 @@ title: API RESTful
 DeepNLPF has a HTTP RESTful that allows you to use its services through POS, GET, PUT and DELETE requests. This makes it possible for applications running on low performance computers to take advantage of this technology, leaving the processing overhead to the server.
 
 ## Start Service
-The following command is required to start the service.
+To run the API, you must have DeePNLPF installed. The following command is required to start the service.
 
     $ deepnlpf --api start
 
@@ -18,7 +18,9 @@ By accessing the address: ```http://127.0.0.1:5000/``` you will see a screen lik
 
     Press CTRL+C to quit
 
-## Postman
+## Documentation Postman
+
+Consult the documentation to learn how HTTP requests work.  
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://documenter.getpostman.com/view/2943437/SVSGMq2A)
 

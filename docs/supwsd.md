@@ -15,17 +15,22 @@ Python Implementations of Word Sense Disambiguation (WSD) Technologies.
 
 > Under construction!
 
-# Install supWSD
+## Install supWSD
 
     $ pip install supwsd
 
-# Install Plugin
+## Install Plugin
 
     $ deepnlpf --install supwsd
 
-# Pipeline
+## Suport Language
+
+English: ```en``` <br/>
+
+## Pipeline
 ```
 {
+    "lang": "en",
     "tools": [
         {
             "supwsd": {
