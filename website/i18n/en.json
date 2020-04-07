@@ -24,8 +24,8 @@
       "cogcompnlp": {
         "title": "CogCompNLP"
       },
-      "configuration": {
-        "title": "What should I configure?"
+      "configurations": {
+        "title": "Configurations"
       },
       "credits": {
         "title": "Some thanks!"
@@ -95,18 +95,7 @@
       "Install": "Install",
       "User Guide": "User Guide",
       "About": "About",
-      "Welcome": "Welcome",
-      "CogCompNLP": "CogCompNLP",
-      "Flair": "Flair",
-      "FreeLing": "FreeLing",
-      "PyWSD": "PyWSD",
-      "Quanteda": "Quanteda",
-      "SupWSD": "SupWSD",
-      "Stanza": "Stanza",
-      "Stanford CoreNLP": "Stanford CoreNLP",
-      "SEMAFOR": "SEMAFOR",
-      "SpaCy": "SpaCy",
-      "WordNet": "WordNet"
+      "Plugin Repositories": "Plugin Repositories"
     }
   },
   "pages-strings": {

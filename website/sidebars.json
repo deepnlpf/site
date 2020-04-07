@@ -9,6 +9,7 @@
                     "cli",
                     "api",
                     "dashboard",
+                    "configurations",
                     "benchmarking"
                 ]
             }
@@ -27,17 +28,23 @@
         ]
     },
     "docs-plugins": {
-        "Welcome": ["plugins"],
-        "CogCompNLP": ["cogcompnlp"],
-        "Flair": ["flair"],
-        "FreeLing": ["freeling"],
-        "PyWSD": ["pywsd"],
-        "Quanteda": ["quanteda"],
-        "SupWSD": ["supwsd"],
-        "Stanza": ["stanza"],
-        "Stanford CoreNLP": ["stanfordcorenlp"],
-        "SEMAFOR": ["semafor"],
-        "SpaCy": ["spacy"],
-        "WordNet": ["wordnet"]
+        "Plugin Repositories": [
+            "plugins", {
+                "type": "subcategory",
+                "ids": [
+                    "cogcompnlp",
+                    "flair",
+                    "freeling",
+                    "pywsd",
+                    "quanteda",
+                    "supwsd",
+                    "stanza",
+                    "stanfordcorenlp",
+                    "semafor",
+                    "spacy",
+                    "wordnet"
+                ]
+            }
+        ]
     }
 }

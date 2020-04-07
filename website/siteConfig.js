@@ -40,6 +40,7 @@ const siteConfig = {
         { doc: 'install', label: 'GUIDE' },
         { doc: 'plugins', label: 'PLUGINS' },
         { page: 'help', label: 'HELP' },
+        { search: true },
         //{ page: 'demo', label: 'DEMO' },
         //{ blog: true, label: 'BLOG' },
         //{ page: 'worldwide', label: 'WORLDWIDE' },
@@ -84,6 +85,7 @@ const siteConfig = {
 
     // On page navigation for the current documentation page.
     onPageNav: 'separate',
+
     // No .html extensions for paths.
     cleanUrl: true,
 
@@ -100,6 +102,13 @@ const siteConfig = {
     // You may provide arbitrary config keys to be used as needed by your
     // template. For example, if you need your repo's URL...
     //   repoUrl: 'https://github.com/facebook/test-site',
+
+    algolia: {
+        apiKey: 'minha-chave-de-api',
+        indexName: 'nome-do-meu-indice',
+        algoliaOptions: {} // Opcional, caso o Algolia ofereça isso
+    },
+
 };
 
 module.exports = siteConfig;

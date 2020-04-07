@@ -12,11 +12,11 @@ CogComp-NLP provides a suite of state-of-the-art Natural Language Processing (NL
 
 > Requires internet connection to function.
 
-# Install Plugin
+## Install Plugin
 
     $ deepnlpf --install cogcompnlp
 
-# Pipeline
+## Pipeline
 
 ```
 {
