@@ -3,10 +3,7 @@
         "About": ["about"],
         "Install": ["install"],
         "User Guide": ["guide"],
-        "Benchmarking": ["benchmarking"],
-        "Cite": ["cite"],
-        "Credits": ["credits"],
-        "TUDO": ["tudo"]
+        "Benchmarking": ["benchmarking"]
     },
     "docs-other": {
         "API": ["api"],
@@ -15,10 +12,12 @@
     "dosc-plugins": {
         "Welcome": ["plugins"],
         "CogCompNLP": ["cogcompnlp"],
+        "Flair": ["flair"],
         "FreeLing": ["freeling"],
         "PyWSD": ["pywsd"],
         "Quanteda": ["quanteda"],
         "SupWSD": ["supwsd"],
+        "Stanza": ["stanza"],
         "Stanford CoreNLP": ["stanfordcorenlp"],
         "SEMAFOR": ["semafor"],
         "SpaCy": ["spacy"],

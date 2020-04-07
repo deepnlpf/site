@@ -10,5 +10,9 @@
   },
   "devDependencies": {
     "docusaurus": "^1.14.4"
+  },
+  "dependencies": {
+    "json": "^9.0.6",
+    "package.json": "^2.0.1"
   }
 }

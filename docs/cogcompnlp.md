@@ -23,7 +23,11 @@ CogComp-NLP provides a suite of state-of-the-art Natural Language Processing (NL
     "tools": [
         {
             "cogcompnlp": {
-                "pipeline": ["SRL_NOM", "SRL_VERB", "SRL_PREP"]
+                "pipeline": [
+                    "SRL_NOM", 
+                    "SRL_VERB", 
+                    "SRL_PREP"
+                    ]
             }
         }
     ]

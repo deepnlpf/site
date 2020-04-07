@@ -11,6 +11,13 @@ Nowadays companies are implementing new business models that depend heavily on N
 
 ## Pipeline
 
+## Cite Published
+
+    {}
+
+## Donate
+[Donate](#) now to support our projects.
+
 ## Developed With
 
 <div>

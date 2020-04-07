@@ -3,6 +3,23 @@ id: install
 title: How to install?
 ---
 
+<div align="center">
+    <a href="#">
+        <img alt="License" src="https://img.shields.io/github/license/deepnlpf/deepnlpf">
+    </a>
+    <a href="https://pypi.org/project/deepnlpframework/">
+        <img alt="PyPI Version" src="https://img.shields.io/pypi/v/deepnlpframework?color=blue">
+    </a>
+    <a href="https://anaconda.org/deepnlpframework">
+        <img alt="Conda Versions" src="https://img.shields.io/conda/vn/deepnlpframework?color=blue&label=conda">
+    </a>
+    <a href="https://pypi.org/project/deepnlpframework/">
+        <img alt="Python Versions" src="https://img.shields.io/pypi/pyversions/deepnlpframework?colorB=blue">
+    </a>
+</div>
+
+<br>
+
 DeepNLPF has been implemented and tested using the [Ubuntu](https://ubuntu.com/) 19.04 operating system. However, it may work on other similar linux versions or Windows and MacOS if it satisfies the dependencies on external NLP tools mentioned below "at your own risk".
 
 ## System requirements
@@ -15,23 +32,21 @@ DeepNLPF has been implemented and tested using the [Ubuntu](https://ubuntu.com/)
 * [Ubuntu 19.04](https://ubuntu.com/) (64-bit).
 * [Intall Python 3.7](https://linuxize.com/post/how-to-install-python-3-7-on-ubuntu-18-04/) 
 * [Install Java 8](https://tecadmin.net/install-oracle-java-8-ubuntu-via-ppa/)
-* [Intall MongoDB](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/)
+* [Install MongoDB](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/)
 
-If you prefer, download and install the dependencies from our [script](https://github.com/deepnlpf/scripts-install/blob/master/script/install_requeriments_deepnlpf.sh).
+To install the system dependencies, execute the command in the terminal.
 
-        $ bash install_requeriments_deepnlpf.sh
+    $ bash <(curl -Ss https://github.com/deepnlpf/deepnlpf/blob/master/install_requeriments_system.sh)
 
-## [Pip](https://pypi.org/project/pip/) install
+If you prefer, download and install the dependencies from our [script](https://github.com/deepnlpf/deepnlpf/blob/master/install_requeriments_system.sh).
 
-        $ pip install deepnlpframework
+    $ bash install_requeriments_deepnlpf.sh
 
-## Install plugin base
+## Pip install
 
-For DeepNLPF to work it needs a natural language processing tool at its base that we take from Stanford CoreNLP.
-        
-        $ deepnlpf --install stanfordcorenlp
+    $ pip install deepnlpframework
 
-## [Anaconda](https://www.anaconda.com/) install
+## Anaconda install
 
 > Comming soon.
 
@@ -50,3 +65,12 @@ Alternatively, you can also install from source via DeepNLPF git repository, whi
 
 > Comming soon.
 
+## Install Tool NLP Base
+
+For DeepNLPF to work it needs a natural language processing tool at its base that we take from [Stanza](https://stanfordnlp.github.io/stanza/). However, you can use Stanford CoreNLP as a base. To do this, simply execute the command in the terminal.
+        
+    $ deepnlpf --install stanfordcorenlp
+
+Now that you have Stanford CoreNLP installed, when you want to use it as a base plugin, use the ```plugin_base``` parameter.
+
+    $ nlp = Pipeline(plugin_base='stanfordcorenlp' , raw_text=sentences, json_string=custom_pipeline_string)

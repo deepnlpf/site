@@ -47,7 +47,7 @@ or indented
     >>> import json
     >>> print(json.dumps(annotation, indent=4))
 
-## More lugins
+## More Plugins
 
 Access the [official plugin repository](https://deepnlpf.github.io/site/docs/plugins) and try out other NLP tools.
 

@@ -15,9 +15,6 @@
       "benchmarking": {
         "title": "Stude Profile"
       },
-      "cite": {
-        "title": "Published"
-      },
       "cogcompnlp": {
         "title": "CogCompNLP"
       },
@@ -63,6 +60,9 @@
       "stanfordcorenlp": {
         "title": "Stanford CoreNLP"
       },
+      "stanza": {
+        "title": "Stanza"
+      },
       "supwsd": {
         "title": "SupWSD"
       },
@@ -78,7 +78,7 @@
     },
     "links": {
       "DOC": "DOC",
-      "PLUGIN": "PLUGIN",
+      "PLUGINS": "PLUGINS",
       "API": "API",
       "HELP": "HELP"
     },
@@ -87,17 +87,16 @@
       "Install": "Install",
       "User Guide": "User Guide",
       "Benchmarking": "Benchmarking",
-      "Cite": "Cite",
-      "Credits": "Credits",
-      "TUDO": "TUDO",
       "API": "API",
       "DashBoard": "DashBoard",
       "Welcome": "Welcome",
       "CogCompNLP": "CogCompNLP",
+      "Flair": "Flair",
       "FreeLing": "FreeLing",
       "PyWSD": "PyWSD",
       "Quanteda": "Quanteda",
       "SupWSD": "SupWSD",
+      "Stanza": "Stanza",
       "Stanford CoreNLP": "Stanford CoreNLP",
       "SEMAFOR": "SEMAFOR",
       "SpaCy": "SpaCy",
@@ -105,6 +104,14 @@
     }
   },
   "pages-strings": {
+    "Learn more using the [documentation on this site.](/test-site/docs/en/doc1.html)|no description given": "Learn more using the [documentation on this site.](/test-site/docs/en/doc1.html)",
+    "Browse Docs|no description given": "Browse Docs",
+    "Ask questions about the documentation and project|no description given": "Ask questions about the documentation and project",
+    "Join the community|no description given": "Join the community",
+    "Find out what's new with this project|no description given": "Find out what's new with this project",
+    "Stay up to date|no description given": "Stay up to date",
+    "Need help?|no description given": "Need help?",
+    "This project is maintained by a dedicated group of people.|statement made to reader": "This project is maintained by a dedicated group of people.",
     "Help Translate|recruit community translators for your project": "Help Translate",
     "Edit this Doc|recruitment message asking to edit the doc source": "Edit",
     "Translate this Doc|recruitment message asking to translate the docs": "Translate"

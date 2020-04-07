@@ -5,6 +5,8 @@ const CompLibrary = require('../../core/CompLibrary.js');
 const Container = CompLibrary.Container;
 const GridBlock = CompLibrary.GridBlock;
 
+const translate = require('../../server/translate.js').translate;
+
 function Demo(props) {
     const { config: siteConfig, language = '' } = props;
     const { baseUrl, docsUrl } = siteConfig;
