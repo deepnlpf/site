@@ -104,8 +104,8 @@ const siteConfig = {
     //   repoUrl: 'https://github.com/facebook/test-site',
 
     algolia: {
-        apiKey: 'minha-chave-de-api',
-        indexName: 'nome-do-meu-indice',
+        apiKey: 'cdd798042f42727926000a32d08d21fe',
+        indexName: 'deepnlpf',
         algoliaOptions: {} // Opcional, caso o Algolia ofereça isso
     },
 

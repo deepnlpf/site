@@ -10,6 +10,14 @@ Nowadays companies are implementing new business models that depend heavily on N
 
 ## Pipeline
 
+## Acknowledgment
+
+<a href="https://www.capes.gov.br/" target="_blank">
+    <img src="https://deepnlpf.github.io/site/img/capes.png" data-canonical-src="https://deepnlpf.github.io/site/img/capes.png" width="100" height="70" />
+</a> CAPES for granting the scholarship; <br>
+
+to Professors Dr. Robson Fidalgo and Dr. Rinaldo Lima, for having accepted the challenge of guiding, with patience, security, always transmitted with tolerance, humility and scientific spirit.
+
 ## Developed With
 
 <div>
