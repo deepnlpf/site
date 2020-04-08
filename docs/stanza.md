@@ -18,7 +18,7 @@ Stanza is a Python natural language analysis package. It contains tools, which c
 <!--Shell--> 
 
      deepnlpf --install stanza
-     python stanza.download('en') #download English model
+     python -c "import stanza; stanza.download('en')" # download English model.
      deepnlpf --install stanza #install wrapper stanza
 
 <!--END_DOCUSAURUS_CODE_TABS-->

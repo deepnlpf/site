@@ -123,12 +123,27 @@ class Index extends React.Component {
         style={{textAlign: 'center'}}>
         <h2>Features</h2>
         <MarkdownBlock>
-          ```Multiprocessing Pathos Framework``` ```Faster Parallel Ray``` ``` ``` ``` ```
+          ```Multiprocessing Pathos Framework``` ```Faster Parallel Ray``` ```DashBoard``` ```Plugins```
+          ```Bot Notification``` ```API RESTFul``` ```CLI Commands``` ```Output Format Json XML``` ```MongoDB```
+          ``` ```
         </MarkdownBlock>
       </div>
     );
 
-    const LearnHow = () => (
+    const BoostProcessing = () => (
+      <Block id="try">
+        {[
+          {
+            content: "DeepNLPF has two approaches to optimize execution. By default we use Multiprocessing Pathos Framework, but if you prefer you can choose to use Faster Parallel Ray 10x fast as the first one.",
+            image: `${baseUrl}img/boost.png`,
+            imageAlign: 'left',
+            title: 'Boost Processing',
+          },
+        ]}
+      </Block>
+    );
+
+    const DashBoard = () => (
       <Block background="light">
         {[
           {
@@ -162,20 +177,20 @@ class Index extends React.Component {
               'DeepNLPF has a very simple solution for you to use natural language processing in your web, mobile or desktop application reducing the computational cost. Using the API we have provided you make this hard work for us and consume only the results of the analysis that interests you.',
             image: `${baseUrl}img/api.png`,
             imageAlign: 'right',
-            title: 'API',
+            title: 'API RESTFul',
           },
         ]}
       </Block>
     );
 
-    const DeepBot = () => (
+    const BotNotification = () => (
       <Block id="try">
         {[
           {
-            content: "You don't have to spend hours shipping the computer waiting for your dataset to finish processing. Deepbot is responsible for keeping you informed about everything that happens during processing, you are the one who chooses the best way that it can do this, either through (Telegram, Email, Desktop Notifications or even by voice). What's up! liked? Take your time to relax, let DeepBot take care of everything for you.",
+            content: "You don't have to spend hours shipping the computer waiting for your dataset to finish processing. BotNotification is responsible for keeping you informed about everything that happens during processing, you are the one who chooses the best way that it can do this, either through (Telegram, Email, Desktop Notifications or even by voice). What's up! liked? Take your time to relax, let BotNotification take care of everything for you.",
             image: `${baseUrl}img/bot_notification.png`,
             imageAlign: 'left',
-            title: 'DeepBot',
+            title: 'BotNotification',
           },
         ]}
       </Block>
@@ -216,10 +231,11 @@ class Index extends React.Component {
         <div className="mainContainer">
           <Features />
           <FeatureCallout />
-          <LearnHow />
+          <BoostProcessing />
+          <DashBoard />
           <Plugins />
           <API />
-          <DeepBot />
+          <BotNotification />
         </div>
       </div>
     );
