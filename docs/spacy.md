@@ -14,19 +14,30 @@ Industrial-Strength Natural Language Processing.
 - [Github](#)
 
 ## Install SpaCy
+<!--DOCUSAURUS_CODE_TABS-->
 
-    $ pip install -U spacy
-    $ python -m spacy download en_core_web_sm
+<!--Shell--> 
+     pip install -U spacy
+     python -m spacy download en_core_web_sm
+
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 ## Install Plugin
+<!--DOCUSAURUS_CODE_TABS-->
 
-    $ deepnlpf --install spacy
+<!--Shell--> 
+     deepnlpf --install spacy
+
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 ## Suport Language
 
 English: ```en``` <br/>
 
 ## Pipeline
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Json--> 
 ```
 {
     "lang": "en",
@@ -47,3 +58,4 @@ English: ```en``` <br/>
     ]
 }
 ```
+<!--END_DOCUSAURUS_CODE_TABS-->

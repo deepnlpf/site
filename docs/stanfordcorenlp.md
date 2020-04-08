@@ -15,14 +15,22 @@ Stanford CoreNLP provides a set of human language technology tools. It can give 
 - [Github](https://github.com/stanfordnlp/CoreNLP)
 
 ## Install Plugin
+<!--DOCUSAURUS_CODE_TABS-->
 
-    $ deepnlpf --install stanfordcorenlp
+<!--Shell--> 
+
+     deepnlpf --install stanfordcorenlp
+
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 ## Suport Language
 
 English: ```en``` <br/>
 
 ## Pipeline
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Json--> 
 ```
 {
     "lang": "en",
@@ -43,3 +51,4 @@ English: ```en``` <br/>
     }]
 }
 ```
+<!--END_DOCUSAURUS_CODE_TABS-->

@@ -16,17 +16,30 @@ To use [Quanteda](https://tutorials.quanteda.io/introduction/install/) on DeepNL
 
 The normal way from CRAN, using your R GUI. If you prefer to install [RStudio](https://rstudio.com/) and run the following command to install the Quanteda.
 
-    $ install.packages("quanteda") 
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--R--> 
+     install.packages("quanteda")
+
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 ## Install Plugin
+<!--DOCUSAURUS_CODE_TABS-->
 
-    $ deepnlpf --install quanteda
+<!--Python--> 
+
+     deepnlpf --install quanteda
+
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 ## Suport Language
 
 English: ```en``` <br/>
 
 ## Pipeline
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--JSON--> 
 ```
 {
     "lang": "en",
@@ -41,3 +54,4 @@ English: ```en``` <br/>
     ]
 }
 ```
+<!--END_DOCUSAURUS_CODE_TABS-->

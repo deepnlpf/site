@@ -21,8 +21,8 @@
                 "type": "subcategory",
                 "ids": [
                     "about",
-                    "donate",
-                    "cite"
+                    "cite",
+                    "donate"
                 ]
             }
         ]
@@ -35,13 +35,14 @@
                     "cogcompnlp",
                     "flair",
                     "freeling",
+                    "opensesame",
                     "pywsd",
                     "quanteda",
-                    "supwsd",
-                    "stanza",
-                    "stanfordcorenlp",
                     "semafor",
                     "spacy",
+                    "stanfordcorenlp",
+                    "stanza",
+                    "supwsd",
                     "wordnet"
                 ]
             }

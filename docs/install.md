@@ -36,35 +36,79 @@ DeepNLPF has been implemented and tested using the [Ubuntu](https://ubuntu.com/)
 
 To install the system dependencies, execute the command in the terminal.
 
-    $ bash <(curl -Ss https://github.com/deepnlpf/deepnlpf/blob/master/install_requeriments_system.sh)
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Shell--> 
+     bash <(curl -Ss https://github.com/deepnlpf/deepnlpf/blob/master/install_requeriments_system.sh)
+
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 If you prefer, download and install the dependencies from our [script](https://github.com/deepnlpf/deepnlpf/blob/master/install_requeriments_system.sh).
 
-    $ bash install_requeriments_deepnlpf.sh
+<!--DOCUSAURUS_CODE_TABS-->
 
-## Pip
+<!--Shell--> 
+     bash install_requeriments_deepnlpf.sh
 
-    $ pip install deepnlpframework
+<!--END_DOCUSAURUS_CODE_TABS-->
 
-## Anaconda
+## Pip install
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Shell--> 
+     pip install deepnlpframework
+
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+## Anaconda install
 
 > Comming soon.
 
-## From Source
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Conda--> 
+
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+## From Source install
 Alternatively, you can also install from source via DeepNLPF git repository, which will give you more flexibility in developing on top of DeepNLPF. For this option, run.
 
-        $ git clone https://github.com/deepnlpf/deepnlpf.git
-        $ cd deepnlpf
-        $ pip install -e .
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Shell--> 
+     git clone https://github.com/deepnlpf/deepnlpf.git
+     cd deepnlpf
+     pip install -e .
+
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 ## Virtual Machine
 
 > Comming soon.
 
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--VBox--> 
+
+<!--END_DOCUSAURUS_CODE_TABS-->
+
 ## Docker
 
 > Comming soon.
 
-## Vagrant Cluster HPC MPI
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Docker--> 
+
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+## Vagrant Cluster HPC MPI install
 
 > Comming soon.
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Vagrant--> 
+
+<!--END_DOCUSAURUS_CODE_TABS-->

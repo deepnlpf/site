@@ -9,11 +9,11 @@ title: CLI Commands
 
 ### Help
     
-    $ deepnlpf -h
+     deepnlpf -h
 
 ### List Plugins Install
 
-    $ deepnlpf --plugins all
+    deepnlpf --plugins all
 
     freeling
     stanfordcorenlp
@@ -32,14 +32,14 @@ To save a corpus, it must be organized in one of the two directory structures sh
 
 Simple structure
 
-    /home/$user/path_corpus/
+    /home/user/path_corpus/
                         document_1.txt
                         document_2.txt
                         ..
 
 or Complete Structure
 
-    /home/$user/path_corpus/
+    /home/user/path_corpus/
                         train/
                             pos/
                                 document_01.txt
@@ -71,7 +71,7 @@ For the doc: ```document_1.txt``` You have the following sentences one after ano
 
 You must use the command: ```python deepnlpf --savecorpus <path_dir_corpus> >``` by passing the path of your corpus directory as an argument, as per the example below.
 
-    $ deepnlpf --savecorpus /home/$user/path_corpus/aclImdb
+     deepnlpf --savecorpus /home/user/path_corpus/aclImdb
 
     corpus: aclImdb
     ├── train:
@@ -85,7 +85,7 @@ You must use the command: ```python deepnlpf --savecorpus <path_dir_corpus> >```
 ### List All Corpus
 Lists all corpus saved in the database.
 
-    $ deepnlpf --listcorpus all
+     deepnlpf --listcorpus all
 
     ├──Corpus: aclImdb
     │  ID: 5d8f55f4b3b87b4d30ee0445
@@ -99,12 +99,12 @@ Lists all corpus saved in the database.
 ### Delete Corpus
 Used the command ```deepnlpf --deletecorpus <_id_corpus>``` for delete a specific corpus.
 
-    $ deepnlpf --deletecorpus 5d8f576dd54e23a38cb3e819 
+     deepnlpf --deletecorpus 5d8f576dd54e23a38cb3e819 
 
 ### Run Pipeline
 Used the command ```deepnlpf --pipeline <custom_pipeline.json>``` for execute pipeline custom analises languagem.
 
-    $ deepnlpf --pipeline custom_pipeline.json
+     deepnlpf --pipeline custom_pipeline.json
 
 Example file ```customs_pipeline_example.json``` in /deepnlpf/example/ .
 
@@ -154,15 +154,15 @@ After running a custom analysis pipeline, all results are saved to the database.
 
 Used the command deepnlf viewannotation <_id_corpus> for view annotation processing the corpus.
 
-    $ deepnlf viewannotation 5d8ed3b6495308534096e879
+     deepnlf viewannotation 5d8ed3b6495308534096e879
 
 ### Generated Annotation
 
-    $ deepnlf generatedannotation <_id_pool_corpus>
+     deepnlf generatedannotation <_id_pool_corpus>
 
 ### View Annotation
 
-    $ deepnlpf viewannotation <_id_pool_corpus>
+     deepnlpf viewannotation <_id_pool_corpus>
 
 ## Application Program Interface - API
 

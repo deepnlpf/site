@@ -10,14 +10,22 @@ title: WordNet
 > Under construction!
 
 ## Install Plugin
+<!--DOCUSAURUS_CODE_TABS-->
 
-    $ deepnlpf --install 
+<!--Shell--> 
+     deepnlpf --install  wordnet
+
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 ## Suport Language
 
 English: ```en``` <br/>
 
 ## Pipeline
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Json--> 
 ```
 
 ```
+<!--END_DOCUSAURUS_CODE_TABS-->

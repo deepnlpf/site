@@ -14,25 +14,33 @@ A frame-semantic parsing system based on a softmax-margin SegRNN.
 > Under construction!
 
 ## Install Plugin
+<!--DOCUSAURUS_CODE_TABS-->
 
-    $ deepnlpf --install opensesame
+<!--Shell--> 
+     deepnlpf --install opensesame
+
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 ## Suport Language
 
 English: ```en``` <br/>
 
 ## Pipeline
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Json--> 
 ```
-{
-    "lang": "en",
-    "tools": [
-        {
-            "semafor": {
-                "pipeline": [
-                    "parsing"
-                ]
+    {
+        "lang": "en",
+        "tools": [
+            {
+                "semafor": {
+                    "pipeline": [
+                        "parsing"
+                    ]
+                }
             }
-        }
-    ]
-}
+        ]
+    }
 ```
+<!--END_DOCUSAURUS_CODE_TABS-->

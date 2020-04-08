@@ -16,20 +16,30 @@ Here you can find information about FreeLing, an open source language analysis t
 > Under construction!
 
 ## Install FreeLing NLP
+<!--DOCUSAURUS_CODE_TABS-->
 
-    $ 
+<!--Shell--> 
+     
+
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 ## Install Plugin
+<!--DOCUSAURUS_CODE_TABS-->
 
-    $ deepnlpf --install freeling
+<!--Shell--> 
+     deepnlpf --install freeling
+
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 ## Suport Language
 
 English: ```en``` <br/>
 
 ## Pipeline
+<!--DOCUSAURUS_CODE_TABS-->
 
-    ```
+<!--Json--> 
+```
     {
         "lang": "en",
         "tools": [{
@@ -42,7 +52,8 @@ English: ```en``` <br/>
             }
         }]
     }
-    ```
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 
 

@@ -14,14 +14,21 @@ SEMAFOR: Semantic Analysis of Frame Representations
 - [Github](https://github.com/Noahs-ARK/semafor)
 
 ## Install Plugin
+<!--DOCUSAURUS_CODE_TABS-->
 
-    $ deepnlpf --install semafor
+<!--Python--> 
+     deepnlpf --install semafor
+
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 ## Suport Language
 
 English: ```en``` <br/>
 
 ## Pipeline
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--JSON--> 
 ```
 {
     "lang": "en",
@@ -36,3 +43,4 @@ English: ```en``` <br/>
     ]
 }
 ```
+<!--END_DOCUSAURUS_CODE_TABS-->

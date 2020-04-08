@@ -98,17 +98,6 @@ class Index extends React.Component {
       </Container>
     );
 
-    const FeatureCallout = () => (
-      <div
-        className="productShowcaseSection paddingBottom"
-        style={{textAlign: 'center'}}>
-        <h2>Features</h2>
-        <MarkdownBlock>
-          Know the main features of the DeepNLP framework.
-        </MarkdownBlock>
-      </div>
-    );
-
     const Features = () => (
       <Block layout="fourColumn">
         {[
@@ -126,6 +115,17 @@ class Index extends React.Component {
           },
         ]}
       </Block>
+    );
+
+    const FeatureCallout = () => (
+      <div
+        className="productShowcaseSection paddingBottom"
+        style={{textAlign: 'center'}}>
+        <h2>Features</h2>
+        <MarkdownBlock>
+          ```Multiprocessing Pathos Framework``` ```Faster Parallel Ray``` ``` ``` ``` ```
+        </MarkdownBlock>
+      </div>
     );
 
     const LearnHow = () => (

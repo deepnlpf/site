@@ -7,8 +7,12 @@ DeepNLPF has a HTTP RESTful that allows you to use its services through POS, GET
 
 ## Start Service
 To run the API, you must have DeePNLPF installed. The following command is required to start the service.
+<!--DOCUSAURUS_CODE_TABS-->
 
-    $ deepnlpf --api start
+<!--Shell-->
+    deepnlpf --api start
+
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 By accessing the address: ```http://127.0.0.1:5000/``` you will see a screen like this informing you that the API has been successfully started and is ready to use.
 

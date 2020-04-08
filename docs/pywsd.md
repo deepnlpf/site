@@ -16,14 +16,21 @@ Python Implementations of Word Sense Disambiguation (WSD) Technologies.
 > Under construction!
 
 ## Install Plugin
+<!--DOCUSAURUS_CODE_TABS-->
 
-    $ deepnlpf --install pywsd
+<!--Shell--> 
+     deepnlpf --install pywsd
+
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 ## Suport Language
 
 English: ```en``` <br/>
 
 ## Pipeline
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Json--> 
 ```
 {
     "lang": "en",
@@ -38,3 +45,4 @@ English: ```en``` <br/>
     ]
 }
 ```
+<!--END_DOCUSAURUS_CODE_TABS-->

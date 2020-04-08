@@ -13,14 +13,24 @@ CogComp-NLP provides a suite of state-of-the-art Natural Language Processing (NL
 > Requires internet connection to function.
 
 ## Install Plugin
+<!--DOCUSAURUS_CODE_TABS-->
 
-    $ deepnlpf --install cogcompnlp
+<!--Shell-->  
+
+```py
+     deepnlpf --install cogcompnlp
+```
+
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 ## Suport Language
 
 English: ```en``` <br/>
 
 ## Pipeline
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Json-->  
 
 ```
 {
@@ -60,3 +70,5 @@ English: ```en``` <br/>
     ]
 }
 ```
+
+<!--END_DOCUSAURUS_CODE_TABS-->

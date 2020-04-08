@@ -12,12 +12,22 @@ A very simple framework for state-of-the-art NLP. Developed by Humboldt Universi
 - [Github](https://github.com/flairNLP/flair)
 
 ## Install Flayr
+<!--DOCUSAURUS_CODE_TABS-->
 
-    $ pip install flair
+<!--Shell--> 
+
+     pip install flair
+
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 ## Install Plugin
+<!--DOCUSAURUS_CODE_TABS-->
 
-    $ deepnlpf --install flair
+<!--Shell--> 
+
+     deepnlpf --install flair
+
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 ## [Suport Language](https://github.com/flairNLP/flair#comparison-with-state-of-the-art)
 
@@ -27,6 +37,9 @@ Dutch: ``` ``` <br/>
 Polish: ``` ``` <br/>
 
 ## Pipeline
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Json--> 
 ```
 {
     "lang": "en",
@@ -43,3 +56,4 @@ Polish: ``` ``` <br/>
     ]
 }
 ```
+<!--END_DOCUSAURUS_CODE_TABS-->
