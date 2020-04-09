@@ -3,23 +3,27 @@ id: pywsd
 title: PyWSD
 ---
 
-<a href="" target="_blank">
-    <img src="" data-canonical-src="" width="170" height="60" />
-</a>
+> Under construction!
 
 Python Implementations of Word Sense Disambiguation (WSD) Technologies.
 
-- [Site Oficial](#)
-- [Demo Online](#)
 - [Github](https://github.com/alvations/pywsd)
 
-> Under construction!
+## Install PyWSD
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Shell-->
+    pip install -U nltk #install NLTK.
+    python -m nltk.downloader 'popular' #download models.
+    pip install -U pywsd #install PyWSD.
+
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 ## Install Plugin
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--Shell--> 
-     deepnlpf --install pywsd
+<!--Shell-->
+    deepnlpf --install pywsd
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
@@ -38,7 +42,7 @@ English: ```en``` <br/>
         {
             "pywsd": {
                 "pipeline": [
-                    "disambiguate"
+                    "disambiguate_max"
                 ]
             }
         }

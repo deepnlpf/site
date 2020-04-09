@@ -38,7 +38,7 @@ const siteConfig = {
     headerLinks: [
         { doc: 'about', label: 'ABOUT' },
         { doc: 'install', label: 'GUIDE' },
-        { doc: 'plugins', label: 'PLUGINS' },
+        { page: 'repository', label: 'REPOSITORY' },
         { page: 'help', label: 'HELP' },
         { search: true },
         //{ page: 'demo', label: 'DEMO' },

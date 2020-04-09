@@ -27,9 +27,20 @@
             }
         ]
     },
-    "docs-plugins": {
+    "docs-pluginswiki": {
         "Plugin Repositories": [
-            "plugins", {
+            "pluginswiki", {
+                "type": "subcategory",
+                "ids": [
+                    "pluginswiki",
+                    "createplugin"
+                ]
+            }
+        ]
+    },
+    "docs-pluginsnlp": {
+        "Plugins Repositories Tools NLP": [
+            "pluginsnlp", {
                 "type": "subcategory",
                 "ids": [
                     "cogcompnlp",
@@ -42,8 +53,28 @@
                     "spacy",
                     "stanfordcorenlp",
                     "stanza",
-                    "supwsd",
+                    "supwsd"
+                ]
+            }
+        ]
+    },
+    "docs-pluginsdic": {
+        "Plugins Repositories Semantic Dictionary": [
+            "pluginsdic", {
+                "type": "subcategory",
+                "ids": [
                     "wordnet"
+                ]
+            }
+        ]
+    },
+    "docs-pluginsdb": {
+        "Plugins Repositories DataBase": [
+            "pluginsdb", {
+                "type": "subcategory",
+                "ids": [
+                    "mongodb",
+                    "basex"
                 ]
             }
         ]

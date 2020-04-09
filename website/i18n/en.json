@@ -12,6 +12,9 @@
       "api": {
         "title": "API RESTful"
       },
+      "wordnet": {
+        "title": "WordNet"
+      },
       "benchmarking": {
         "title": "Benchmarking"
       },
@@ -26,6 +29,9 @@
       },
       "configurations": {
         "title": "Configurations"
+      },
+      "createplugin": {
+        "title": "Create Plugin"
       },
       "credits": {
         "title": "Some thanks!"
@@ -51,8 +57,17 @@
       "opensesame": {
         "title": "Open Sesame"
       },
-      "plugins": {
-        "title": "Welcome Plugin Repositories"
+      "pluginsdb": {
+        "title": "Plugins Repositories DataBase"
+      },
+      "pluginsdic": {
+        "title": "Plugins Repositories Semantic Dictionary"
+      },
+      "pluginsnlp": {
+        "title": "Plugins Repositories Tools NLP"
+      },
+      "pluginswiki": {
+        "title": "Wiki Plugin"
       },
       "pywsd": {
         "title": "PyWSD"
@@ -78,9 +93,6 @@
       "tudo": {
         "title": "Futute Updates"
       },
-      "wordnet": {
-        "title": "WordNet"
-      },
       "worldwide": {
         "title": "worldwide"
       }
@@ -88,14 +100,17 @@
     "links": {
       "ABOUT": "ABOUT",
       "GUIDE": "GUIDE",
-      "PLUGINS": "PLUGINS",
+      "REPOSITORY": "REPOSITORY",
       "HELP": "HELP"
     },
     "categories": {
       "Install": "Install",
       "User Guide": "User Guide",
       "About": "About",
-      "Plugin Repositories": "Plugin Repositories"
+      "Plugin Repositories": "Plugin Repositories",
+      "Plugins Repositories Tools NLP": "Plugins Repositories Tools NLP",
+      "Plugins Repositories Semantic Dictionary": "Plugins Repositories Semantic Dictionary",
+      "Plugins Repositories DataBase": "Plugins Repositories DataBase"
     }
   },
   "pages-strings": {
