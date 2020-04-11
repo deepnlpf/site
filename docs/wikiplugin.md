@@ -1,5 +1,5 @@
 ---
-id: pluginswiki
+id: wikiplugin
 title: Wiki Plugin
 ---
 

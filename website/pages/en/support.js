@@ -20,23 +20,12 @@ class Help extends React.Component {
       {
         content: (
           <translate>
-            Learn more using the [documentation on this
-            site.](/test-site/docs/en/doc1.html)
+            [Bug report](https://github.com/deepnlpf/deepnlpf/issues/new/choose), 
+            [Feature request](https://github.com/deepnlpf/deepnlpf/issues/new/choose), 
+            [Question](https://github.com/deepnlpf/deepnlpf/issues/new/choose).
           </translate>
         ),
-        title: <translate>Browse Docs</translate>,
-      },
-      {
-        content: (
-          <translate>
-            Ask questions about the documentation and project
-          </translate>
-        ),
-        title: <translate>Join the community</translate>,
-      },
-      {
-        content: <translate>Find out what's new with this project</translate>,
-        title: <translate>Stay up to date</translate>,
+        title: <translate>Issue Tracker</translate>,
       },
     ];
 

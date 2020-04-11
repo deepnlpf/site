@@ -32,7 +32,7 @@
             "pluginswiki", {
                 "type": "subcategory",
                 "ids": [
-                    "pluginswiki",
+                    "wikiplugin",
                     "createplugin"
                 ]
             }

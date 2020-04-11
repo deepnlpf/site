@@ -68,12 +68,9 @@ class HomeSplash extends React.Component {
     return (
       <SplashContainer>
         <div className="inner">
-          <h1>Here you will find all external tool plugins built <br/> by us and third parties to use on DeepNLPF.</h1>
+        <h1>DeepNLPF Repository</h1>
           <PromoSection>
-          <Button href={docUrl('pluginswiki')}>Wiki Plugin</Button>
-          <Button href={docUrl('pluginsnlp')}>Tools NLP</Button>
-          <Button href={docUrl('pluginsdic')}>Semantic Dictionary</Button>
-          <Button href={docUrl('pluginsdb')}>DataBase</Button>
+            Here you will find all external tool plugins built by us and third parties to use on DeepNLPF.
           </PromoSection>
         </div>
       </SplashContainer>
@@ -103,22 +100,33 @@ class Index extends React.Component {
       <Block layout="fourColumn">
         {[
           {
+            content: 'Did not find what you were looking for? Create your plugin now and help DeeoNLPF grow.',
+            image: `${baseUrl}img/wiki.jpg`,
+            imageAlign: 'top',
+            title: 'Wiki Plugin',
+            // http://localhost:3000/site/docs/en/pluginsnlp
+            imageLink: siteConfig.baseUrl+'docs/en/wikiplugin',
+          },
+          {
             content: 'Choose from the best natural language processing tools and add them to your analysis pipeline.',
             image: `${baseUrl}img/tools.png`,
             imageAlign: 'top',
             title: 'Tools NLP',
+            imageLink: siteConfig.baseUrl+'docs/en/pluginsnlp',
           },
           {
             content: 'Use semantic dictionaries in your pipeline and better results.',
             image: `${baseUrl}img/dictionary.png`,
             imageAlign: 'top',
             title: 'Semantic Dictionary',
+            imageLink: siteConfig.baseUrl+'docs/en/pluginsdic',
           },
           {
             content: 'Save and explore your datasets through a database.',
             image: `${baseUrl}img/database.png`,
             imageAlign: 'top',
             title: 'DataBase',
+            imageLink: siteConfig.baseUrl+'docs/en/pluginsdb',
           },
         ]}
       </Block>

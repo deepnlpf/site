@@ -36,36 +36,25 @@ class Footer extends React.Component {
             )}
           </a>
           <div>
-            <h5>Docs</h5>
-            <a href={this.docUrl('install.html', this.props.language)}>
-              Install
-            </a>
-            <a href={this.docUrl('guide.html', this.props.language)}>
-              User Guide
-            </a>
+            <h5>DeepNLPF</h5>
+            <a href={this.docUrl('about', this.props.language)}>About</a>
+            <a href={this.docUrl('install', this.props.language)}>Guide</a>
+            <a href={this.pageUrl('repository', this.props.language)}>Repository</a>
+            <a href={this.pageUrl('support', this.props.language)}>Support</a>
           </div>
           <div>
             <h5>Community</h5>
-            <a href={this.pageUrl('users.html', this.props.language)}>
-              User Showcase
-            </a>
-            <a
-              href="http://stackoverflow.com/questions/tagged/"
-              target="_blank"
-              rel="noreferrer noopener">
-              Stack Overflow
-            </a>
-            <a href="https://discordapp.com/">Project Chat</a>
+            <a href={this.pageUrl('users.html', this.props.language)}>User Showcase</a>
           </div>
           <div>
-            <h5>More</h5>
+            <h5>Connect</h5>
             <a href={`${this.props.config.baseUrl}blog`}>Blog</a>
             <a href="https://github.com/deepnlpf">GitHub</a>
             <a
               className="github-button"
-              href={this.props.config.repoUrl}
+              href='https://github.com/deepnlpf/deepnlpf/stargazers'
               data-icon="octicon-star"
-              data-count-href="/facebook/docusaurus/stargazers"
+              data-count-href="/deepnlpf/deepnlpf/stargazers"
               data-show-count="true"
               data-count-aria-label="# stargazers on GitHub"
               aria-label="Star this project on GitHub">

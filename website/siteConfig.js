@@ -39,7 +39,7 @@ const siteConfig = {
         { doc: 'about', label: 'ABOUT' },
         { doc: 'install', label: 'GUIDE' },
         { page: 'repository', label: 'REPOSITORY' },
-        { page: 'help', label: 'HELP' },
+        { page: 'support', label: 'SUPPORT' },
         { search: true },
         //{ page: 'demo', label: 'DEMO' },
         //{ blog: true, label: 'BLOG' },
