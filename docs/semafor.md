@@ -4,7 +4,7 @@ title: SEMAFOR
 ---
 
 <a href="" target="_blank">
-    <img src="" data-canonical-src="" width="170" height="60" />
+    <img src="http://www.cs.cmu.edu/~ark/SEMAFOR/semafor-holdoff.png" data-canonical-src="" width="700" height="90" />
 </a>
 
 SEMAFOR: Semantic Analysis of Frame Representations
@@ -36,7 +36,7 @@ English: ```en``` <br/>
         {
             "semafor": {
                 "pipeline": [
-                    "parsing"
+                    "frame_semantic_parsing"
                 ]
             }
         }

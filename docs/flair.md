@@ -4,7 +4,7 @@ title: Flair
 ---
 
 <a href="" target="_blank">
-    <img src="" data-canonical-src="" width="170" height="60" />
+    <img src="https://raw.githubusercontent.com/flairNLP/flair/master/resources/docs/flair_logo_2020.png" data-canonical-src="" width="160" height="60" />
 </a>
 
 A very simple framework for state-of-the-art NLP. Developed by Humboldt University of Berlin and friends.

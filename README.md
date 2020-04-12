@@ -25,5 +25,6 @@ To publish the site, send the files by performing a commit.
 Then publish the website by running the following command.
 
     GIT_USER=<your_username> CURRENT_BRANCH=master npm run publish-gh-pages
+    GIT_USER=rodriguesfas CURRENT_BRANCH=master npm run publish-gh-pages
 
 Info your username and/or password.

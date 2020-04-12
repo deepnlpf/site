@@ -2,16 +2,26 @@
 id: opensesame
 title: Open Sesame
 ---
+> Under construction!
 
 <a href="" target="_blank">
-    <img src="" data-canonical-src="" width="170" height="60" />
+    <img src="https://raw.githubusercontent.com/swabhs/open-sesame/master/fig/fsp-example.png" data-canonical-src="" width="700" height="250" />
 </a>
 
 A frame-semantic parsing system based on a softmax-margin SegRNN.
 
 - [Github](https://github.com/swabhs/open-sesame)
 
-> Under construction!
+
+## Install OpenSesame
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Shell--> 
+    pip install dynet
+    pip install nltk
+    python -m nltk.downloader averaged_perceptron_tagger wordnet
+
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 ## Install Plugin
 <!--DOCUSAURUS_CODE_TABS-->
@@ -21,7 +31,7 @@ A frame-semantic parsing system based on a softmax-margin SegRNN.
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
-## Suport Language
+## Language
 
 English: ```en``` <br/>
 
@@ -34,9 +44,9 @@ English: ```en``` <br/>
         "lang": "en",
         "tools": [
             {
-                "semafor": {
+                "opensesame": {
                     "pipeline": [
-                        "parsing"
+                        "frame_semantic_parsing"
                     ]
                 }
             }

@@ -101,7 +101,7 @@ class Index extends React.Component {
         {[
           {
             content: 'Did not find what you were looking for? Create your plugin now and help DeeoNLPF grow.',
-            image: `${baseUrl}img/wiki.jpg`,
+            image: `${baseUrl}img/wiki.png`,
             imageAlign: 'top',
             title: 'Wiki Plugin',
             // http://localhost:3000/site/docs/en/pluginsnlp

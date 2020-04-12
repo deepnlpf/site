@@ -4,7 +4,7 @@ title: SupWSD
 ---
 
 <a href="" target="_blank">
-    <img src="" data-canonical-src="" width="170" height="60" />
+    <img src="https://supwsd.net/supwsd/img/supwsd_logo_com.png" data-canonical-src="" width="60" height="60" />
 </a>
 
 Python Implementations of Word Sense Disambiguation (WSD) Technologies.
@@ -33,9 +33,19 @@ Python Implementations of Word Sense Disambiguation (WSD) Technologies.
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
-## Suport Language
+## Language
 
 English: ```en``` <br/>
+```fr``` <br/>
+```de``` <br/>
+```it``` <br/>
+```es``` <br/>
+
+## Models
+
+The model to be used in the disambiguation process: SEMCOR (English only), SEMCOR_OMSTI (English only), TRAIN_O_MATIC.
+
+If you don't specify the model, the program will load the default one: ```semcor_omsti``` for English, ```train_o_matic``` for other languages.
 
 ## Pipeline
 <!--DOCUSAURUS_CODE_TABS-->

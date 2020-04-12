@@ -4,7 +4,7 @@ title: Stanford CoreNLP
 ---
 
 <a href="" target="_blank">
-    <img src="" data-canonical-src="" width="170" height="60" />
+    <img src="https://miro.medium.com/max/2560/1*3uoY7zY6wfnYyTOgKNYLkQ.jpeg" data-canonical-src="" width="180" height="100" />
 </a>
 
 Stanford CoreNLP provides a set of human language technology tools. It can give the base forms of words, their parts of speech, whether they are names of companies, people, etc., normalize dates, times, and numeric quantities, mark up the structure of sentences in terms of phrases and syntactic dependencies, indicate which noun phrases refer to the same entities, indicate sentiment, extract particular or open-class relations between entity mentions, get the quotes people said, etc.
@@ -28,6 +28,8 @@ Stanford CoreNLP provides a set of human language technology tools. It can give 
 English: ```en``` <br/>
 
 ## Pipeline
+View all [Anotators](https://stanfordnlp.github.io/CoreNLP/annotators.html).<br/>
+Before assembling your pipeline, see the [dependent annotators](https://stanfordnlp.github.io/CoreNLP/annotators.html#annotator-dependencies).
 <!--DOCUSAURUS_CODE_TABS-->
 
 <!--Json--> 
@@ -44,8 +46,13 @@ English: ```en``` <br/>
                 "ner",
                 "parse",
                 "depparse",
-                "truecase",
-                "dcoref"
+                "coref",
+                "dcoref",
+                "relation",
+                "openie",
+                "entitylink",
+                "sentiment",
+                "truecase"
             ]
         }
     }]
