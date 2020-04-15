@@ -48,4 +48,21 @@ English: ```en``` <br/>
     }]
 }
 ```
+<!--yaml-->
+```yaml
+---
+    lang: en
+    tools:
+    - stanfordcorenlp:
+        pipeline:
+        - tokenize
+        - ssplit
+        - pos
+        - lemma
+        - ner
+        - truecase
+        - parse
+        - depparse
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->

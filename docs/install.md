@@ -61,13 +61,23 @@ If you prefer, download and install the dependencies from our [script](https://g
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
+If you currently have a previous version of DeepNLPF installed, use:
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Shell--> 
+    pip install deepnlpf -U
+
+<!--END_DOCUSAURUS_CODE_TABS-->
+
 ## Anaconda install
 
 > Comming soon.
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--Conda--> 
+<!--Shell-->
+conda install -c deepnlpf
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
@@ -77,9 +87,9 @@ Alternatively, you can also install from source via DeepNLPF git repository, whi
 <!--DOCUSAURUS_CODE_TABS-->
 
 <!--Shell--> 
-     git clone https://github.com/deepnlpf/deepnlpf.git
-     cd deepnlpf
-     pip install -e .
+    git clone https://github.com/deepnlpf/deepnlpf.git
+    cd deepnlpf
+    pip install -e .
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 

@@ -26,9 +26,9 @@ The normal way from CRAN, using your R GUI. If you prefer to install [RStudio](h
 ## Install Plugin
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--Python--> 
+<!--Shell--> 
 
-     deepnlpf --install quanteda
+    deepnlpf --install quanteda
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
@@ -54,4 +54,9 @@ English: ```en``` <br/>
     ]
 }
 ```
+
+<!--yaml-->
+```yaml
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->

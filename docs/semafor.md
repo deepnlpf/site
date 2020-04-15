@@ -16,8 +16,8 @@ SEMAFOR: Semantic Analysis of Frame Representations
 ## Install Plugin
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--Python--> 
-     deepnlpf --install semafor
+<!--Shell--> 
+    deepnlpf --install semafor
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
@@ -43,4 +43,8 @@ English: ```en``` <br/>
     ]
 }
 ```
+<!--yaml-->
+```yaml
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->

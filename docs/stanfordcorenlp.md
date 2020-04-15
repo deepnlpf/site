@@ -53,4 +53,9 @@ Before assembling your pipeline, see the [dependent annotators](https://stanford
     }]
 }
 ```
+
+<!--yaml-->
+```yaml
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
