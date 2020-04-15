@@ -57,7 +57,7 @@ If you prefer, download and install the dependencies from our [script](https://g
 <!--DOCUSAURUS_CODE_TABS-->
 
 <!--Shell--> 
-     pip install deepnlpframework
+     pip install deepnlpf
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 

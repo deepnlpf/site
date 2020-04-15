@@ -9,7 +9,7 @@
                     "cli",
                     "api",
                     "dashboard",
-                    "configurations",
+                    "notifications",
                     "benchmarking"
                 ]
             }

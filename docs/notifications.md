@@ -1,10 +1,7 @@
 ---
-id: configurations
-title: Configurations
+id: notifications
+title: Notifications
 ---
-
-## Database
->  Comming Soon :)
 
 ## Notification
 

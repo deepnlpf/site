@@ -68,9 +68,15 @@ class HomeSplash extends React.Component {
     return (
       <SplashContainer>
         <div className="inner">
-        <h1>DeepNLPF Repository</h1>
+        <h1>
+          <translate>
+            Repository Plugins
+          </translate>
+        </h1>
           <PromoSection>
-            Here you will find all external tool plugins built by us and third parties to use on DeepNLPF.
+            <translate>
+              Here you will find all external tool plugins built by us and third parties to use on DeepNLPF.
+            </translate>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -100,32 +106,60 @@ class Index extends React.Component {
       <Block layout="fourColumn">
         {[
           {
-            content: 'Did not find what you were looking for? Create your plugin now and help DeeoNLPF grow.',
+            content: (
+              <translate>
+                Did not find what you were looking for? Create your plugin now and help DeeoNLPF grow.
+              </translate>
+            ),
             image: `${baseUrl}img/wiki.png`,
             imageAlign: 'top',
-            title: 'Wiki Plugin',
+            title: 'Wiki',
             // http://localhost:3000/site/docs/en/pluginsnlp
             imageLink: siteConfig.baseUrl+'docs/en/wikiplugin',
           },
           {
-            content: 'Choose from the best natural language processing tools and add them to your analysis pipeline.',
+            content: (
+              <translate>
+                Choose from the best natural language processing tools and add them to your analysis pipeline.
+              </translate>
+            ),
             image: `${baseUrl}img/tools.png`,
             imageAlign: 'top',
-            title: 'Tools NLP',
+            title: (
+              <translate>
+                Tools NLP
+              </translate>
+            ),
             imageLink: siteConfig.baseUrl+'docs/en/pluginsnlp',
           },
           {
-            content: 'Use semantic dictionaries in your pipeline and better results.',
+            content: (
+              <translate>
+                Use semantic dictionaries in your pipeline and better results.
+              </translate>
+            ),
             image: `${baseUrl}img/dictionary.png`,
             imageAlign: 'top',
-            title: 'Semantic Dictionary',
+            title: (
+              <translate>
+                Semantic Dictionary
+              </translate>
+            ),
             imageLink: siteConfig.baseUrl+'docs/en/pluginsdic',
           },
           {
-            content: 'Save and explore your datasets through a database.',
+            content: (
+              <translate>
+                Save and explore your datasets through a database.
+              </translate>
+            ),
             image: `${baseUrl}img/database.png`,
             imageAlign: 'top',
-            title: 'DataBase',
+            title: (
+              <translate>
+                DataBase
+              </translate>
+            ),
             imageLink: siteConfig.baseUrl+'docs/en/pluginsdb',
           },
         ]}

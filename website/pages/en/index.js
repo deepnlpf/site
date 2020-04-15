@@ -45,7 +45,11 @@ class HomeSplash extends React.Component {
     const ProjectTitle = () => (
       <h2 className="projectTitle">
         {siteConfig.title}
-        <small>{siteConfig.tagline}</small>
+        <small>
+          <translate>
+            A Framework for Integrating Linguistic Analysis <br/>and Semantic Annotation of Text Documents.
+          </translate>
+        </small>
       </h2>
     );
 
@@ -102,16 +106,32 @@ class Index extends React.Component {
       <Block layout="fourColumn">
         {[
           {
-            content: 'DeepNLPF provides a component for integrating and customizing linguistic analysis. When building Plugins, you can add any PLN tool, regardless of the programming language in which it was created.',
+            content: (
+              <translate>
+                DeepNLPF provides a component for integrating and customizing linguistic analysis. When building Plugins, you can add any PLN tool, regardless of the programming language in which it was created.
+              </translate>
+            ),
             image: `${baseUrl}img/pipeline.png`,
             imageAlign: 'top',
-            title: 'Custom Pipeline',
+            title: (
+              <translate>
+                Custom Pipeline
+              </translate>
+            ),
           },
           {
-            content: 'DeepNLPF includes parallel processing strategies and multithreads to ensure maximum performance. Through the approach taken it is possible to process extremely large texts.',
+            content: (
+              <translate>
+                DeepNLPF includes parallel processing strategies and multithreads to ensure maximum performance. Through the approach taken it is possible to process extremely large texts.
+              </translate>
+            ),
             image: `${baseUrl}img/parallell-pipeline.svg`,
             imageAlign: 'top',
-            title: 'Parallel Processing',
+            title: (
+              <translate>
+                Parallel Processing
+              </translate>
+            ),
           },
         ]}
       </Block>
@@ -134,10 +154,20 @@ class Index extends React.Component {
       <Block id="try">
         {[
           {
-            content: "DeepNLPF has two approaches to optimize execution. By default we use [Multiprocessing Pathos Framework](https://pypi.org/project/pathos/), but if you prefer you can choose to use [Faster Parallel Ray](https://ray.io/) 10x [fast as the first one](https://towardsdatascience.com/10x-faster-parallel-python-without-python-multiprocessing-e5017c93cce1).",
+            content: (
+              <translate>
+                DeepNLPF has two approaches to optimize execution. By default we use [Multiprocessing Pathos Framework](https://pypi.org/project/pathos/), but if you prefer you can choose to use [Faster Parallel Ray](https://ray.io/) 10x [fast as the first one](https://towardsdatascience.com/10x-faster-parallel-python-without-python-multiprocessing-e5017c93cce1).
+              </translate>
+            ),
             image: `${baseUrl}img/boost.png`,
             imageAlign: 'left',
-            title: 'Boost Processing',
+            imageAlt: 'Learn how to use this Boost',
+            imageLink: siteConfig.baseUrl + 'docs/en/guide#custom-boost',
+            title: (
+              <translate>
+                Boost Processing
+              </translate>
+            ),
           },
         ]}
       </Block>
@@ -147,9 +177,15 @@ class Index extends React.Component {
       <Block background="light">
         {[
           {
-            content: 'DeepNLPF contains a DashBoard that allows you to view and process textual data without writing any lines of code and with few settings, choosing from various linguistic analyzes coming from a number of successful PLN tools.',
+            content: (
+              <translate>
+                DeepNLPF contains a DashBoard that allows you to view and process textual data without writing any lines of code and with few settings, choosing from various linguistic analyzes coming from a number of successful PLN tools.
+              </translate>
+            ),
             image: `${baseUrl}img/dashboard.png`,
             imageAlign: 'right',
+            imageAlt: 'Learn how to use DashBoard',
+            imageLink: siteConfig.baseUrl + 'docs/en/dashboard',
             title: 'DashBoard',
           },
         ]}
@@ -160,23 +196,34 @@ class Index extends React.Component {
       <Block id="try">
         {[
           {
-            content: "DeepNLPF has a flexible plugin architecture, allowing the integration of various third party PLN tools, regardless of the programming language in which it was built, it can be integrated into the analysis pipeline.",
+            content: (
+              <translate>
+                DeepNLPF has a flexible plugin architecture, allowing the integration of various third party PLN tools, regardless of the programming language in which it was built, it can be integrated into the analysis pipeline.
+              </translate>
+            ),
             image: `${baseUrl}img/plugins22.png`,
             imageAlign: 'left',
+            imageAlt: 'Learn how to use this Plugin',
+            imageLink: siteConfig.baseUrl + '/en/repository',
             title: 'Plugin in Play',
           },
         ]}
       </Block>
     );
 
-    const API = () => ( //dark
+    const API = () => (
       <Block background="light"> 
         {[
           {
-            content:
-              'DeepNLPF has a very simple solution for you to use natural language processing in your web, mobile or desktop application reducing the computational cost. Using the API we have provided you make this hard work for us and consume only the results of the analysis that interests you.',
-            image: `${baseUrl}img/api.png`,
+            content: (
+              <translate>
+                DeepNLPF has a very simple solution for you to use natural language processing in your web, mobile or desktop application reducing the computational cost. Using the API we have provided you make this hard work for us and consume only the results of the analysis that interests you.
+              </translate>
+            ),
+            image: `${baseUrl}img/api.svg`,
             imageAlign: 'right',
+            imageAlt: 'Learn how to use this API RESTFul',
+            imageLink: siteConfig.baseUrl + 'docs/en/api',
             title: 'API RESTFul',
           },
         ]}
@@ -187,10 +234,35 @@ class Index extends React.Component {
       <Block id="try">
         {[
           {
-            content: "You don't have to spend hours shipping the computer waiting for your dataset to finish processing. BotNotification is responsible for keeping you informed about everything that happens during processing, you are the one who chooses the best way that it can do this, either through (Telegram, Email, Desktop Notifications or even by voice). What's up! liked? Take your time to relax, let BotNotification take care of everything for you.",
+            content: (
+              <translate>
+                You don't have to spend hours shipping the computer waiting for your dataset to finish processing. BotNotification is responsible for keeping you informed about everything that happens during processing, you are the one who chooses the best way that it can do this, either through (Telegram, Email, Desktop Notifications or even by voice). What's up! liked? Take your time to relax, let BotNotification take care of everything for you.
+              </translate>
+            ),
             image: `${baseUrl}img/bot_notification.png`,
             imageAlign: 'left',
+            imageAlt: 'Learn how to use this BotNotification',
+            imageLink: siteConfig.baseUrl + 'docs/en/notifications',
             title: 'BotNotification',
+          },
+        ]}
+      </Block>
+    );
+
+    const CommandsLine = () => (
+      <Block background="light"> 
+        {[
+          {
+            content: (
+              <translate>
+                Install plugins and pipeline with our command line interface.
+              </translate>
+            ),
+            image: `${baseUrl}img/cli.png`,
+            imageAlign: 'right',
+            imageAlt: 'Learn how to use this CLI',
+            imageLink: siteConfig.baseUrl + 'docs/en/cli',
+            title: 'Command Line',
           },
         ]}
       </Block>
@@ -236,6 +308,7 @@ class Index extends React.Component {
           <Plugins />
           <API />
           <BotNotification />
+          <CommandsLine />
         </div>
       </div>
     );

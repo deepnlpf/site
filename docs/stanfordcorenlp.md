@@ -44,15 +44,10 @@ Before assembling your pipeline, see the [dependent annotators](https://stanford
                 "pos",
                 "lemma",
                 "ner",
+                "truecase",
                 "parse",
                 "depparse",
-                "coref",
-                "dcoref",
-                "relation",
-                "openie",
-                "entitylink",
-                "sentiment",
-                "truecase"
+                "coref"
             ]
         }
     }]
