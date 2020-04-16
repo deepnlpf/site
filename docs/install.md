@@ -24,15 +24,16 @@ DeepNLPF has been implemented and tested using the [Ubuntu](https://ubuntu.com/)
 
 ## System requirements
 <b>Hardware</b>
-* Memoria RAM: Min. 16GB.
+* Memoria RAM: Min. 8GB.
 * CPU Core: Min. Dualcore
 * Disk Space: ~ MB (does not include disk space for IDE/tools).
 
-<b>Software</b>
+<b>Operational System</b>
 * [Ubuntu 19.04](https://ubuntu.com/) (64-bit).
+
+<b>Software Requested</b>
 * [Intall Python 3.7](https://linuxize.com/post/how-to-install-python-3-7-on-ubuntu-18-04/)
 * [Pip](https://pypi.org/)
-* [Java 8](#)
 
 To install the system dependencies, execute the command in the terminal.
 

@@ -13,23 +13,35 @@ By default we use Stanza as a base NLP tool. Therefore, it is necessary to insta
 
 <!--Shell--> 
     python -c "import stanza; stanza.download('en')" & \
-    deepnlpf --install stanza #Install wrapper stanza.
+    deepnlpf --install stanza
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ## Install Stanford CoreNLP Tool Base
 
-However, if you prefer you can also use Stanford CoreNLP as a base. To do this, simply execute the command on the terminal. If not, skip this step.
+However, if you prefer you can also use Stanford CoreNLP as a base. To do this, simply execute the command on the terminal. If not, skip this step.<br>
+<br>
+Install requirement [Java 8](#)
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Shell-->
+```
+sudo apt install openjdk-8-jdk openjdk-8-jre
+```
+<br/>
+Install Plugin Stanford CoreNLP
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 <!--DOCUSAURUS_CODE_TABS-->
 
 <!--Shell-->
 ```
-sudo apt install openjdk-8-jdk openjdk-8-jre & \
-     deepnlpf --install stanfordcorenlp
+  deepnlpf --install stanfordcorenlp
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
+
+<br/>
 
 Now that you have Stanford CoreNLP installed, when you want to use it as a base tool, use the ```tool_base``` parameter.
 
@@ -744,4 +756,15 @@ You find the annotated files within the: ```/home/your_user/deepnlpf_data/output
 
 There are needs in which we want to work with a database to save the data from the annotated datasets to explore later. With that in mind DeepNLPF supports plugins that support the storage of documents in a database.
 
-[MongoDB](https://www.mongodb.com/).
+To save your notes in a database, just install one of our available pluginsdb [here](https://deepnlpf.github.io/site/docs/en/pluginsdb).
+
+After installing the desired database plugins, you must inform the pipeline that you are using storage using the following parameter: ``` use_db='<name_database>' ```
+
+Let's look at an example for a JSON-type document-oriented data storage system.
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Python--> 
+    nlp = Pipeline(_input=sentence, pipeline=path_pipeline, use_db='mongodb')
+
+<!--END_DOCUSAURUS_CODE_TABS-->
