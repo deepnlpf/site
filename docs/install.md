@@ -91,6 +91,30 @@ Alternatively, you can also install from source via DeepNLPF git repository, whi
 ## Virtual Machine
 
 > Comming soon.
+- Download VM [here](#).
+
+- Install 
+VM use [VirtualBox](https://www.virtualbox.org/)
+    - Virtual Box >> Menu >> Machine >> Add
+    - Select a virtual machine file: ```DeepNLPF.vbox```
+
+- Settings
+
+    - System >> Motherboard
+        - Base Memory (your choice)
+    - System >> Processor
+        - Processor(s) (your choice)
+
+- Start
+    - Virtual Box >> Select ```DeepNLPF``` >> Start
+
+- VM access credentials:<br/>
+    - <b>User:</b> deepnlpf <br>
+    - <b>Pass:</b> deepnlpf
+
+- VM Full Screen
+    - Download driver [here](#)
+    - With the VM open: Menu >> Devices >> Optical drives >> Choose disk image >> ```VBoxGuestAdditions_6.0.6.iso```
 
 <!--DOCUSAURUS_CODE_TABS-->
 
