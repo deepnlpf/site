@@ -30,25 +30,19 @@ DeepNLPF has been implemented and tested using the [Ubuntu](https://ubuntu.com/)
 
 <b>Software</b>
 * [Ubuntu 19.04](https://ubuntu.com/) (64-bit).
-* [Intall Python 3.7](https://linuxize.com/post/how-to-install-python-3-7-on-ubuntu-18-04/) 
-* [Install Java 8](https://tecadmin.net/install-oracle-java-8-ubuntu-via-ppa/)
-* [Install MongoDB](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/)
+* [Intall Python 3.7](https://linuxize.com/post/how-to-install-python-3-7-on-ubuntu-18-04/)
+* [Pip](https://pypi.org/)
+* [Java 8](#)
 
 To install the system dependencies, execute the command in the terminal.
 
 <!--DOCUSAURUS_CODE_TABS-->
 
 <!--Shell--> 
-     bash <(curl -Ss https://github.com/deepnlpf/deepnlpf/blob/master/install_requeriments_system.sh)
-
-<!--END_DOCUSAURUS_CODE_TABS-->
-
-If you prefer, download and install the dependencies from our [script](https://github.com/deepnlpf/deepnlpf/blob/master/install_requeriments_system.sh).
-
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell--> 
-     bash install_requeriments_deepnlpf.sh
+```
+sudo apt install python3 & \
+     apt install python-pip
+```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 

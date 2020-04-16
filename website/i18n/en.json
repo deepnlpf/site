@@ -12,8 +12,8 @@
       "api": {
         "title": "API RESTful"
       },
-      "wordnet": {
-        "title": "WordNet"
+      "basex": {
+        "title": "BaseX"
       },
       "benchmarking": {
         "title": "Benchmarking"
@@ -51,6 +51,9 @@
       "install": {
         "title": "Installation"
       },
+      "mongodb": {
+        "title": "MongoDB"
+      },
       "notifications": {
         "title": "Notifications"
       },
@@ -87,11 +90,11 @@
       "supwsd": {
         "title": "SupWSD"
       },
-      "tudo": {
-        "title": "Futute Updates"
-      },
       "wikiplugin": {
         "title": "Wiki Plugin"
+      },
+      "wordnet": {
+        "title": "WordNet"
       },
       "worldwide": {
         "title": "worldwide"

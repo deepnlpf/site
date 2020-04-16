@@ -12,7 +12,7 @@ By default we use Stanza as a base NLP tool. Therefore, it is necessary to insta
 <!--DOCUSAURUS_CODE_TABS-->
 
 <!--Shell--> 
-    python -c "import stanza; stanza.download('en')" #Download English model.
+    python -c "import stanza; stanza.download('en')" & \
     deepnlpf --install stanza #Install wrapper stanza.
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -23,8 +23,11 @@ However, if you prefer you can also use Stanford CoreNLP as a base. To do this, 
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--Shell--> 
+<!--Shell-->
+```
+sudo apt install openjdk-8-jdk openjdk-8-jre & \
      deepnlpf --install stanfordcorenlp
+```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
@@ -583,13 +586,102 @@ Now run your python file.
 
 You may have already noticed that we assume all processing output in ```JSON``` format. However, sometimes we want to use another format like ```XML```. DeepNLPF makes it easy for you using the ```_format='xml'``` parameter.
 
-Following the previous example, just add the parameter ```_format='xml' = "xml"```, to have the result processed in the desired format.
+Following the previous example, just add the parameter ```_format='xml'```, to have the result processed in the desired format.
 <!--DOCUSAURUS_CODE_TABS-->
 
 <!--Python--> 
-    nlp = Pipeline(_input=sentences, pipeline=path_pipeline, _format='xml'='xml')
+    nlp = Pipeline(_input=sentences, pipeline=path_pipeline, _format='xml')
 
-<!--Result--> 
+<!--Result-->
+```
+<?xml version="1.0" ?>
+<all>
+  <_id_pool type="str">666f6f2d6261722d71757578</_id_pool>
+  <_id_dataset type="str">5e98002997299f974570e89e</_id_dataset>
+  <_id_document type="str">5e980029de739f4c4b60ee9c</_id_document>
+  <tool type="str">stanza</tool>
+  <annotation type="list">
+    <item type="list">
+      <item type="dict">
+        <id type="str">1</id>
+        <text type="str">Barack</text>
+        <lemma type="str">Barack</lemma>
+        <upos type="str">PROPN</upos>
+        <xpos type="str">NNP</xpos>
+        <feats type="str">Number=Sing</feats>
+        <head type="int">4</head>
+        <deprel type="str">nsubj:pass</deprel>
+        <misc type="str">start_char=0|end_char=6</misc>
+      </item>
+      <item type="dict">
+        <id type="str">2</id>
+        <text type="str">Obama</text>
+        <lemma type="str">Obama</lemma>
+        <upos type="str">PROPN</upos>
+        <xpos type="str">NNP</xpos>
+        <feats type="str">Number=Sing</feats>
+        <head type="int">1</head>
+        <deprel type="str">flat</deprel>
+        <misc type="str">start_char=7|end_char=12</misc>
+      </item>
+      <item type="dict">
+        <id type="str">3</id>
+        <text type="str">was</text>
+        <lemma type="str">be</lemma>
+        <upos type="str">AUX</upos>
+        <xpos type="str">VBD</xpos>
+        <feats type="str">Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin</feats>
+        <head type="int">4</head>
+        <deprel type="str">aux:pass</deprel>
+        <misc type="str">start_char=13|end_char=16</misc>
+      </item>
+      <item type="dict">
+        <id type="str">4</id>
+        <text type="str">born</text>
+        <lemma type="str">bear</lemma>
+        <upos type="str">VERB</upos>
+        <xpos type="str">VBN</xpos>
+        <feats type="str">Tense=Past|VerbForm=Part|Voice=Pass</feats>
+        <head type="int">0</head>
+        <deprel type="str">root</deprel>
+        <misc type="str">start_char=17|end_char=21</misc>
+      </item>
+      <item type="dict">
+        <id type="str">5</id>
+        <text type="str">in</text>
+        <lemma type="str">in</lemma>
+        <upos type="str">ADP</upos>
+        <xpos type="str">IN</xpos>
+        <head type="int">6</head>
+        <deprel type="str">case</deprel>
+        <misc type="str">start_char=22|end_char=24</misc>
+      </item>
+      <item type="dict">
+        <id type="str">6</id>
+        <text type="str">Hawaii</text>
+        <lemma type="str">Hawaii</lemma>
+        <upos type="str">PROPN</upos>
+        <xpos type="str">NNP</xpos>
+        <feats type="str">Number=Sing</feats>
+        <head type="int">4</head>
+        <deprel type="str">obl</deprel>
+        <misc type="str">start_char=25|end_char=31</misc>
+      </item>
+      <item type="dict">
+        <id type="str">7</id>
+        <text type="str">.</text>
+        <lemma type="str">.</lemma>
+        <upos type="str">PUNCT</upos>
+        <xpos type="str">.</xpos>
+        <head type="int">4</head>
+        <deprel type="str">punct</deprel>
+        <misc type="str">start_char=32|end_char=33</misc>
+      </item>
+    </item>
+  </annotation>
+  <data_time type="str">&quot;16/04/2020 - 03:50:20&quot;</data_time>
+</all>
+```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
@@ -601,7 +693,7 @@ DeepNLPF has two approaches to optimize execution. By default we use [Multiproce
 <!--DOCUSAURUS_CODE_TABS-->
 
 <!--Shell--> 
-     pip install redis
+    pip install ray==0.8.4 redis==3.4.1
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
@@ -609,7 +701,7 @@ DeepNLPF has two approaches to optimize execution. By default we use [Multiproce
 <!--DOCUSAURUS_CODE_TABS-->
 
 <!--Shell--> 
-     pip install ray funcsigs aiohttp psutil setproctitle grpcio
+    pip install ray funcsigs aiohttp psutil setproctitle grpcio
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
@@ -621,14 +713,35 @@ Therefore, to select the second option, just use the ```boost``` parameter as fo
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
+## Output Files
+Sometimes the dataset is large, so it is not interesting to analyze the results in the terminal. Saving your notes to a file is more efficient. Therefore, DeepNLPF is able to export the processed data to a JSON or XML file for you to open in a tool of your choice.
+
+### Output Files JSON
+To save the output to a ```JSON``` file you must use the following parameters: ``` _output='file' ``` which states that the annotated output must be in a ```json``` format file by default.
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Python--> 
+    nlp = Pipeline(_input=sentence, pipeline=path_pipeline, _output='file')
+
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+### Output Files XML
+If you want the file to be generated in ```XML``` format, you must add the parameter ```format='xml'``` informed in the output format.
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Python--> 
+    nlp = Pipeline(_input=sentence, pipeline=path_pipeline, _output='file', format='xml')
+
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+### Output Files Directory
+Okay, but where does the generated file go? <br/>
+You find the annotated files within the: ```/home/your_user/deepnlpf_data/output/<dir_id_dataset>/<document_name>``` directory path.
+
 ## DataBase
 
-You may already be bored that everything in DeepNLPF is saved in [MongoDB](https://www.mongodb.com/). So let's see some possible operations in this regard.
+There are needs in which we want to work with a database to save the data from the annotated datasets to explore later. With that in mind DeepNLPF supports plugins that support the storage of documents in a database.
 
-### Save Dataset
-
-### List Dataset
-
-### Delete Dataset
-
-### Select Dataset
+[MongoDB](https://www.mongodb.com/).

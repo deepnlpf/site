@@ -73,8 +73,8 @@
             "pluginsdb", {
                 "type": "subcategory",
                 "ids": [
-                    "mongodb",
-                    "basex"
+                    "basex",
+                    "mongodb"
                 ]
             }
         ]
