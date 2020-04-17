@@ -12,8 +12,22 @@ By default we use Stanza as a base NLP tool. Therefore, it is necessary to insta
 <!--DOCUSAURUS_CODE_TABS-->
 
 <!--Shell--> 
-    python -c "import stanza; stanza.download('en')" & \
-    deepnlpf --install stanza
+```shell
+deepnlpf --install stanza
+```
+
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+<br>
+
+Install Model Stanza EN
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Shell--> 
+```shell
+python -c "import stanza; stanza.download('en')"
+```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
@@ -701,19 +715,8 @@ Following the previous example, just add the parameter ```_format='xml'```, to h
 
 DeepNLPF has two approaches to optimize execution. By default we use [Multiprocessing Pathos Framework](https://pypi.org/project/pathos/), but if you prefer you can choose to use [Faster Parallel Ray](https://ray.io/) 10x [fast as the first one](https://towardsdatascience.com/10x-faster-parallel-python-without-python-multiprocessing-e5017c93cce1).
 
-> For you to use Ray, you must have a Redis server installed.
-<!--DOCUSAURUS_CODE_TABS-->
-
 <!--Shell--> 
-    pip install ray==0.8.4 redis==3.4.1
-
-<!--END_DOCUSAURUS_CODE_TABS-->
-
-> Certify the following installations.
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell--> 
-    pip install ray funcsigs aiohttp psutil setproctitle grpcio
+    pip install funcsigs aiohttp psutil setproctitle grpcio
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 

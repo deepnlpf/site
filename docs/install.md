@@ -31,18 +31,18 @@ DeepNLPF has been implemented and tested using the [Ubuntu](https://ubuntu.com/)
 <b>Operational System</b>
 * [Ubuntu 19.04](https://ubuntu.com/) (64-bit).
 
-<b>Software Requested</b>
-* [Intall Python 3.7](https://linuxize.com/post/how-to-install-python-3-7-on-ubuntu-18-04/)
+<b>System Requested</b>
+* [Python 3](https://linuxize.com/post/how-to-install-python-3-7-on-ubuntu-18-04/)
+* [Python 3 Dev](#)
 * [Pip](https://pypi.org/)
 
-To install the system dependencies, execute the command in the terminal.
+To install the system requested (Python 3, Python 3 Dev and Pip), execute the command in the terminal.
 
 <!--DOCUSAURUS_CODE_TABS-->
 
 <!--Shell--> 
 ```
-sudo apt install python3 & \
-     apt install python-pip
+sudo apt install python3 python3-pip python3-dev libgnutls28-dev
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->

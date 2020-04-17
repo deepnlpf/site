@@ -47,7 +47,7 @@ class HomeSplash extends React.Component {
         {siteConfig.title}
         <small>
           <translate>
-            A Framework for Integrating Linguistic Analysis <br/>and Semantic Annotation of Text Documents.
+            A Framework for Integrating Linguistic Analysis and Semantic Annotation of Text Documents.
           </translate>
         </small>
       </h2>

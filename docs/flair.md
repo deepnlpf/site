@@ -47,9 +47,11 @@ Polish: ``` ``` <br/>
         {
             "flair": {
                 "pipeline": [
-                    "tokenizer",
-                    "postag",
-                    "semantic_frame"
+                    "fast_pos_tagging",
+                    "fast_ner_4class",
+                    "fast_ner_ontonotes_18class",
+                    "fast_syntatic_chunking",
+                    "fast_semantic_frame_detection"
                 ]
             }
         }
@@ -59,6 +61,33 @@ Polish: ``` ``` <br/>
 
 <!--yaml-->
 ```yaml
+```
+
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+## Example
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Python--> 
+```python
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+from deepnlpf.pipeline import Pipeline
+
+path_pipeline = '<path>/pipeline_flair.json'
+sentence = 'The grass is green.'
+
+nlp = Pipeline(_input=sentence, pipeline=path_pipeline)
+annotation = nlp.annotate()
+```
+
+<!--Output JSON-->
+```json
+```
+
+<!--Output XML-->
+```xml
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->

@@ -117,7 +117,7 @@
     }
   },
   "pages-strings": {
-    "A Framework for Integrating Linguistic Analysis|no description given": "A Framework for Integrating Linguistic Analysis",
+    "A Framework for Integrating Linguistic Analysis and Semantic Annotation of Text Documents.|no description given": "A Framework for Integrating Linguistic Analysis and Semantic Annotation of Text Documents.",
     "DeepNLPF provides a component for integrating and customizing linguistic analysis. When building Plugins, you can add any PLN tool, regardless of the programming language in which it was created.|no description given": "DeepNLPF provides a component for integrating and customizing linguistic analysis. When building Plugins, you can add any PLN tool, regardless of the programming language in which it was created.",
     "Custom Pipeline|no description given": "Custom Pipeline",
     "DeepNLPF includes parallel processing strategies and multithreads to ensure maximum performance. Through the approach taken it is possible to process extremely large texts.|no description given": "DeepNLPF includes parallel processing strategies and multithreads to ensure maximum performance. Through the approach taken it is possible to process extremely large texts.",
