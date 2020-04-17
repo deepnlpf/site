@@ -73,46 +73,41 @@ To see DeepNLPF custom pipeline in action, you can launch the Python interactive
 <!--DOCUSAURUS_CODE_TABS-->
 
 <!--Python--> 
-     from deepnlpf.pipeline import Pipeline
+```python
+from deepnlpf.pipeline import Pipeline
 
-     custom_pipeline = """
-        {
-            "lang": "en",
-            "tools": [{
-                "stanza": {
-                    "pipeline": [
-                        "tokenize",
-                        "mwt",
-                        "pos",
-                        "lemma",
-                        "ner",
-                        "depparse"
-                    ]
-                }
-            }]
-        }
-        """
+custom_pipeline = """
+  {
+      "lang": "en",
+      "tools": [{
+          "stanza": {
+              "pipeline": [
+                  "tokenize",
+                  "mwt",
+                  "pos",
+                  "lemma",
+                  "ner",
+                  "depparse"
+              ]
+          }
+      }]
+  }
+  """
 
-     sentence = "Barack Obama was born in Hawaii."
+sentence = "Barack Obama was born in Hawaii."
 
-     nlp = Pipeline(_input=sentence, pipeline=custom_pipeline)
-     nlp.annotate()
-
-<!--END_DOCUSAURUS_CODE_TABS-->
-
-To print the output you can use as follows:
-
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Python--> 
-     annotation = nlp.annotate()
-
-     print(annotation)
+nlp = Pipeline(_input=sentence, pipeline=custom_pipeline)
+resul = nlp.annotate()
+print(resul)
+```
 
 <!--Result-->
+```json
 [{'_id_pool': '666f6f2d6261722d71757578', '_id_dataset': '5e96107d18e379f9d70f856f', '_id_document': '5e96107d18e379f9d70f8571', 'tool': 'stanfordcorenlp', 'annotation': [{'sentences': [{'index': 0, 'parse': '(ROOT\n  (S\n    (NP (NNP Barack) (NNP Obama))\n    (VP (VBD was)\n      (VP (VBN born)\n        (PP (IN in)\n          (NP (NNP Hawaii)))))\n    (. .)))', 'basicDependencies': [{'dep': 'ROOT', 'governor': 0, 'governorGloss': 'ROOT', 'dependent': 4, 'dependentGloss': 'born'}, {'dep': 'compound', 'governor': 2, 'governorGloss': 'Obama', 'dependent': 1, 'dependentGloss': 'Barack'}, {'dep': 'nsubjpass', 'governor': 4, 'governorGloss': 'born', 'dependent': 2, 'dependentGloss': 'Obama'}, {'dep': 'auxpass', 'governor': 4, 'governorGloss': 'born', 'dependent': 3, 'dependentGloss': 'was'}, {'dep': 'case', 'governor': 6, 'governorGloss': 'Hawaii', 'dependent': 5, 'dependentGloss': 'in'}, {'dep': 'nmod', 'governor': 4, 'governorGloss': 'born', 'dependent': 6, 'dependentGloss': 'Hawaii'}, {'dep': 'punct', 'governor': 4, 'governorGloss': 'born', 'dependent': 7, 'dependentGloss': '.'}], 'enhancedDependencies': [{'dep': 'ROOT', 'governor': 0, 'governorGloss': 'ROOT', 'dependent': 4, 'dependentGloss': 'born'}, {'dep': 'compound', 'governor': 2, 'governorGloss': 'Obama', 'dependent': 1, 'dependentGloss': 'Barack'}, {'dep': 'nsubjpass', 'governor': 4, 'governorGloss': 'born', 'dependent': 2, 'dependentGloss': 'Obama'}, {'dep': 'auxpass', 'governor': 4, 'governorGloss': 'born', 'dependent': 3, 'dependentGloss': 'was'}, {'dep': 'case', 'governor': 6, 'governorGloss': 'Hawaii', 'dependent': 5, 'dependentGloss': 'in'}, {'dep': 'nmod:in', 'governor': 4, 'governorGloss': 'born', 'dependent': 6, 'dependentGloss': 'Hawaii'}, {'dep': 'punct', 'governor': 4, 'governorGloss': 'born', 'dependent': 7, 'dependentGloss': '.'}], 'enhancedPlusPlusDependencies': [{'dep': 'ROOT', 'governor': 0, 'governorGloss': 'ROOT', 'dependent': 4, 'dependentGloss': 'born'}, {'dep': 'compound', 'governor': 2, 'governorGloss': 'Obama', 'dependent': 1, 'dependentGloss': 'Barack'}, {'dep': 'nsubjpass', 'governor': 4, 'governorGloss': 'born', 'dependent': 2, 'dependentGloss': 'Obama'}, {'dep': 'auxpass', 'governor': 4, 'governorGloss': 'born', 'dependent': 3, 'dependentGloss': 'was'}, {'dep': 'case', 'governor': 6, 'governorGloss': 'Hawaii', 'dependent': 5, 'dependentGloss': 'in'}, {'dep': 'nmod:in', 'governor': 4, 'governorGloss': 'born', 'dependent': 6, 'dependentGloss': 'Hawaii'}, {'dep': 'punct', 'governor': 4, 'governorGloss': 'born', 'dependent': 7, 'dependentGloss': '.'}], 'entitymentions': [{'docTokenBegin': 0, 'docTokenEnd': 2, 'tokenBegin': 0, 'tokenEnd': 2, 'text': 'Barack Obama', 'characterOffsetBegin': 0, 'characterOffsetEnd': 12, 'ner': 'PERSON'}, {'docTokenBegin': 5, 'docTokenEnd': 6, 'tokenBegin': 5, 'tokenEnd': 6, 'text': 'Hawaii', 'characterOffsetBegin': 25, 'characterOffsetEnd': 31, 'ner': 'STATE_OR_PROVINCE'}], 'tokens': [{'index': 1, 'word': 'Barack', 'originalText': 'Barack', 'lemma': 'Barack', 'characterOffsetBegin': 0, 'characterOffsetEnd': 6, 'pos': 'NNP', 'ner': 'PERSON', 'truecase': 'INIT_UPPER', 'truecaseText': 'Barack', 'before': '', 'after': ' '}, {'index': 2, 'word': 'Obama', 'originalText': 'Obama', 'lemma': 'Obama', 'characterOffsetBegin': 7, 'characterOffsetEnd': 12, 'pos': 'NNP', 'ner': 'PERSON', 'truecase': 'INIT_UPPER', 'truecaseText': 'Obama', 'before': ' ', 'after': ' '}, {'index': 3, 'word': 'was', 'originalText': 'was', 'lemma': 'be', 'characterOffsetBegin': 13, 'characterOffsetEnd': 16, 'pos': 'VBD', 'ner': 'O', 'truecase': 'LOWER', 'truecaseText': 'was', 'before': ' ', 'after': ' '}, {'index': 4, 'word': 'born', 'originalText': 'born', 'lemma': 'bear', 'characterOffsetBegin': 17, 'characterOffsetEnd': 21, 'pos': 'VBN', 'ner': 'O', 'truecase': 'LOWER', 'truecaseText': 'born', 'before': ' ', 'after': ' '}, {'index': 5, 'word': 'in', 'originalText': 'in', 'lemma': 'in', 'characterOffsetBegin': 22, 'characterOffsetEnd': 24, 'pos': 'IN', 'ner': 'O', 'truecase': 'LOWER', 'truecaseText': 'in', 'before': ' ', 'after': ' '}, {'index': 6, 'word': 'Hawaii', 'originalText': 'Hawaii', 'lemma': 'Hawaii', 'characterOffsetBegin': 25, 'characterOffsetEnd': 31, 'pos': 'NNP', 'ner': 'STATE_OR_PROVINCE', 'truecase': 'INIT_UPPER', 'truecaseText': 'Hawaii', 'before': ' ', 'after': ' '}, {'index': 7, 'word': '.', 'originalText': '.', 'lemma': '.', 'characterOffsetBegin': 32, 'characterOffsetEnd': 33, 'pos': '.', 'ner': 'O', 'truecase': 'O', 'truecaseText': '.', 'before': ' ', 'after': ''}]}]}], 'data_time': '"14/04/2020 - 16:36:02"', '_id': '5e9610a218e379f9d70f8574'}]
+```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
+
 
 This output was not at all interesting, let's try something more beautiful.
 <!--DOCUSAURUS_CODE_TABS-->
