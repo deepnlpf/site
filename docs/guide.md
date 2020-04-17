@@ -114,8 +114,7 @@ This output was not at all interesting, let's try something more beautiful.
 
 <!--Python--> 
      import json
-
-     print(json.dumps(annotation, indent=4))
+     print(json.dumps(resul, indent=4))
 
 <!--Result-->
 ```
