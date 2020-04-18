@@ -121,14 +121,23 @@ VM use [VirtualBox](https://www.virtualbox.org/)
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ## Docker
-
-> Comming soon.
-
+Download the image from the DeepNLPF docker.
 <!--DOCUSAURUS_CODE_TABS-->
-
-<!--Docker--> 
-
+<!--Shell-->
+```shell
+docker pull deepnlpf/deepnlpf:latest 
+```
 <!--END_DOCUSAURUS_CODE_TABS-->
+
+Run docker image DeepNLPF
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Shell-->
+```shell
+docker run -i -t deepnlpf /bin/bash
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+Learn some commands [here](http://deepnlpf.github.io/site/docs/en/cli).
 
 ## Vagrant Cluster HPC MPI install
 

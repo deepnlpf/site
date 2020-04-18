@@ -5,41 +5,128 @@ title: CLI Commands
 
 > Under construction!
 
-<b>CLI Commands</b>: use through command line interface. <br>
+DeepNLPF Command Line Interface.
 
-### Help
-    
-     deepnlpf -h
+## Help
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Shell-->
+```shell
+deepnlpf -h
+```
+<!--Output-->
+```shell
+usage: deepnlpf [-h] [-v] [-install INSTALL] [-uninstall UNINSTALL] [-listplugins LISTPLUGINS] [-api API]
 
-### List Plugins Install
+DeepNLPF Command Line Interface - CLI
 
-    deepnlpf --plugins all
+optional arguments:
+  -h, --help            show this help message and exit
+  -v, --version         show version.
+  -install INSTALL, --install INSTALL
+                        Command for install plugin.
+  -uninstall UNINSTALL, --uninstall UNINSTALL
+                        Command for uninstall plugin.
+  -listplugins LISTPLUGINS, --listplugins LISTPLUGINS
+                        Command for listplugins plugin.
+  -api API, --api API   Command run api.
 
-    freeling
-    stanfordcorenlp
-    pywsd
-    spacy
-    quanteda
-    semafor
-    deepnlp
-    cogcomp
-    wordnet
-    supwsd
-    helloworld
+🐙 Enjoy the program! :)
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
 
-### Save New Corpus
+
+
+## Version
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Shell-->
+```shell
+deepnlpf -v
+```
+<!--Output-->
+```shell
+🐙 DeepNLPF V x.x.x
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+
+
+## Create project
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Shell-->
+```shell
+deepnlpf --new [project_name] [json|yaml|ini|xml]
+```
+<!--Output-->
+```shell
+project_name
+├── pipeline.py
+├── custom_pipeline.json
+└── README.md
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+
+
+## Plugins
+
+### List all plugins published
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Shell-->
+```shell
+deepnlpf --plugins published
+```
+<!--Output-->
+```shell
+cogcomp
+stanfordcorenlp
+spacy
+semafor
+supwsd
+stanza
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+### Install one plugin
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Shell-->
+```shell
+deepnlpf --install [plugin_name]
+```
+<!--Output-->
+```shell
+stanfordcorenlp
+stanza
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+### List all plugins instaled
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Shell-->
+```shell
+deepnlpf --plugins installed
+```
+<!--Output-->
+```shell
+stanfordcorenlp
+stanza
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+## Dataset
+
+### Save new dataset
 To save a corpus, it must be organized in one of the two directory structures shown below.
 
 Simple structure
 
-    /home/user/path_corpus/
+    /home/your_user/path_dataset/
                         document_1.txt
                         document_2.txt
                         ..
 
 or Complete Structure
 
-    /home/user/path_corpus/
+    /home/your_user/path_dataset/
                         train/
                             pos/
                                 document_01.txt
@@ -62,120 +149,158 @@ or Complete Structure
 Sentences must be saved in the TXT file, one per line.
 For the doc: ```document_1.txt``` You have the following sentences one after another.
 
-        1 A misty ridge uprises from the surge.
-        2 The author of a keygen uses a disassembler to look at the raw assembly code.
-        3 The child was carefully wrapped and bound into the cradle by means of a cord.
-        4 The system as described above has its greatest application in an arrayed configuration of antenna elements.
-        5 The student association is the vpath_oice of the undergraduate student population of the State University of New York at Buffalo.
+    1 A misty ridge uprises from the surge.
+    2 The author of a keygen uses a disassembler to look at the raw assembly code.
+    3 The child was carefully wrapped and bound into the cradle by means of a cord.
+    4 The system as described above has its greatest application in an arrayed configuration of antenna elements.
+    5 The student association is the vpath_oice of the undergraduate student population of the State University of New York at Buffalo.
 
 
-You must use the command: ```python deepnlpf --savecorpus <path_dir_corpus> >``` by passing the path of your corpus directory as an argument, as per the example below.
-
-     deepnlpf --savecorpus /home/user/path_corpus/aclImdb
-
-    corpus: aclImdb
+You must use the command: ```deepnlpf --savedataset [path_dir_corpus]``` by passing the path of your corpus directory as an argument, as per the example below.
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Shell-->
+```shell
+deepnlpf --savedataset /home/your_user/path_dataset/dataset_name
+```
+<!--Output-->
+```shell
+    dataset: dataset_name
     ├── train:
     │   └── documents [pos]: 100%|███████████████████████████████████████████████████| 12500/12500 [00:50<00:00, 245.24it/s]
     │   └── documents [neg]: 100%|███████████████████████████████████████████████████| 12500/12500 [00:51<00:00, 241.78it/s]
     ├── test:
     │   └── documents [pos]: 100%|███████████████████████████████████████████████████| 12500/12500 [00:59<00:00, 211.20it/s]
     │   └── documents [neg]: 100%|███████████████████████████████████████████████████| 12500/12500 [01:01<00:00, 202.22it/s]
-    └── _id_corpus: 5d8f5e3825fc15b3ec6f43a6
+    └── _id_dataset: 5d8f5e3825fc15b3ec6f43a6
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
 
-### List All Corpus
-Lists all corpus saved in the database.
-
-     deepnlpf --listcorpus all
-
-    ├──Corpus: aclImdb
+### List all datasets
+Lists all dataset saved in the database.
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Shell-->
+```shell
+deepnlpf --listdataset all
+```
+<!--Output-->
+```shell
+    ├── Dataset: dataset_name
     │  ID: 5d8f55f4b3b87b4d30ee0445
     │  Register: 2019-09-28 09:45:40.725000
 
-    ├──Corpus: semeval
-    │  id_corpus: 5d8f576dd54e23a38cb3e819
+    ├── Dataset: dataset_name
+    │  id_dataset: 5d8f576dd54e23a38cb3e819
     │  register: 2019-09-28 09:51:57.850000
-    ..
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
 
-### Delete Corpus
-Used the command ```deepnlpf --deletecorpus <_id_corpus>``` for delete a specific corpus.
+### Delete one dataset
+Used the command ```deepnlpf --deletedataset [_id_dataset]``` for delete a specific corpus.
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Shell-->
+```shell
+deepnlpf --deletedataset 5d8f576dd54e23a38cb3e819 
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
 
-     deepnlpf --deletecorpus 5d8f576dd54e23a38cb3e819 
+## Pipeline
 
-### Run Pipeline
-Used the command ```deepnlpf --pipeline <custom_pipeline.json>``` for execute pipeline custom analises languagem.
-
-     deepnlpf --pipeline custom_pipeline.json
-
-Example file ```customs_pipeline_example.json``` in /deepnlpf/example/ .
-
-    {
-        "corpus_id": "5d8ed3b6495308534096e879",
-        "lang": "en",
-        "tools": [{
-            "supwsd": {
-                "pipeline": ["wsd"]
-            },
-            {
-                "stanfordcorenlp": {
-                    "pipeline": ["tokenize", "ssplit", "pos", "lemma", "ner", "parse", "depparse", "truecase", "dcoref"]
-                }
-            },
-            {
-                "semafor": {
-                    "pipeline": ["parsing"]
-                }
-            },
-            {
-                "cogcomp": {
-                    "pipeline": ["SRL_NOM", "SRL_VERB", "SRL_PREP"]
-                }
-            },
-            {
-                "pywsd": {
-                    "pipeline": ["disambiguate"]
-                }
-            },
-            {
-                "spacy": {
-                    "pipeline": ["pos", "tag", "shape", "is_alpha", "is_title", "like_num", "label"]
-                }
-            },
-            {
-                "freeling": {
-                    "pipeline": ["wsd", "svo_triples_srl"]
-                }
-            }
-        }]
-    }
+### Run pipeline
+Used the command ```deepnlpf --pipeline [custom_pipeline.json]``` for execute pipeline custom analises languagem.
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Shell-->
+```shell
+deepnlpf --pipeline custom_pipeline.json
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 After running a custom analysis pipeline, all results are saved to the database.
 
-### View Analysis
+### View result analysis
 
-Used the command deepnlf viewannotation <_id_corpus> for view annotation processing the corpus.
-
-     deepnlf viewannotation 5d8ed3b6495308534096e879
+Used the command deepnlf viewannotation [_id_dataset] for view annotation processing the corpus.
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Shell-->
+```shell
+deepnlf --viewannotation 5d8ed3b6495308534096e879
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 ### Generated Annotation
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Shell-->
+```shell
+deepnlf --generatedannotation [_id_pool_datset]
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
 
-     deepnlf generatedannotation <_id_pool_corpus>
+### View annotation
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Shell-->
+```shell
+deepnlpf --viewannotation [_id_pool_dataset]
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
 
-### View Annotation
 
-     deepnlpf viewannotation <_id_pool_corpus>
-
-## Application Program Interface - API
-
-## Create APP
-
-## Corpus
-
-### Save Corpus
-
-### Delete Corpus
-### Selected Corpus
-
-## Run Pipeline
 
 ## Statistics
-### 
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Shell-->
+```shell
+deepnlpf --statistics [dataset_name|dataset_id]
+```
+<!--Output-->
+```shell
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+
+
+## API
+### Start API
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Shell-->
+```shell
+deepnlpf --start api
+```
+<!--Output-->
+```shell
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+### Stop API
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Shell-->
+```shell
+Ctrl + c
+```
+<!--Output-->
+```shell
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+
+
+## DashBoard
+### Start DashBoard
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Shell-->
+```shell
+deepnlpf --dashboard api
+```
+<!--Output-->
+```shell
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+### Stop DashBoard
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Shell-->
+```shell
+Ctrl + c
+```
+<!--Output-->
+```shell
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
