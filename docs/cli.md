@@ -115,7 +115,7 @@ stanza
 ## Dataset
 
 ### Save new dataset
-To save a corpus, it must be organized in one of the two directory structures shown below.
+To save a dataset, it must be organized in one of the two directory structures shown below.
 
 Simple structure
 
@@ -156,7 +156,7 @@ For the doc: ```document_1.txt``` You have the following sentences one after ano
     5 The student association is the vpath_oice of the undergraduate student population of the State University of New York at Buffalo.
 
 
-You must use the command: ```deepnlpf --savedataset [path_dir_corpus]``` by passing the path of your corpus directory as an argument, as per the example below.
+You must use the command: ```deepnlpf --savedataset [path_dir_dataset]``` by passing the path of your dataset directory as an argument, as per the example below.
 <!--DOCUSAURUS_CODE_TABS-->
 <!--Shell-->
 ```shell
@@ -195,7 +195,7 @@ deepnlpf --listdataset all
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### Delete one dataset
-Used the command ```deepnlpf --deletedataset [_id_dataset]``` for delete a specific corpus.
+Used the command ```deepnlpf --deletedataset [_id_dataset]``` for delete a specific dataset.
 <!--DOCUSAURUS_CODE_TABS-->
 <!--Shell-->
 ```shell
@@ -218,7 +218,7 @@ After running a custom analysis pipeline, all results are saved to the database.
 
 ### View result analysis
 
-Used the command deepnlf viewannotation [_id_dataset] for view annotation processing the corpus.
+Used the command deepnlf viewannotation [_id_dataset] for view annotation processing the dataset.
 <!--DOCUSAURUS_CODE_TABS-->
 <!--Shell-->
 ```shell

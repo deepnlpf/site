@@ -48,44 +48,39 @@ sudo apt install python3 python3-pip python3-dev libgnutls28-dev
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ## Pip install
-
 <!--DOCUSAURUS_CODE_TABS-->
-
 <!--Shell--> 
-     pip install deepnlpf
-
+```shell
+pip install deepnlpf
+```
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 If you currently have a previous version of DeepNLPF installed, use:
-
 <!--DOCUSAURUS_CODE_TABS-->
-
 <!--Shell--> 
-    pip install deepnlpf -U
-
+```shell
+pip install deepnlpf -U
+```
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ## Anaconda install
-
-> Comming soon.
-
 <!--DOCUSAURUS_CODE_TABS-->
-
 <!--Shell-->
-conda install -c deepnlpf
-
+```shell
+> Comming soon.
+```
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ## From Source install
 Alternatively, you can also install from source via DeepNLPF git repository, which will give you more flexibility in developing on top of DeepNLPF. For this option, run.
 
 <!--DOCUSAURUS_CODE_TABS-->
-
 <!--Shell--> 
-    git clone https://github.com/deepnlpf/deepnlpf.git
-    cd deepnlpf
-    pip install -e .
-
+```shell
+git clone https://github.com/deepnlpf/deepnlpf.git
+cd deepnlpf
+pip install -e .
+```
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ## Virtual Machine
@@ -114,18 +109,20 @@ VM use [VirtualBox](https://www.virtualbox.org/)
     - Download driver [here](https://w0.dk/~chlor/vboxguestadditions/)
     - With the VM open: Menu >> Devices >> Optical drives >> Choose disk image >> ```VBoxGuestAdditions_x.x.x.iso```
 
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--VBox--> 
-
-<!--END_DOCUSAURUS_CODE_TABS-->
-
 ## Docker
 Download the image from the DeepNLPF docker.
 <!--DOCUSAURUS_CODE_TABS-->
 <!--Shell-->
 ```shell
 docker pull deepnlpf/deepnlpf:latest 
+```
+<!--Output-->
+```shell
+Using default tag: latest
+latest: Pulling from deepnlpf/deepnlpf
+Digest: sha256:a87f092b7379276d7cd84b2f896764152e844897f49a4d34a6f8dba1b8fda134
+Status: Image is up to date for deepnlpf/deepnlpf:latest
+docker.io/deepnlpf/deepnlpf:latest
 ```
 <!--END_DOCUSAURUS_CODE_TABS-->
 
@@ -135,16 +132,18 @@ Run docker image DeepNLPF
 ```shell
 docker run -i -t deepnlpf /bin/bash
 ```
+<!--Output-->
+```shell
+root@435d96b406c2:/# 
+```
 <!--END_DOCUSAURUS_CODE_TABS-->
 
-Learn some commands [here](http://deepnlpf.github.io/site/docs/en/cli).
+Learn some commands [here](http://deepnlpf.github.io/site/docs/en/cli) to use the docker.
 
-## Vagrant Cluster HPC MPI install
-
-> Comming soon.
-
+## Cluster HPC MPI
 <!--DOCUSAURUS_CODE_TABS-->
-
-<!--Vagrant--> 
-
+<!--Shell--> 
+```shell
+> Comming soon.
+```
 <!--END_DOCUSAURUS_CODE_TABS-->
