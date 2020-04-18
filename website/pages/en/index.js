@@ -144,8 +144,8 @@ class Index extends React.Component {
         <h2>Features</h2>
         <MarkdownBlock>
           ```Multiprocessing Pathos Framework``` ```Faster Parallel Ray``` ```DashBoard``` ```Plugins```
-          ```Bot Notification``` ```API RESTFul``` ```CLI Commands``` ```Output Format Jsona and XML``` ```MongoDB```
-          ``` Data Statistics ```
+          ```Bot Notification``` ```API RESTFul``` ```CLI Commands``` ```Output Format Jsona and XML``` 
+          ```Suport Database JSON and XML``` ``` Data Statistics ```
         </MarkdownBlock>
       </div>
     );
