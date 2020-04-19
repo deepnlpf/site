@@ -42,7 +42,7 @@ To install the system requested (Python 3, Python 3 Dev and Pip), execute the co
 
 <!--Shell--> 
 ```
-sudo apt install python3 python3-pip python3-dev libgnutls28-dev
+sudo apt install python3 python3-pip build-essential python3-dev libgnutls28-dev
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->

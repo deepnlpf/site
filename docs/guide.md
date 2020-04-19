@@ -705,7 +705,7 @@ Following the previous example, just add the parameter ```_format='xml'```, to h
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
-## Boost
+## Boost CPU
 
 DeepNLPF has two approaches to optimize execution. By default we use [Multiprocessing Pathos Framework](https://pypi.org/project/pathos/), but if you prefer you can choose to use [Faster Parallel Ray](https://ray.io/) 10x [fast as the first one](https://towardsdatascience.com/10x-faster-parallel-python-without-python-multiprocessing-e5017c93cce1).
 
