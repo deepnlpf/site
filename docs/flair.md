@@ -13,20 +13,18 @@ A very simple framework for state-of-the-art NLP. Developed by Humboldt Universi
 
 ## Install Flayr
 <!--DOCUSAURUS_CODE_TABS-->
-
 <!--Shell--> 
-
-     pip install flair
-
+```shell
+    pip install flair
+```
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ## Install Plugin
 <!--DOCUSAURUS_CODE_TABS-->
-
 <!--Shell--> 
-
-     deepnlpf --install flair
-
+```shell
+    deepnlpf --install flair
+```
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ## [Suport Language](https://github.com/flairNLP/flair#comparison-with-state-of-the-art)
@@ -40,39 +38,32 @@ Polish: ``` ``` <br/>
 <!--DOCUSAURUS_CODE_TABS-->
 
 <!--Json--> 
-```
+```json
 {
     "lang": "en",
-    "tools": [
-        {
-            "flair": {
-                "pipeline": [
-                    "fast_pos_tagging",
-                    "fast_ner_4class",
-                    "fast_ner_ontonotes_18class",
-                    "fast_syntatic_chunking",
-                    "fast_semantic_frame_detection"
-                ]
-            }
+    "tools": [{
+        "flair": {
+            "pipeline": [
+                "pos-fast",
+                "ner-fast",
+                "ner-ontonotes-fast",
+                "chunk-fast",
+                "frame-fast"
+            ]
         }
-    ]
+    }]
 }
 ```
 
 <!--yaml-->
 ```yaml
 ```
-
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ## Example
 <!--DOCUSAURUS_CODE_TABS-->
-
 <!--Python--> 
 ```python
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 from deepnlpf.pipeline import Pipeline
 
 path_pipeline = '<path>/pipeline_flair.json'

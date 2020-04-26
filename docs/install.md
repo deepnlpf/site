@@ -30,6 +30,7 @@ DeepNLPF has been implemented and tested using the [Ubuntu](https://ubuntu.com/)
 
 <b>Operational System</b>
 * [Ubuntu 19.04](https://ubuntu.com/) (64-bit).
+* [Manjaro](https://manjaro.org/).
 
 <b>System Requested</b>
 * [Python 3](https://linuxize.com/post/how-to-install-python-3-7-on-ubuntu-18-04/)
