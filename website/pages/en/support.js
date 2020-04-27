@@ -40,7 +40,7 @@ class Help extends React.Component {
             </header>
             <p>
               <translate desc="statement made to reader">
-                This project is maintained by a dedicated group of people.
+                This project is maintained by a dedicated group of people. deepnlpf@gmail.com
               </translate>
             </p>
             <GridBlock contents={supportLinks} layout="threeColumn" />

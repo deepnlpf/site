@@ -66,7 +66,7 @@ const languages = [{
         tag: 'fi',
     },
     {
-        enabled: true,
+        enabled: false,
         name: 'Français',
         tag: 'fr',
     },
@@ -126,7 +126,7 @@ const languages = [{
         tag: 'pt-PT',
     },
     {
-        enabled: true,
+        enabled: false,
         name: 'Português (Brasil)',
         tag: 'pt-BR',
     },
