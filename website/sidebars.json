@@ -44,7 +44,6 @@
                 "type": "subcategory",
                 "ids": [
                     "cogcompnlp",
-                    "flair",
                     "freeling",
                     "opensesame",
                     "pywsd",
