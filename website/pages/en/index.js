@@ -150,7 +150,7 @@ class Index extends React.Component {
       </div>
     );
 
-    const BoostCPU = () => (
+    const Boost = () => (
       <Block id="try">
         {[
           {
@@ -165,7 +165,7 @@ class Index extends React.Component {
             imageLink: siteConfig.baseUrl + 'docs/en/guide#custom-boost',
             title: (
               <translate>
-                Boost CPU
+                Boost CPU and GPU
               </translate>
             ),
           },
@@ -303,7 +303,7 @@ class Index extends React.Component {
         <div className="mainContainer">
           <Features />
           <FeatureCallout />
-          <BoostCPU />
+          <Boost />
           <DashBoard />
           <Plugins />
           <API />

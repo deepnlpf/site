@@ -51,7 +51,8 @@ English: ```en``` <br/>
                     "is_alpha",
                     "is_title",
                     "like_num",
-                    "label"
+                    "label",
+                    "noun_chunks"
                 ]
             }
         }
