@@ -85,6 +85,8 @@ pip install -e .
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ## Virtual Machine
+> Comming Soon :)
+
 - Download VM [here](https://drive.google.com/open?id=1GRCP5E-rRa2Z6G3FeA7rbpYb_jdNgry_).
 
 - Install 
@@ -111,6 +113,8 @@ VM use [VirtualBox](https://www.virtualbox.org/)
     - With the VM open: Menu >> Devices >> Optical drives >> Choose disk image >> ```VBoxGuestAdditions_x.x.x.iso```
 
 ## Docker
+> Comming Soon :)
+
 Download the image from the DeepNLPF docker.
 <!--DOCUSAURUS_CODE_TABS-->
 <!--Shell-->
@@ -131,7 +135,7 @@ Run docker image DeepNLPF
 <!--DOCUSAURUS_CODE_TABS-->
 <!--Shell-->
 ```shell
-docker run -i -t deepnlpf /bin/bash
+docker run -i -t deepnlpf/deepnlpf /bin/bash
 ```
 <!--Output-->
 ```shell
