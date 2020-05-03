@@ -11,26 +11,13 @@ MongoDB is a general purpose, document-based, distributed database built for mod
 
 - [Site Oficial](https://www.mongodb.com/)
 
-
-## Install MongoDB
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell-->
-     sudo apt install -y mongodb
-
-<!--END_DOCUSAURUS_CODE_TABS-->
-
-
 ## Install Plugin
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell--> 
-     deepnlpf --install mongodb
-
-<!--END_DOCUSAURUS_CODE_TABS-->
+```shell
+deepnlpf --install mongodb
+```
 
 ## Suport Document
 
-Type: ``json``` <br/>
+Type: ```JSON``` <br/>
 
 ## Operations

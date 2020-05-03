@@ -7,21 +7,10 @@ Python Implementations of Word Sense Disambiguation (WSD) Technologies.
 
 - [Github](https://github.com/alvations/pywsd)
 
-## Install PyWSD
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell-->
-    pip install -U pywsd
-
-<!--END_DOCUSAURUS_CODE_TABS-->
-
 ## Install Plugin
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell-->
-    deepnlpf --install pywsd
-
-<!--END_DOCUSAURUS_CODE_TABS-->
+```shell
+deepnlpf --install pywsd
+```
 
 ## Suport Language
 

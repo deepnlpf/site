@@ -36,6 +36,9 @@
       "dashboard": {
         "title": "DashBoard"
       },
+      "deploy": {
+        "title": "Deploy"
+      },
       "donate": {
         "title": "Donate"
       },
@@ -141,7 +144,7 @@
     "Semantic Dictionary|no description given": "Semantic Dictionary",
     "Save and explore your datasets through a database.|no description given": "Save and explore your datasets through a database.",
     "DataBase|no description given": "DataBase",
-    "[Bug report](https://github.com/deepnlpf/deepnlpf/issues/new/choose), [Feature request](https://github.com/deepnlpf/deepnlpf/issues/new/choose), [Question](https://github.com/deepnlpf/deepnlpf/issues/new/choose). [deepnlpf@gmail.com](deepnlpf@gmail.com)|no description given": "[Bug report](https://github.com/deepnlpf/deepnlpf/issues/new/choose), [Feature request](https://github.com/deepnlpf/deepnlpf/issues/new/choose), [Question](https://github.com/deepnlpf/deepnlpf/issues/new/choose). [deepnlpf@gmail.com](deepnlpf@gmail.com)",
+    "[Bug report](https://github.com/deepnlpf/deepnlpf/issues/new/choose), [Feature request](https://github.com/deepnlpf/deepnlpf/issues/new/choose), [Question](https://github.com/deepnlpf/deepnlpf/issues/new/choose).|no description given": "[Bug report](https://github.com/deepnlpf/deepnlpf/issues/new/choose), [Feature request](https://github.com/deepnlpf/deepnlpf/issues/new/choose), [Question](https://github.com/deepnlpf/deepnlpf/issues/new/choose).",
     "Issue Tracker|no description given": "Issue Tracker",
     "Need help?|no description given": "Need help?",
     "This project is maintained by a dedicated group of people.|statement made to reader": "This project is maintained by a dedicated group of people.",

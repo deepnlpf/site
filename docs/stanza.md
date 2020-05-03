@@ -13,19 +13,17 @@ Stanza is a Python natural language analysis package. It contains tools, which c
 - [Github](https://github.com/stanfordnlp/stanza)
 
 ## Install Plugin
-<!--DOCUSAURUS_CODE_TABS-->
+```shell
+deepnlpf --install stanza
+```
 
-<!--Shell--> 
+## Download Model.
+```shell
+python -c "stanza.download('en')"
+```
 
-     deepnlpf --install stanza
-     python -c "import stanza; stanza.download('en')" # download English model.
-     deepnlpf --install stanza #install wrapper stanza
-
-<!--END_DOCUSAURUS_CODE_TABS-->
-
-## Suport Language
-
-English: ```en``` <br/>
+## Model Language
+Stanza supports multiple languages, see available ones [here](https://stanfordnlp.github.io/stanza/models.html#human-languages-supported-by-stanza).
 
 ## Pipeline
 <!--DOCUSAURUS_CODE_TABS-->

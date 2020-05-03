@@ -10,7 +10,8 @@
                     "api",
                     "dashboard",
                     "notifications",
-                    "benchmarking"
+                    "benchmarking",
+                    "deploy"
                 ]
             }
         ]

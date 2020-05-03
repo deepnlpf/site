@@ -13,26 +13,21 @@ Industrial-Strength Natural Language Processing.
 - [Demo Online](#)
 - [Github](#)
 
-## Install SpaCy
-<!--DOCUSAURUS_CODE_TABS-->
 
-<!--Shell--> 
-     pip install -U spacy
-     python -m spacy download en_core_web_sm
-
-<!--END_DOCUSAURUS_CODE_TABS-->
 
 ## Install Plugin
-<!--DOCUSAURUS_CODE_TABS-->
+```shell
+deepnlpf --install spacy
+```
 
-<!--Shell--> 
-     deepnlpf --install spacy
 
-<!--END_DOCUSAURUS_CODE_TABS-->
+## Install SpaCy Language English
+```shell
+python -m spacy download en_core_web_sm
+```
+To install other language models see [here](https://spacy.io/usage).
 
-## Suport Language
 
-English: ```en``` <br/>
 
 ## Pipeline
 <!--DOCUSAURUS_CODE_TABS-->

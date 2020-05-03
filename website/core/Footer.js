@@ -60,6 +60,7 @@ class Footer extends React.Component {
               aria-label="Star this project on GitHub">
               Star
             </a>
+            <a href='mailto:deepnlpf@gmail.com'>deepnlpf@gmail.com</a>
           </div>
         </section>
         

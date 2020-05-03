@@ -15,31 +15,13 @@ Python Implementations of Word Sense Disambiguation (WSD) Technologies.
 
 > Under construction!
 
-## Install supWSD
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell--> 
-
-     pip install supwsd
-
-<!--END_DOCUSAURUS_CODE_TABS-->
-
 ## Install Plugin
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell--> 
-
-     deepnlpf --install supwsd
-
-<!--END_DOCUSAURUS_CODE_TABS-->
+```Shell
+deepnlpf --install supwsd
+```
 
 ## Language
-
-English: ```en``` <br/>
-```fr``` <br/>
-```de``` <br/>
-```it``` <br/>
-```es``` <br/>
+SupWSD supports the following languages ```en```, ```fr```, ```de```, ```it``` and ```es```. Download the model you want [here](https://supwsd.net/supwsd/downloads.jsp) and save it on the way: ```/home/your_user/deepnlpf_data/plugins/supwsd/``` .
 
 ## Models
 
