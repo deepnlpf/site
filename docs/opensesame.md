@@ -13,23 +13,10 @@ A frame-semantic parsing system based on a softmax-margin SegRNN.
 - [Github](https://github.com/swabhs/open-sesame)
 
 
-## Install OpenSesame
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell--> 
-    pip install dynet
-    pip install nltk
-    python -m nltk.downloader averaged_perceptron_tagger wordnet
-
-<!--END_DOCUSAURUS_CODE_TABS-->
-
 ## Install Plugin
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell--> 
-     deepnlpf --install opensesame
-
-<!--END_DOCUSAURUS_CODE_TABS-->
+```shell
+deepnlpf --install opensesame
+```
 
 ## Language
 
@@ -39,23 +26,29 @@ English: ```en``` <br/>
 <!--DOCUSAURUS_CODE_TABS-->
 
 <!--Json--> 
-```
-    {
-        "lang": "en",
-        "tools": [
-            {
-                "opensesame": {
-                    "pipeline": [
-                        "frame_semantic_parsing"
-                    ]
-                }
+```json
+{
+    "lang": "en",
+    "tools": [
+        {
+            "opensesame": {
+                "pipeline": [
+                    "frame_semantic_parsing"
+                ]
             }
-        ]
-    }
+        }
+    ]
+}
 ```
 
 <!--yaml-->
 ```yaml
+---
+lang: en
+tools:
+- opensesame:
+    pipeline:
+    - frame_semantic_parsing
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->

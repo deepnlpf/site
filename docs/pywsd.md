@@ -20,7 +20,7 @@ English: ```en``` <br/>
 <!--DOCUSAURUS_CODE_TABS-->
 
 <!--Json--> 
-```
+```json
 {
     "lang": "en",
     "tools": [
@@ -34,4 +34,16 @@ English: ```en``` <br/>
     ]
 }
 ```
+
+<!--yaml-->
+```yaml
+---
+lang: en
+tools:
+- pywsd:
+    pipeline:
+    - wsd
+
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->

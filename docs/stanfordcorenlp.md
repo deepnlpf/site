@@ -33,7 +33,7 @@ Before assembling your pipeline, see the [dependent annotators](https://stanford
 <!--DOCUSAURUS_CODE_TABS-->
 
 <!--Json--> 
-```
+```json
 {
     "lang": "en",
     "tools": [{
@@ -56,6 +56,19 @@ Before assembling your pipeline, see the [dependent annotators](https://stanford
 
 <!--yaml-->
 ```yaml
+lang: en
+tools:
+- stanfordcorenlp:
+    pipeline:
+    - tokenize
+    - ssplit
+    - pos
+    - lemma
+    - ner
+    - truecase
+    - parse
+    - depparse
+    - coref
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->

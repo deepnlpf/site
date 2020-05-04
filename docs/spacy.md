@@ -33,7 +33,7 @@ To install other language models see [here](https://spacy.io/usage).
 <!--DOCUSAURUS_CODE_TABS-->
 
 <!--Json--> 
-```
+```json
 {
     "lang": "en",
     "tools": [
@@ -57,5 +57,18 @@ To install other language models see [here](https://spacy.io/usage).
 
 <!--yaml-->
 ```yaml
+---
+lang: en
+tools:
+- spacy:
+    pipeline:
+    - pos
+    - tag
+    - shape
+    - is_alpha
+    - is_title
+    - like_num
+    - label
+    - noun_chunks
 ```
 <!--END_DOCUSAURUS_CODE_TABS-->

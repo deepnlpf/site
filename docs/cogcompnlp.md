@@ -13,15 +13,9 @@ CogComp-NLP provides a suite of state-of-the-art Natural Language Processing (NL
 > Requires internet connection to function.
 
 ## Install Plugin
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell-->  
-
-```py
-     deepnlpf --install cogcompnlp
+```python
+deepnlpf --install cogcompnlp
 ```
-
-<!--END_DOCUSAURUS_CODE_TABS-->
 
 ## Suport Language
 
@@ -73,6 +67,37 @@ English: ```en``` <br/>
 
 <!--yaml-->
 ```yaml
+---
+lang: en
+tools:
+- cogcompnlp:
+    pipeline:
+    - POS
+    - LEMMA
+    - SHALLOW_PARSE
+    - DEP
+    - NER_CONLL
+    - NER_ONTONOTES
+    - STANFORD_PARSE
+    - STANFORD_DEP
+    - SRL_VERB
+    - SRL_NOM
+    - SRL_PREP
+    - SRL_COMMA
+    - QUANTIFIER
+    - VERB_SENSE
+    - RELATION
+    - LAZY_INITIALIZATION
+    - SRL_INTERNAL_PREPROCESSOR
+    - SPLIT_ON_DASH
+    - SENTENCE_PIPELINE
+    - TIMEX3
+    - MENTION
+    - TRANSLITERATION
+    - DATALESS_ESA
+    - DATALESS_W2V
+    - QUESTION_TYPER
+
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->

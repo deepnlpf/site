@@ -29,7 +29,7 @@ Stanza supports multiple languages, see available ones [here](https://stanfordnl
 <!--DOCUSAURUS_CODE_TABS-->
 
 <!--Json--> 
-```
+```json
 {
     "lang": "en",
     "tools": [{
@@ -49,18 +49,16 @@ Stanza supports multiple languages, see available ones [here](https://stanfordnl
 <!--yaml-->
 ```yaml
 ---
-    lang: en
-    tools:
-    - stanfordcorenlp:
-        pipeline:
-        - tokenize
-        - ssplit
-        - pos
-        - lemma
-        - ner
-        - truecase
-        - parse
-        - depparse
+lang: en
+tools:
+- stanza:
+    pipeline:
+    - tokenize
+    - mwt
+    - pos
+    - lemma
+    - ner
+    - depparse
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->

@@ -33,7 +33,7 @@ If you don't specify the model, the program will load the default one: ```semcor
 <!--DOCUSAURUS_CODE_TABS-->
 
 <!--Json--> 
-```
+```json
 {
     "lang": "en",
     "tools": [
@@ -50,6 +50,13 @@ If you don't specify the model, the program will load the default one: ```semcor
 
 <!--yaml-->
 ```yaml
+---
+lang: en
+tools:
+- supwsd:
+    pipeline:
+    - wsd
+
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->

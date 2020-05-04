@@ -11,47 +11,43 @@ Here you can find information about FreeLing, an open source language analysis t
 
 > Under construction!
 
-## Install FreeLing NLP
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell--> 
-     
-
-<!--END_DOCUSAURUS_CODE_TABS-->
-
 ## Install Plugin
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell--> 
-     deepnlpf --install freeling
-
-<!--END_DOCUSAURUS_CODE_TABS-->
+```python
+deepnlpf --install freeling
+```
 
 ## Suport Language
-
-English: ```en``` <br/>
+View [hare](#) documentation.
 
 ## Pipeline
 <!--DOCUSAURUS_CODE_TABS-->
 
 <!--Json--> 
-```
-    {
-        "lang": "en",
-        "tools": [{
-            "freeling": {
-                "pipeline": [
-                    "wsd",
-                    "svo_triples_srl",
-                    "wordnet_sumo"
-                ]
-            }
-        }]
-    }
+```json
+{
+    "lang": "en",
+    "tools": [{
+        "freeling": {
+            "pipeline": [
+                "wsd",
+                "svo_triples_srl",
+                "wordnet_sumo"
+            ]
+        }
+    }]
+}
 ```
 
 <!--yaml-->
 ```yaml
+---
+lang: en
+tools:
+- freeling:
+    pipeline:
+    - wsd
+    - svo_triples_srl
+    - wordnet_sumo
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
