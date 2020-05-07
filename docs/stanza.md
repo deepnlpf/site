@@ -19,7 +19,7 @@ deepnlpf --install stanza
 
 ## Download Model.
 ```shell
-python -c "stanza.download('en')"
+python -c "import stanza; stanza.download('en')"
 ```
 
 ## Model Language
