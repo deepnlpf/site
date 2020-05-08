@@ -58,6 +58,10 @@ to Professors Dr. Robson Fidalgo and Dr. Rinaldo Lima, for having accepted the c
         <a href="https://fastapi.tiangolo.com/" target="_blank" title="FastAPI">
         <img src="https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png" data-canonical-src="https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png" width="200" height="80" />
     </a>
+    </a>
+        <a href="https://asciinema.org/" target="_blank" title="ASCIINEMA">
+        <img src="https://asciinema.org/images/logo-red-949d10005bb389d1ae900a13b5ac53d7.svg?vsn=d" data-canonical-src="https://asciinema.org/images/logo-red-949d10005bb389d1ae900a13b5ac53d7.svg?vsn=d" width="60" height="80" />
+    </a>
 </div>
 
 
