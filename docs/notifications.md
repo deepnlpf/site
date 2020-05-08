@@ -6,15 +6,15 @@ title: Notifications
 ## Notification
 
 * Toast - Notification Desktop, used ```True``` or ```False```.
->  Comming Soon :)
+>  🚧 Comming Soon :)
 
 * [Telegram](https://web.telegram.org/) - Notification Device Mobile.
->  Comming Soon :)
+>  🚧 Comming Soon :)
 
 * Email
->  Comming Soon :)
+>  🚧 Comming Soon :)
 
 * Spech
-> Comming Soon :)
+> 🚧 Comming Soon :)
 
 

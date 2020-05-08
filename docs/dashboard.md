@@ -3,7 +3,7 @@ id: dashboard
 title: DashBoard
 ---
 
-> Under construction!
+> 🚧 Under construction!
 
 DeepNLPF DashBoard makes it possible to use its resources through a GUI. As such, it is not necessary to write any line of code to test the tools integrated into the framework.
 

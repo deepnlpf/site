@@ -9,7 +9,7 @@ Here you can find information about FreeLing, an open source language analysis t
 - [Demo Online](http://nlp.lsi.upc.edu/freeling/demo/demo.php)
 - [Github](https://github.com/TALP-UPC/freeling)
 
-> Under construction!
+> 🚧 Under construction!
 
 ## Install Plugin
 ```python

@@ -4,7 +4,7 @@ title: Deploy
 ---
 
 ## Deploy AWS EC2, Azure and Google Cloud
-> Comming Soon :)
+> 🚧 Comming Soon :)
 
 ### Nginx
 Install Nginx on your instance.

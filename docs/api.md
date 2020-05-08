@@ -25,7 +25,7 @@ INFO:     Application startup complete.
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
-## Docs
+## Check it
 By accessing the address: [```http://127.0.0.1:8000/```](http://127.0.0.1:8000/) you will see a screen like this informing you that the API has been successfully started and is ready to use.
 ```json
 {
@@ -36,18 +36,20 @@ By accessing the address: [```http://127.0.0.1:8000/```](http://127.0.0.1:8000/)
 }
 ```
 
-## ReDocs
-Accessing the address [```http://127.0.0.1:8000/docs```](http://127.0.0.1:8000/docs) you will get the API docs return.
+## Interactive API Docs
+Accessing the address [```http://127.0.0.1:8000/docs```](http://127.0.0.1:8000/docs) you will see the automatic interactive API documentation.
 
 ![API DeepNLPF Docs](assets/img/api/api_docs.png)
 
-Accessing the address [```http://127.0.0.1:8000/redoc```](http://127.0.0.1:8000/redoc) you will get the API Redoc return.
+## Alternative API Docs
+And now, accessing the address [```http://127.0.0.1:8000/redoc```](http://127.0.0.1:8000/redoc) you will see the alternative automatic documentation.
 
 ![API DeepNLPF ReDoc](assets/img/api/api_redocs.png)
 
 ## Stop Service
-
-    Press CTRL+C to quit
+```shell
+Press CTRL+C to quit.
+```
 
 ## Created with
 

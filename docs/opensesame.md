@@ -2,7 +2,7 @@
 id: opensesame
 title: Open Sesame
 ---
-> Under construction!
+> 🚧 Under construction!
 
 <a href="" target="_blank">
     <img src="https://raw.githubusercontent.com/swabhs/open-sesame/master/fig/fsp-example.png" data-canonical-src="" width="700" height="250" />

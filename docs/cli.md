@@ -3,7 +3,7 @@ id: cli
 title: CLI Commands
 ---
 
-> Under construction!
+> 🚧 Under construction!
 
 DeepNLPF Command Line Interface.
 

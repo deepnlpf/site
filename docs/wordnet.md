@@ -7,7 +7,7 @@ title: WordNet
 - [Demo Online](#)
 - [Github](#)
 
-> Under construction!
+> 🚧 Under construction!
 
 ## Install Plugin
 <!--DOCUSAURUS_CODE_TABS-->

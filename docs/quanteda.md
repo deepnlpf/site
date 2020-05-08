@@ -2,7 +2,7 @@
 id: quanteda
 title: Quanteda
 ---
-> Under construction!
+> 🚧 Under construction!
 
 - [Site Oficial](https://quanteda.io/)
 - [Documentation Oficial](https://tutorials.quanteda.io/)
