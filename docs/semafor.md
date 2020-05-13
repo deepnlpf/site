@@ -31,7 +31,7 @@ English: ```en``` <br/>
     "lang": "en",
     "tools": {
         "semafor": {
-            "pipeline": [
+            "processors": [
                 "frame_semantic_parsing"
             ]
         }
@@ -44,7 +44,7 @@ English: ```en``` <br/>
 lang: en
 tools:
 - semafor:
-    pipeline:
+    processors:
     - frame_semantic_parsing
 ```
 

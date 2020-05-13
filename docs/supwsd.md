@@ -37,7 +37,7 @@ If you don't specify the model, the program will load the default one: ```semcor
 {
     "lang": "en",
     "tools": 
-        { "supwsd": { "pipeline": [ "wsd" ] } }
+        { "supwsd": { "processors": [ "wsd" ] } }
 }
 ```
 
@@ -47,7 +47,7 @@ If you don't specify the model, the program will load the default one: ```semcor
 lang: en
 tools:
 - supwsd:
-    pipeline:
+    processors:
     - wsd
 
 ```

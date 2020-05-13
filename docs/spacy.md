@@ -38,7 +38,7 @@ To install other language models see [here](https://spacy.io/usage).
     "lang": "en",
     "tools": {
         "spacy": {
-            "pipeline": [
+            "processors": [
                 "pos",
                 "tag",
                 "shape",
@@ -59,7 +59,7 @@ To install other language models see [here](https://spacy.io/usage).
 lang: en
 tools:
 - spacy:
-    pipeline:
+    processors:
     - pos
     - tag
     - shape

@@ -32,7 +32,7 @@ English: ```en``` <br/>
     "tools": [
         {
             "opensesame": {
-                "pipeline": [
+                "processors": [
                     "frame_semantic_parsing"
                 ]
             }
@@ -47,7 +47,7 @@ English: ```en``` <br/>
 lang: en
 tools:
 - opensesame:
-    pipeline:
+    processors:
     - frame_semantic_parsing
 ```
 

@@ -43,7 +43,7 @@ Polish: ``` ``` <br/>
     "lang": "en",
     "tools": [{
         "flair": {
-            "pipeline": [
+            "processors": [
                 "pos-fast",
                 "ner-fast",
                 "ner-ontonotes-fast",

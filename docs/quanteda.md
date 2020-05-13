@@ -45,7 +45,7 @@ English: ```en``` <br/>
     "lang": "en",
     "tools": {
         "quanteda": {
-            "pipeline": [
+            "processors": [
                 "frequency"
             ]
         }

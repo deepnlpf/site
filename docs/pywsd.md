@@ -25,7 +25,7 @@ English: ```en``` <br/>
     "lang": "en",
     "tools":  {
         "pywsd": {
-            "pipeline": [
+            "processors": [
                 "wsd"
                 ]
                 }
@@ -40,7 +40,7 @@ English: ```en``` <br/>
 lang: en
 tools:
 - pywsd:
-    pipeline:
+    processors:
     - wsd
 
 ```

@@ -28,7 +28,7 @@ View [hare](#) documentation.
     "lang": "en",
     "tools": [{
         "freeling": {
-            "pipeline": [
+            "processors": [
                 "wsd",
                 "svo_triples_srl",
                 "wordnet_sumo"
@@ -44,7 +44,7 @@ View [hare](#) documentation.
 lang: en
 tools:
 - freeling:
-    pipeline:
+    processors:
     - wsd
     - svo_triples_srl
     - wordnet_sumo

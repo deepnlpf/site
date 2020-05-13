@@ -34,7 +34,7 @@ Stanza supports multiple languages, see available ones [here](https://stanfordnl
     "lang": "en",
     "tools": {
         "stanza": {
-            "pipeline": [
+            "processors": [
                 "tokenize",
                 "mwt",
                 "pos",
@@ -52,7 +52,7 @@ Stanza supports multiple languages, see available ones [here](https://stanfordnl
 lang: en
 tools:
 - stanza:
-    pipeline:
+    processors:
     - tokenize
     - mwt
     - pos

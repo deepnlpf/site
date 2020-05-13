@@ -25,13 +25,12 @@ English: ```en``` <br/>
 <!--DOCUSAURUS_CODE_TABS-->
 
 <!--Json-->  
-
-```
+```json
 {
     "lang": "en",
     "tools":{
         "cogcompnlp": {
-            "pipeline": [
+            "processors": [
                 "POS", 
                 "LEMMA", 
                 "SHALLOW_PARSE", 
@@ -69,7 +68,7 @@ English: ```en``` <br/>
 lang: en
 tools:
 - cogcompnlp:
-    pipeline:
+    processors:
     - POS
     - LEMMA
     - SHALLOW_PARSE

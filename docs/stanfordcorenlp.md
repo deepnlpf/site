@@ -38,7 +38,7 @@ Before assembling your pipeline, see the [dependent annotators](https://stanford
     "lang": "en",
     "tools": {
         "stanfordcorenlp": {
-            "pipeline": [
+            "processors": [
                 "tokenize",
                 "ssplit",
                 "pos",
@@ -59,7 +59,7 @@ Before assembling your pipeline, see the [dependent annotators](https://stanford
 lang: en
 tools:
 - stanfordcorenlp:
-    pipeline:
+    processors:
     - tokenize
     - ssplit
     - pos
