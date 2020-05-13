@@ -29,6 +29,7 @@ For you to create your own plugin and add it to DeepNLPF, you must pay attention
 
 As you may have already noticed in the figure, a plugin is built following a file structure: ```directory like the name of the plugin```, ```requirements.sh``` file, ```manifest.json``` file and the ```plugin_name.py``` file.
 
+
 You can also add other files and directories as needed, things like: ```README.md```, ```LICENSE```, ```bin```, ```resources```, among others. This is just the basic structure to be followed, which you can customize according to your needs, as long as it does not violate the mandatory recommendations.
 
 ### Directory Plugin Name
@@ -235,6 +236,30 @@ def out_format(self, annotation):
             )
 ```
 
+Pay attention to the data output of the tool, it must obey the structure, to be valid.
+```json
+{
+    // sentences
+    {
+        "_id": 1,
+        "text": "I went to the bank to deposit my money.",
+        "annotation": [..]
+    },
+    {
+        "_id": 2,
+        "text": "text sentence",
+        "annotation": [..]
+    },
+    {
+        "_id": 3,
+        "text": "text sentence",
+        "annotation": [..]
+    },
+
+    ...
+}
+```
+
 #### Example Full
 
 <!--DOCUSAURUS_CODE_TABS-->
@@ -345,6 +370,19 @@ def wrapper(self):
     ...
 ```
 
+## Plugin versioning
+
+We use the standard versioning structure define in [Semantic Versioning](https://semver.org/) ```0.0.0```, here is a short explanation for novice users.
+
+- The first number indicates that the system has changes that make it incompatible with previous versions;
+- The second number indicates that the system has changes compatible with previous versions, within the first number;
+- The third number indicates that the system has minor changes, such as bug fixes and features that do not affect backward compatibility.
+
+## Publish plugin
+
+To publish your plugin contact us to add you as a collaborator and thus be able to commit your built plugin. It will be available on our [github](https://github.com/deepnlpf) for all DeepNLPF users.
+
+## Helps
 Doubts? Look at our repository on github and see how we build our plugins. If the documentation doesn't have enough information for you, let us know so we can improve it. If the DeepNLPF Plugin does not meet your needs, let us know so that we can build something useful for you. If you would like us to add a new plugin, let us know, we will be happy to bring you convenience, and finally help us to improve this tool, your suggestion and criticism are very important to us. Hug.
 
 Click on the [Support](#) menu and leave your opinion, suggestion, bugs, whatever you want.

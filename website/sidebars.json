@@ -45,8 +45,6 @@
                 "type": "subcategory",
                 "ids": [
                     "cogcompnlp",
-                    "freeling",
-                    "opensesame",
                     "pywsd",
                     "quanteda",
                     "semafor",
