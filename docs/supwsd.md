@@ -36,15 +36,8 @@ If you don't specify the model, the program will load the default one: ```semcor
 ```json
 {
     "lang": "en",
-    "tools": [
-        {
-            "supwsd": {
-                "pipeline": [
-                    "wsd"
-                ]
-            }
-        }
-    ]
+    "tools": 
+        { "supwsd": { "pipeline": [ "wsd" ] } }
 }
 ```
 

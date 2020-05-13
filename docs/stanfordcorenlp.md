@@ -36,7 +36,7 @@ Before assembling your pipeline, see the [dependent annotators](https://stanford
 ```json
 {
     "lang": "en",
-    "tools": [{
+    "tools": {
         "stanfordcorenlp": {
             "pipeline": [
                 "tokenize",
@@ -50,7 +50,7 @@ Before assembling your pipeline, see the [dependent annotators](https://stanford
                 "coref"
             ]
         }
-    }]
+    }
 }
 ```
 

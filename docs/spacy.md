@@ -36,22 +36,20 @@ To install other language models see [here](https://spacy.io/usage).
 ```json
 {
     "lang": "en",
-    "tools": [
-        {
-            "spacy": {
-                "pipeline": [
-                    "pos",
-                    "tag",
-                    "shape",
-                    "is_alpha",
-                    "is_title",
-                    "like_num",
-                    "label",
-                    "noun_chunks"
-                ]
-            }
+    "tools": {
+        "spacy": {
+            "pipeline": [
+                "pos",
+                "tag",
+                "shape",
+                "is_alpha",
+                "is_title",
+                "like_num",
+                "label",
+                "noun_chunks"
+            ]
         }
-    ]
+    }
 }
 ```
 

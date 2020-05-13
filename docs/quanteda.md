@@ -40,18 +40,17 @@ English: ```en``` <br/>
 <!--DOCUSAURUS_CODE_TABS-->
 
 <!--JSON--> 
-```
+```json
 {
     "lang": "en",
-    "tools": [
-        {
-            "quanteda": {
-                "pipeline": [
-                    "frequency"
-                ]
-            }
+    "tools": {
+        "quanteda": {
+            "pipeline": [
+                "frequency"
+            ]
         }
-    ]
+    }
+    
 }
 ```
 

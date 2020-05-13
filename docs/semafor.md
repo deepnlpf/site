@@ -29,15 +29,13 @@ English: ```en``` <br/>
 ```json
 {
     "lang": "en",
-    "tools": [
-        {
-            "semafor": {
-                "pipeline": [
-                    "frame_semantic_parsing"
-                ]
-            }
+    "tools": {
+        "semafor": {
+            "pipeline": [
+                "frame_semantic_parsing"
+            ]
         }
-    ]
+    } 
 }
 ```
 <!--yaml-->

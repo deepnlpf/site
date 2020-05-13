@@ -46,7 +46,6 @@
                 "ids": [
                     "cogcompnlp",
                     "pywsd",
-                    "quanteda",
                     "semafor",
                     "spacy",
                     "stanfordcorenlp",
@@ -71,7 +70,6 @@
             "pluginsdb", {
                 "type": "subcategory",
                 "ids": [
-                    "basex",
                     "mongodb"
                 ]
             }

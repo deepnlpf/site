@@ -32,7 +32,7 @@ Stanza supports multiple languages, see available ones [here](https://stanfordnl
 ```json
 {
     "lang": "en",
-    "tools": [{
+    "tools": {
         "stanza": {
             "pipeline": [
                 "tokenize",
@@ -43,7 +43,7 @@ Stanza supports multiple languages, see available ones [here](https://stanfordnl
                 "depparse"
             ]
         }
-    }]
+    }
 }
 ```
 <!--yaml-->

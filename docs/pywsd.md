@@ -23,15 +23,14 @@ English: ```en``` <br/>
 ```json
 {
     "lang": "en",
-    "tools": [
-        {
-            "pywsd": {
-                "pipeline": [
-                    "wsd"
+    "tools":  {
+        "pywsd": {
+            "pipeline": [
+                "wsd"
                 ]
-            }
+                }
         }
-    ]
+    
 }
 ```
 
