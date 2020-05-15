@@ -28,66 +28,58 @@ DeepNLPF has been implemented and tested using the [Ubuntu](https://ubuntu.com/)
 * CPU Core: Min. Dualcore
 * Disk Space: ~ MB (does not include disk space for IDE/tools).
 
-<b>Operational System</b>
-* [Ubuntu 19.04](https://ubuntu.com/) (64-bit).
+<b>Platforms</b>
+* [Ubuntu](https://ubuntu.com/).
 * [Manjaro](https://manjaro.org/).
 
-<b>System Requested</b>
+<b>Requested</b>
 * [Python 3](https://linuxize.com/post/how-to-install-python-3-7-on-ubuntu-18-04/)
 * [Python 3 Dev](#)
 * [Pip](https://pypi.org/)
 
 To install the system requested (Python 3, Python 3 Dev and Pip), execute the command in the terminal.
-
-<!--DOCUSAURUS_CODE_TABS-->
-
-<!--Shell--> 
-```
+```shell
 sudo apt install python3 python3-pip build-essential python3-dev libgnutls28-dev
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
 ## Pip install
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Shell--> 
+> Comming soon.
 ```shell
 pip install deepnlpf
 ```
-<!--END_DOCUSAURUS_CODE_TABS-->
 
 If you currently have a previous version of DeepNLPF installed, use:
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Shell--> 
 ```shell
 pip install deepnlpf -U
 ```
-<!--END_DOCUSAURUS_CODE_TABS-->
 
 ## Anaconda install
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Shell-->
-```shell
 > Comming soon.
-```
-<!--END_DOCUSAURUS_CODE_TABS-->
 
 ## From Source install
 Alternatively, you can also install from source via DeepNLPF git repository, which will give you more flexibility in developing on top of DeepNLPF. For this option, run.
-
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Shell--> 
 ```shell
 git clone https://github.com/deepnlpf/deepnlpf.git
-cd deepnlpf
-pip install -e .
 ```
-<!--END_DOCUSAURUS_CODE_TABS-->
+
+```shell
+cd deepnlpf
+```
+
+```shell
+virtualenv .venv
+```
+```shell
+source .venv/bin/activate
+```
+```shell
+python setup.py install --user
+```
 
 ## Virtual Machine
 > Comming Soon :)
 
-- Download VM [here](https://drive.google.com/open?id=1GRCP5E-rRa2Z6G3FeA7rbpYb_jdNgry_).
+- Download VM [here](#).
 
 - Install 
 VM use [VirtualBox](https://www.virtualbox.org/)
@@ -146,9 +138,4 @@ root@435d96b406c2:/#
 Learn some commands [here](http://deepnlpf.github.io/site/docs/en/cli) to use the docker.
 
 ## Cluster HPC MPI
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Shell--> 
-```shell
 > Comming soon.
-```
-<!--END_DOCUSAURUS_CODE_TABS-->

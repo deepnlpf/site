@@ -20,11 +20,6 @@ Industrial-Strength Natural Language Processing.
 deepnlpf --install spacy
 ```
 
-
-## Install SpaCy Language English
-```shell
-python -m spacy download en_core_web_sm
-```
 To install other language models see [here](https://spacy.io/usage).
 
 
