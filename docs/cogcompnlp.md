@@ -67,7 +67,7 @@ English: ```en``` <br/>
 ---
 lang: en
 tools:
-- cogcompnlp:
+  cogcompnlp:
     processors:
     - POS
     - LEMMA
@@ -94,7 +94,6 @@ tools:
     - DATALESS_ESA
     - DATALESS_W2V
     - QUESTION_TYPER
-
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->

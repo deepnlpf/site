@@ -13,6 +13,11 @@ By default we use Stanza as a base NLP tool. Therefore, it is necessary to insta
 deepnlpf --install stanza
 ```
 
+Download English Model
+```shell
+python -c "import stanza; stanza.download('en')"
+```
+
 Install plugin pre-processing installation.
 ```shell
 deepnlpf --install preprocessing
@@ -69,7 +74,7 @@ path_pipeline = "<path_pipeline>/pipeline.json"
 sentence = "Barack Obama was born in Hawaii."
 
 nlp = Pipeline(_input=sentence, pipeline=path_pipeline, _output="file")
-resul = nlp.annotate()
+nlp.annotate()
 ```
 
 Run
@@ -82,7 +87,71 @@ The result produced will be saved in a text file in the path:
 $ /home/YOU_NAME/deepnlpf_data/output/
 ```
 
-## Custom Pipeline
+## Input
+DeepNLP has a parameter called ```_input```, this parameter must be used to input the data to be processed. It works automatically to understand what was passed on. For example, you can pass as you enter:
+
+### One sentence
+```python
+sentence = "The boy gave the frog to the girl."
+nlp = Pipeline(_input=sentence, pipeline=path_pipeline, _output="file")
+```
+
+### Multiple sentence
+```python
+sentences = "The boy gave the frog to the girl. The boy's gift was to the girl. The girl was given a frog."
+nlp = Pipeline(_input=sentences, pipeline=path_pipeline, _output="file")
+```
+
+### One file
+The supported text file type is ```.txt``` . Enter the path of the directory containing the text file with the sentences to be processed. Make sure that there is only the file in that directory if it will be processed. Do not include the file in the path.
+
+```
+/home/user_name/dataset/file.txt
+```
+
+```python
+path_dataset = "/home/user_name/dataset/"
+nlp = Pipeline(_input=path_dataset, pipeline=path_pipeline, _output="file")
+```
+
+### Multiple files
+Yes, if you have more than one file to be processed DeepNLPF automatically recognizes all of them. Just inform the path of the directory containing the files.
+
+```
+/home/user_name/dataset/file_1.txt
+                        file_2.txt
+                        file_3.txt
+                        ...
+```
+
+```python
+path_dataset = "/home/user_name/dataset/"
+nlp = Pipeline(_input=path_dataset, pipeline=path_pipeline, _output="file")
+```
+
+### Dataset test and train
+If you work with test and training dataset DeepNLPF distinguishes for you as long as it follows the proposed directory structure.
+
+```
+/home/user_name/dataset/test/
+                          file_1.txt
+                          file_2.txt
+                          file_3.txt
+                          ...
+                       /train/
+                          file_1.txt
+                          file_2.txt
+                          file_3.txt
+                          ...
+```
+
+```python
+path_dataset = "/home/user_name/dataset/"
+nlp = Pipeline(_input=path_dataset, pipeline=path_pipeline, _output="file")
+```
+
+
+## Pipeline
 To run a customized pipeline with more than one NLP tool, you must have installed other plugins of your choice. More Plugins, access the [official plugin repository](/site/en/repository) and try out other NLP tools.
 
 This example assumes that you have the [Stanza](https://deepnlpf.github.io/site/docs/en/stanza) and [SpaCy](https://deepnlpf.github.io/site/docs/en/spacy) plugins installed.
@@ -202,27 +271,54 @@ tools:
 
 
 
-## Output files
+## Output
 
-You may have already noticed that we assume all processing output in ```JSON``` format. However, sometimes we want to use another format like ```XML```. DeepNLPF makes it easy for you using the ```_format='xml'``` parameter.
+DeepNLPF contains a parameter ```_output``` to configure the type of data output, which can be in a ```text file```, on the ```screen terminal``` or in the ```browser```. By default the parameter is set to file ```_output="file"```.
 
-### Format XML
+It is used as follows:
+```python
+nlp = Pipeline(_input=path_dataset, pipeline=path_pipeline, _output="file")
+```
 
-Following the previous example, just add the parameter ```_format='xml'```, to have the result processed in the desired format.
+### File Json
+You may have already noticed that we assume all processing output in ```JSON``` format. 
+
+```Python
+nlp = Pipeline(_input=sentence, pipeline=path_pipeline, _output="file")
+```
+
+or
+
+```Python
+nlp = Pipeline(_input=sentence, pipeline=path_pipeline, _output="file", _format='json')
+```
+### File XML
+
+However, sometimes we want to use another format like ```XML```. DeepNLPF makes it easy for you using the ```_format='xml'``` parameter. Following the previous example, just add the parameter ```_format='xml'```, to have the result processed in the desired format.
 
 ```Python
 nlp = Pipeline(_input=sentence, pipeline=path_pipeline, _output="file", _format='xml')
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
-
 ## Boost
+DeepNLPF has two approaches to optimize execution [CPU](#) and [GPU](#) usage.
 
-DeepNLPF has two approaches to optimize execution. By default we use [Faster Parallel Ray](https://ray.io/) 10x [fast as the Pathos](https://towardsdatascience.com/10x-faster-parallel-python-without-python-multiprocessing-e5017c93cce1). But if you prefer you can choose to use [Multiprocessing Pathos Framework](https://pypi.org/project/pathos/).
+### Ray
+By default we use [Faster Parallel Ray](https://ray.io/) 10x [fast as the Pathos](https://towardsdatascience.com/10x-faster-parallel-python-without-python-multiprocessing-e5017c93cce1). But if you prefer you can choose to use [Multiprocessing Pathos Framework](https://pypi.org/project/pathos/).
 
-<!--END_DOCUSAURUS_CODE_TABS-->
+```python
+nlp = Pipeline(_input=sentence, pipeline=path_pipeline)
+```
 
+or
+
+```python
+nlp = Pipeline(_input=sentence, pipeline=path_pipeline, boost='ray')
+```
+
+### Pathos
 Therefore, to select the second option, just use the ```boost``` parameter as follows. Remember that when not specified, Pathos will be selected.
+
 ```python
 nlp = Pipeline(_input=sentence, pipeline=path_pipeline, boost='pathos')
 ```

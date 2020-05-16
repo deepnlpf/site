@@ -69,9 +69,15 @@ cd deepnlpf
 ```shell
 virtualenv .venv
 ```
+
 ```shell
 source .venv/bin/activate
 ```
+
+```shell
+pip install requirements.txt
+```
+
 ```shell
 python setup.py install --user
 ```
