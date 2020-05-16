@@ -59,6 +59,9 @@
 <p>By default we use Stanza as a base NLP tool. Therefore, it is necessary to install language modules. In this case we will install the English language. If you need another language, see which ones are available <a href="https://stanfordnlp.github.io/stanza/models.html#human-languages-supported-by-stanza">here</a>. Then install the stanza plugin.</p>
 <pre><code class="hljs css language-shell">deepnlpf --install stanza
 </code></pre>
+<p>Download English Model</p>
+<pre><code class="hljs css language-shell">python -c "import stanza; stanza.download('en')"
+</code></pre>
 <p>Install plugin pre-processing installation.</p>
 <pre><code class="hljs css language-shell">deepnlpf --install preprocessing
 </code></pre>
@@ -100,7 +103,7 @@ path_pipeline = <span class="hljs-string">"&lt;path_pipeline&gt;/pipeline.json"<
 sentence = <span class="hljs-string">"Barack Obama was born in Hawaii."</span>
 
 nlp = Pipeline(_input=sentence, pipeline=path_pipeline, _output=<span class="hljs-string">"file"</span>)
-resul = nlp.annotate()
+nlp.annotate()
 </code></pre>
 <p>Run</p>
 <pre><code class="hljs css language-shell"><span class="hljs-meta">$</span><span class="bash"> python hello_world.py</span>
@@ -108,7 +111,50 @@ resul = nlp.annotate()
 <p>The result produced will be saved in a text file in the path:</p>
 <pre><code class="hljs css language-shell"><span class="hljs-meta">$</span><span class="bash"> /home/YOU_NAME/deepnlpf_data/output/</span>
 </code></pre>
-<h2><a class="anchor" aria-hidden="true" id="custom-pipeline"></a><a href="#custom-pipeline" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Custom Pipeline</h2>
+<h2><a class="anchor" aria-hidden="true" id="input"></a><a href="#input" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Input</h2>
+<p>DeepNLP has a parameter called <code>_input</code>, this parameter must be used to input the data to be processed. It works automatically to understand what was passed on. For example, you can pass as you enter:</p>
+<h3><a class="anchor" aria-hidden="true" id="one-sentence"></a><a href="#one-sentence" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>One sentence</h3>
+<pre><code class="hljs css language-python">sentence = <span class="hljs-string">"The boy gave the frog to the girl."</span>
+nlp = Pipeline(_input=sentence, pipeline=path_pipeline, _output=<span class="hljs-string">"file"</span>)
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="multiple-sentence"></a><a href="#multiple-sentence" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Multiple sentence</h3>
+<pre><code class="hljs css language-python">sentences = <span class="hljs-string">"The boy gave the frog to the girl. The boy's gift was to the girl. The girl was given a frog."</span>
+nlp = Pipeline(_input=sentences, pipeline=path_pipeline, _output=<span class="hljs-string">"file"</span>)
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="one-file"></a><a href="#one-file" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>One file</h3>
+<p>The supported text file type is <code>.txt</code> . Enter the path of the directory containing the text file with the sentences to be processed. Make sure that there is only the file in that directory if it will be processed. Do not include the file in the path.</p>
+<pre><code class="hljs"><span class="hljs-regexp">/home/u</span>ser_name<span class="hljs-regexp">/dataset/</span><span class="hljs-keyword">file</span>.txt
+</code></pre>
+<pre><code class="hljs css language-python">path_dataset = <span class="hljs-string">"/home/user_name/dataset/"</span>
+nlp = Pipeline(_input=path_dataset, pipeline=path_pipeline, _output=<span class="hljs-string">"file"</span>)
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="multiple-files"></a><a href="#multiple-files" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Multiple files</h3>
+<p>Yes, if you have more than one file to be processed DeepNLPF automatically recognizes all of them. Just inform the path of the directory containing the files.</p>
+<pre><code class="hljs">/home/user_name/dataset/file_1<span class="hljs-selector-class">.txt</span>
+                        file_2<span class="hljs-selector-class">.txt</span>
+                        file_3<span class="hljs-selector-class">.txt</span>
+                        ...
+</code></pre>
+<pre><code class="hljs css language-python">path_dataset = <span class="hljs-string">"/home/user_name/dataset/"</span>
+nlp = Pipeline(_input=path_dataset, pipeline=path_pipeline, _output=<span class="hljs-string">"file"</span>)
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="dataset-test-and-train"></a><a href="#dataset-test-and-train" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dataset test and train</h3>
+<p>If you work with test and training dataset DeepNLPF distinguishes for you as long as it follows the proposed directory structure.</p>
+<pre><code class="hljs">/home/user_name/dataset/test/
+                          file_1<span class="hljs-selector-class">.txt</span>
+                          file_2<span class="hljs-selector-class">.txt</span>
+                          file_3<span class="hljs-selector-class">.txt</span>
+                          ...
+                       /train/
+                          file_1<span class="hljs-selector-class">.txt</span>
+                          file_2<span class="hljs-selector-class">.txt</span>
+                          file_3<span class="hljs-selector-class">.txt</span>
+                          ...
+</code></pre>
+<pre><code class="hljs css language-python">path_dataset = <span class="hljs-string">"/home/user_name/dataset/"</span>
+nlp = Pipeline(_input=path_dataset, pipeline=path_pipeline, _output=<span class="hljs-string">"file"</span>)
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="pipeline"></a><a href="#pipeline" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pipeline</h2>
 <p>To run a customized pipeline with more than one NLP tool, you must have installed other plugins of your choice. More Plugins, access the <a href="/site/en/repository">official plugin repository</a> and try out other NLP tools.</p>
 <p>This example assumes that you have the <a href="https://deepnlpf.github.io/site/docs/en/stanza">Stanza</a> and <a href="https://deepnlpf.github.io/site/docs/en/spacy">SpaCy</a> plugins installed.</p>
 <p>Create a file called custom <code>custom_pipeline.json</code> and copy the following pipeline:</p>
@@ -163,16 +209,32 @@ annotation = nlp.annotate()
 <p>Under construction!</p>
 </blockquote>
 </span></div></div></div></div>
-<h2><a class="anchor" aria-hidden="true" id="output-files"></a><a href="#output-files" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Output files</h2>
-<p>You may have already noticed that we assume all processing output in <code>JSON</code> format. However, sometimes we want to use another format like <code>XML</code>. DeepNLPF makes it easy for you using the <code>_format='xml'</code> parameter.</p>
-<h3><a class="anchor" aria-hidden="true" id="format-xml"></a><a href="#format-xml" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Format XML</h3>
-<p>Following the previous example, just add the parameter <code>_format='xml'</code>, to have the result processed in the desired format.</p>
+<h2><a class="anchor" aria-hidden="true" id="output"></a><a href="#output" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Output</h2>
+<p>DeepNLPF contains a parameter <code>_output</code> to configure the type of data output, which can be in a <code>text file</code>, on the <code>screen terminal</code> or in the <code>browser</code>. By default the parameter is set to file <code>_output=&quot;file&quot;</code>.</p>
+<p>It is used as follows:</p>
+<pre><code class="hljs css language-python">nlp = Pipeline(_input=path_dataset, pipeline=path_pipeline, _output=<span class="hljs-string">"file"</span>)
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="file-json"></a><a href="#file-json" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>File Json</h3>
+<p>You may have already noticed that we assume all processing output in <code>JSON</code> format.</p>
+<pre><code class="hljs css language-Python">nlp = Pipeline(_input=sentence, pipeline=path_pipeline, _output=<span class="hljs-string">"file"</span>)
+</code></pre>
+<p>or</p>
+<pre><code class="hljs css language-Python">nlp = Pipeline(_input=sentence, pipeline=path_pipeline, _output=<span class="hljs-string">"file"</span>, _format=<span class="hljs-string">'json'</span>)
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="file-xml"></a><a href="#file-xml" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>File XML</h3>
+<p>However, sometimes we want to use another format like <code>XML</code>. DeepNLPF makes it easy for you using the <code>_format='xml'</code> parameter. Following the previous example, just add the parameter <code>_format='xml'</code>, to have the result processed in the desired format.</p>
 <pre><code class="hljs css language-Python">nlp = Pipeline(_input=sentence, pipeline=path_pipeline, _output=<span class="hljs-string">"file"</span>, _format=<span class="hljs-string">'xml'</span>)
 </code></pre>
-<!--END_DOCUSAURUS_CODE_TABS-->
 <h2><a class="anchor" aria-hidden="true" id="boost"></a><a href="#boost" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Boost</h2>
-<p>DeepNLPF has two approaches to optimize execution. By default we use <a href="https://ray.io/">Faster Parallel Ray</a> 10x <a href="https://towardsdatascience.com/10x-faster-parallel-python-without-python-multiprocessing-e5017c93cce1">fast as the Pathos</a>. But if you prefer you can choose to use <a href="https://pypi.org/project/pathos/">Multiprocessing Pathos Framework</a>.</p>
-<!--END_DOCUSAURUS_CODE_TABS-->
+<p>DeepNLPF has two approaches to optimize execution <a href="#">CPU</a> and <a href="#">GPU</a> usage.</p>
+<h3><a class="anchor" aria-hidden="true" id="ray"></a><a href="#ray" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ray</h3>
+<p>By default we use <a href="https://ray.io/">Faster Parallel Ray</a> 10x <a href="https://towardsdatascience.com/10x-faster-parallel-python-without-python-multiprocessing-e5017c93cce1">fast as the Pathos</a>. But if you prefer you can choose to use <a href="https://pypi.org/project/pathos/">Multiprocessing Pathos Framework</a>.</p>
+<pre><code class="hljs css language-python">nlp = Pipeline(_input=sentence, pipeline=path_pipeline)
+</code></pre>
+<p>or</p>
+<pre><code class="hljs css language-python">nlp = Pipeline(_input=sentence, pipeline=path_pipeline, boost=<span class="hljs-string">'ray'</span>)
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="pathos"></a><a href="#pathos" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pathos</h3>
 <p>Therefore, to select the second option, just use the <code>boost</code> parameter as follows. Remember that when not specified, Pathos will be selected.</p>
 <pre><code class="hljs css language-python">nlp = Pipeline(_input=sentence, pipeline=path_pipeline, boost=<span class="hljs-string">'pathos'</span>)
 </code></pre>
@@ -183,7 +245,7 @@ annotation = nlp.annotate()
 <p>Let's look at an example for a JSON-type document-oriented data storage system.</p>
 <pre><code class="hljs css language-python">nlp = Pipeline(_input=sentence, pipeline=path_pipeline, use_db=<span class="hljs-string">'mongodb'</span>)
 </code></pre>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/site/docs/en/guide.html"><span class="arrow-prev">← </span><span>How to begin?</span></a><a class="docs-next button" href="/site/docs/en/cli"><span>CLI Commands</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#install-stanza-nlp-tool-base">Install Stanza NLP Tool Base</a></li><li><a href="#install-stanford-corenlp-tool-base">Install Stanford CoreNLP Tool Base</a></li><li><a href="#getting-started">Getting Started</a></li><li><a href="#custom-pipeline">Custom Pipeline</a><ul class="toc-headings"><li><a href="#other-pipeline-input-files">Other pipeline input files</a></li></ul></li><li><a href="#output-files">Output files</a><ul class="toc-headings"><li><a href="#format-xml">Format XML</a></li></ul></li><li><a href="#boost">Boost</a></li><li><a href="#database">DataBase</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/site/" class="nav-home"><img src="/site/img/octopussy_white.png" alt="DeepNLPF" width="66" height="58"/></a><div><h5>DeepNLPF</h5><a href="/site/docs/en/about">About</a><a href="/site/docs/en/install">Guide</a><a href="/site/en/repository">Repository</a><a href="/site/en/support">Support</a></div><div><h5>Community</h5><a href="/site/en/users.html">User Showcase</a></div><div><h5>Connect</h5><a href="/site/blog">Blog</a><a href="https://github.com/deepnlpf">GitHub</a><a class="github-button" href="https://github.com/deepnlpf/deepnlpf/stargazers" data-icon="octicon-star" data-count-href="/deepnlpf/deepnlpf/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><a href="mailto:deepnlpf@gmail.com">deepnlpf@gmail.com</a></div></section><section class="copyright">Copyright © 2020 DeepNLPF.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/site/docs/en/guide.html"><span class="arrow-prev">← </span><span>How to begin?</span></a><a class="docs-next button" href="/site/docs/en/cli"><span>CLI Commands</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#install-stanza-nlp-tool-base">Install Stanza NLP Tool Base</a></li><li><a href="#install-stanford-corenlp-tool-base">Install Stanford CoreNLP Tool Base</a></li><li><a href="#getting-started">Getting Started</a></li><li><a href="#input">Input</a><ul class="toc-headings"><li><a href="#one-sentence">One sentence</a></li><li><a href="#multiple-sentence">Multiple sentence</a></li><li><a href="#one-file">One file</a></li><li><a href="#multiple-files">Multiple files</a></li><li><a href="#dataset-test-and-train">Dataset test and train</a></li></ul></li><li><a href="#pipeline">Pipeline</a><ul class="toc-headings"><li><a href="#other-pipeline-input-files">Other pipeline input files</a></li></ul></li><li><a href="#output">Output</a><ul class="toc-headings"><li><a href="#file-json">File Json</a></li><li><a href="#file-xml">File XML</a></li></ul></li><li><a href="#boost">Boost</a><ul class="toc-headings"><li><a href="#ray">Ray</a></li><li><a href="#pathos">Pathos</a></li></ul></li><li><a href="#database">DataBase</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/site/" class="nav-home"><img src="/site/img/octopussy_white.png" alt="DeepNLPF" width="66" height="58"/></a><div><h5>DeepNLPF</h5><a href="/site/docs/en/about">About</a><a href="/site/docs/en/install">Guide</a><a href="/site/en/repository">Repository</a><a href="/site/en/support">Support</a></div><div><h5>Community</h5><a href="/site/en/users.html">User Showcase</a></div><div><h5>Connect</h5><a href="/site/blog">Blog</a><a href="https://github.com/deepnlpf">GitHub</a><a class="github-button" href="https://github.com/deepnlpf/deepnlpf/stargazers" data-icon="octicon-star" data-count-href="/deepnlpf/deepnlpf/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><a href="mailto:deepnlpf@gmail.com">deepnlpf@gmail.com</a></div></section><section class="copyright">Copyright © 2020 DeepNLPF.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

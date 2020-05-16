@@ -133,16 +133,25 @@ nlp = Pipeline(_input=path_dataset, pipeline=path_pipeline, _output="file")
 If you work with test and training dataset DeepNLPF distinguishes for you as long as it follows the proposed directory structure.
 
 ```
-/home/user_name/dataset/test/
-                          file_1.txt
-                          file_2.txt
-                          file_3.txt
-                          ...
-                       /train/
-                          file_1.txt
-                          file_2.txt
-                          file_3.txt
-                          ...
+/home/user_name/dataset/
+                    train/
+                        pos/
+                            document_01.txt
+                            document_02.txt
+                            ..
+                        neg/
+                            document_01.txt
+                            document_02.txt
+                            ..
+                    test/
+                        pos/
+                            document_01.txt
+                            document_02.txt
+                            ..
+                        neg/
+                            document_01.txt
+                            document_02.txt
+                            ..
 ```
 
 ```python

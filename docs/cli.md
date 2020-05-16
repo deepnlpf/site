@@ -112,6 +112,23 @@ stanza
 ```
 <!--END_DOCUSAURUS_CODE_TABS-->
 
+### Create new plugin
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Shell-->
+```shell
+deepnlpf --new plugin [name_plugin]
+```
+<!--Output-->
+```shell
+/home/user_name/deepnlpf_data/name_plugin/
+                                    resources/
+                                    README.md
+                                    manifest.json
+                                    requeriments.sh
+                                    plugin_name.py
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
+
 ## Dataset
 
 ### Save new dataset
