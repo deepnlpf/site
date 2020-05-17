@@ -6,8 +6,7 @@
     "tagline": "A Framework for Integrating Linguistic Analysis and Semantic Annotation of Text Documents.",
     "docs": {
       "about": {
-        "title": "What is DeepNLPF?",
-        "sidebar_label": "What is DeepNLPF?"
+        "title": "Resume"
       },
       "api": {
         "title": "API RESTful"
