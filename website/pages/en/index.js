@@ -76,7 +76,7 @@ class HomeSplash extends React.Component {
           <ProjectTitle siteConfig={siteConfig} />
           <PromoSection>
           <Button href="https://github.com/deepnlpf">Github Repo</Button>
-          <Button href="https://deepnlpf.github.io/site/docs/install">Install</Button>
+          <Button href="docs/en/install">Install</Button>
           </PromoSection>
         </div>
       </SplashContainer>

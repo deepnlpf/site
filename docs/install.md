@@ -42,7 +42,7 @@ To install the system requested (Python 3, Python 3 Dev and Pip), execute the co
 sudo apt install python3 python3-pip build-essential python3-dev libgnutls28-dev
 ```
 
-## Pip install
+## Installing Pip
 > Comming soon.
 ```shell
 pip install deepnlpf
@@ -53,10 +53,20 @@ If you currently have a previous version of DeepNLPF installed, use:
 pip install deepnlpf -U
 ```
 
-## Anaconda install
+Unistall
+```
+pip uninstall deepnlpf
+```
+
+## Installing Anaconda
 > Comming soon.
 
-## From Source install
+## Installing from Github
+```shell
+pip install git+https://github.com/deepnlpf/deepnlpf.git
+```
+
+## Installing from Source
 Alternatively, you can also install from source via DeepNLPF git repository, which will give you more flexibility in developing on top of DeepNLPF. For this option, run.
 ```shell
 git clone https://github.com/deepnlpf/deepnlpf.git
@@ -80,6 +90,11 @@ pip install -r requirements.txt
 
 ```shell
 python setup.py install --user
+```
+
+Installing with pip
+```shell
+pip install .
 ```
 
 ## Virtual Machine
