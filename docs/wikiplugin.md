@@ -228,13 +228,25 @@ def out_format(self, doc):
     return doc_formated
 ```
 
+Schema to be followed for the output of the plugins.
+```json
+schema = {
+    "type": "array",
+    "properties": {
+        "_id": {"type": "number"},
+        "text": {"type": "string"},
+        "annotation": {"type": "array"},
+    },
+}
+```
+
 Pay attention to the data output of the tool, it must obey the structure, to be valid.
 ```json
-[ // list objects sentences.
+[ // array objects "sentences".
     {
         "_id": 1, // id sentence.
         "text": "The boy gave the frog to the girl.", // sentence.
-        "annotation": [..] // array list annotation sentence.
+        "annotation": [..] // array list annotation "tokens, pos, lemma, .." sentence.
     },
     {
         "_id": 2,
