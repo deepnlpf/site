@@ -27,7 +27,26 @@ deepnlpf --settoast false
 >  🚧 Comming Soon :)
 
 ## Email
->  🚧 Comming Soon :)
+Parameter settings.
+
+```shell
+deepnlpf --setemailsmtp [smtp.gmail.com]
+```
+
+```shell
+deepnlpf --setemailport [465]
+```
+
+```shell
+deepnlpf --setemailaddress [you_email@gmail.com]
+```
+
+```shell
+deepnlpf --setemailpassword [you_email_password]
+```
+
+Example datalog send from email.
+![alt text](assets/img/notifications/email.png "Email Notification")
 
 ## Spech
 > 🚧 Comming Soon :)
