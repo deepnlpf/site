@@ -42,9 +42,10 @@ The use of this file is optional, you should only use it if the tool you want to
 
 Example: ```requirements.sh```
 ```shell
+sudo apt install [tool]
 pip install [name_tool]
 wget [url]
-rm - r [folder]
+rm - r [file|directory]
 ...
 ```
 
@@ -204,8 +205,8 @@ In the ```run()``` method you must add only the start of the ```wrapper()```. Ev
 # method that runs the wrapper.
 def run(self):
     # logic start wrapped ...
-    annotation = self.wrapper()
-    return self.out_format(annotation)
+    doc_annotation = self.wrapper()
+    return self.out_format(doc_annotation)
 ```
 
 #### Function wrapper()
@@ -215,49 +216,39 @@ Here you add your logic on how to access the functionality of the tool that will
 # here you add your logic on how to access the functionality of the tool that will be added.
 def wrapper(self):
     # logic access tool nlp ...        
-    return annotation
+    return doc_annotation
 ```
 
 #### Function out_format
 This method is used to format the output processed by the NLP tool. In case the tool you are adding to the output is not ```JSON```, you must in this function make the conversion to this format and add it in the proposed scheme.
 
 ```python
-def out_format(self, annotation):
-    # import format output.
-    from deepnlpf.core.output_format import OutputFormat
-    
-    # logic output ...
-    return OutputFormat().doc_annotation(
-            _id_pool=self._id_pool, 
-            _id_dataset=self._document['_id_dataset'],
-            _id_document=self._document['_id'], 
-            tool="tool_name", 
-            annotation=annotation
-            )
+def out_format(self, doc):
+    # logic format output ...
+    return doc_formated
 ```
 
 Pay attention to the data output of the tool, it must obey the structure, to be valid.
 ```json
-{
-    // sentences
+[ // list objects sentences.
     {
-        "_id": 1,
-        "text": "I went to the bank to deposit my money.",
-        "annotation": [..]
+        "_id": 1, // id sentence.
+        "text": "The boy gave the frog to the girl.", // sentence.
+        "annotation": [..] // array list annotation sentence.
     },
     {
         "_id": 2,
-        "text": "text sentence",
+        "text": "The boy's gift was to the girl.",
         "annotation": [..]
     },
     {
         "_id": 3,
-        "text": "text sentence",
+        "text": "The girl was given a frog.",
         "annotation": [..]
     },
 
     ...
-}
+]
 ```
 
 #### Example Full
@@ -272,12 +263,11 @@ from deepnlpf.core.iplugin import IPlugin
 # Create a class with the name Plugin that implements the IPlugin interface and its mandatory methods.
 class Plugin(IPlugin):
     
-    def __init__(self, id_pool, lang, document, pipeline):
+    def __init__(self, document, pipeline):
         # add variables, loads, path, other..
-        self._id_pool = id_pool
-        self._lang = lang
         self._document = document
-        self._pipeline = pipeline
+        self._processors = pipeline["tools"]["tool_name"]["processors"]
+        self._lang = pipeline["lang"]
     
     # method that runs the wrapper.
     def run(self):
@@ -291,55 +281,61 @@ class Plugin(IPlugin):
         return annotation
 
     # here you add your logic of how the data output will be formatted.
-    def out_format(self, annotation):
-        # import format output.
-        from deepnlpf.core.output_format import OutputFormat
-        
+    def out_format(self, doc):
         # logic output ...
-        return OutputFormat().doc_annotation(
-                _id_pool=self._id_pool, 
-                _id_dataset=self._document['_id_dataset'],
-                _id_document=self._document['_id'], 
-                tool="tool_name", 
-                annotation=annotation
-                )
+        return doc_formated
 
 ```
 <!--Example Plugin Stanza-->
 ```python
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import json
+import stanza
+
 from deepnlpf.core.iplugin import IPlugin
 
+
 class Plugin(IPlugin):
-    
-    def __init__(self, id_pool, lang, document, pipeline):
-        self._id_pool = id_pool
-        self._lang = lang
+    def __init__(self, document, pipeline):
         self._document = document
-        self._pipeline = pipeline
+        self._processors = pipeline["tools"]["stanza"]["processors"]
+        self._lang = pipeline["lang"]
 
     def run(self):
-        annotation = self.wrapper()
-        annotation = self.out_format(annotation)
-        return annotation
+        doc = self.wrapper()
+        doc_annotation = self.out_format(doc)
+        return doc_annotation
 
-    def wrapper(self):
-        import stanza, json
+    def wrapper(self) -> list:
+        nlp = stanza.Pipeline(
+            lang=self._lang, processors=", ".join(self._processors), use_gpu=False,
+        )
 
-        nlp = stanza.Pipeline(lang=self._lang, processors=", ".join(self._pipeline), use_gpu=False)
-        doc = nlp(", ".join(self._document['sentences']))
-        
-        return json.loads(str(doc))
+        object_stanza = nlp(" ".join(self._document))
 
-    def out_format(self, annotation):
-        from deepnlpf.core.output_format import OutputFormat
-        return OutputFormat().doc_annotation(
-                _id_pool=self._id_pool, 
-                _id_dataset=self._document['_id_dataset'],
-                _id_document=self._document['_id'], 
-                tool="stanza", 
-                annotation=annotation
-                )
+        return json.loads(str(object_stanza))  # convert object stanza to object json.
 
+    def out_format(self, doc: list) -> list:
+        doc_formated = list()
+
+        for index, sentence in enumerate(doc):
+            text = list()
+            token_annotation = list()
+
+            for token in sentence:
+                text.append(token["text"])
+                token_annotation.append(token)
+
+            data = {}
+            data["_id"] = index + 1
+            data["text"] = " ".join(text)
+            data["annotation"] = token_annotation
+
+            doc_formated.append(data)
+
+        return doc_formated
 ```
 <!--END_DOCUSAURUS_CODE_TABS-->
 
