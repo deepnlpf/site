@@ -22,9 +22,7 @@ Deactivate notification toast.
 deepnlpf --settoast false
 ```
 
-## Telegram
-* [Telegram](https://web.telegram.org/) - Notification Device Mobile.
->  🚧 Comming Soon :)
+---
 
 ## Email
 Parameter settings.
@@ -47,6 +45,14 @@ deepnlpf --setemailpassword [you_email_password]
 
 Example datalog send from email.
 ![alt text](assets/img/notifications/email.png "Email Notification")
+
+---
+
+## Telegram
+* [Telegram](https://web.telegram.org/) - Notification Device Mobile.
+>  🚧 Comming Soon :)
+
+---
 
 ## Spech
 > 🚧 Comming Soon :)
