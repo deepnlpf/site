@@ -53,6 +53,9 @@
       "install": {
         "title": "Installation"
       },
+      "jupyterlab": {
+        "title": "JupyterLab"
+      },
       "mongodb": {
         "title": "MongoDB"
       },
@@ -114,6 +117,7 @@
     "categories": {
       "Install": "Install",
       "User Guide": "User Guide",
+      "Others": "Others",
       "About": "About",
       "Plugin Repositories": "Plugin Repositories",
       "Plugins Repositories Tools NLP": "Plugins Repositories Tools NLP",

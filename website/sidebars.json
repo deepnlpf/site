@@ -11,7 +11,16 @@
                     "dashboard",
                     "notifications",
                     "benchmarking",
-                    "deploy"
+                    "deploy",
+                    "others"
+                ]
+            }
+        ],
+        "Others": [
+            "others", {
+                "type": "subcategory",
+                "ids": [
+                    "jupyterlab"
                 ]
             }
         ]
