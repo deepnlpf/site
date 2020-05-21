@@ -6,6 +6,9 @@ title: Published
 # Cite
 
 If you use DeepNLPF, mention one of our works.
+
+[View Paper](http://www.lrec-conf.org/proceedings/lrec2020/pdf/2020.lrec-1.895.pdf)
+
 ```bib
 @InProceedings{rodrigues-EtAl:2020:LREC,
   author    = {Rodrigues, Francisco  and  Lima, Rinaldo  and  Domingues, William  and  Fidalgo, Robson  and  Chifu, Adrian  and  Espinasse, Bernard  and  Fournier, SÃ©bastien},
