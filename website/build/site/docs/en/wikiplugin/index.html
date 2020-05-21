@@ -135,12 +135,22 @@ rm - r [file|directory]
     <span class="hljs-comment"># logic format output ...</span>
     <span class="hljs-keyword">return</span> doc_formated
 </code></pre>
+<p>Schema to be followed for the output of the plugins.</p>
+<pre><code class="hljs css language-json">schema = {
+    "type": "array",
+    "properties": {
+        "_id": {"type": "number"},
+        "text": {"type": "string"},
+        "annotation": {"type": "array"},
+    },
+}
+</code></pre>
 <p>Pay attention to the data output of the tool, it must obey the structure, to be valid.</p>
-<pre><code class="hljs css language-json">[ <span class="hljs-comment">// list objects sentences.</span>
+<pre><code class="hljs css language-json">[ <span class="hljs-comment">// array objects "sentences".</span>
     {
         <span class="hljs-attr">"_id"</span>: <span class="hljs-number">1</span>, <span class="hljs-comment">// id sentence.</span>
         <span class="hljs-attr">"text"</span>: <span class="hljs-string">"The boy gave the frog to the girl."</span>, <span class="hljs-comment">// sentence.</span>
-        <span class="hljs-attr">"annotation"</span>: [..] <span class="hljs-comment">// array list annotation sentence.</span>
+        <span class="hljs-attr">"annotation"</span>: [..] <span class="hljs-comment">// array list annotation "tokens, pos, lemma, .." sentence.</span>
     },
     {
         <span class="hljs-attr">"_id"</span>: <span class="hljs-number">2</span>,

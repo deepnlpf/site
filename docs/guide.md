@@ -87,7 +87,7 @@ The result produced will be saved in a text file in the path:
 $ /home/YOU_NAME/deepnlpf_data/output/
 ```
 
-## Input
+## Input Data
 DeepNLP has a parameter called ```_input```, this parameter must be used to input the data to be processed. It works automatically to understand what was passed on. For example, you can pass as you enter:
 
 ### One sentence
@@ -159,6 +159,9 @@ path_dataset = "/home/user_name/dataset/"
 nlp = Pipeline(_input=path_dataset, pipeline=path_pipeline, _output="file")
 ```
 
+### Dataset URL
+> Under construction!
+
 
 ## Pipeline
 To run a customized pipeline with more than one NLP tool, you must have installed other plugins of your choice. More Plugins, access the [official plugin repository](/site/en/repository) and try out other NLP tools.
@@ -212,7 +215,61 @@ The result produced will be saved in a text file in the path:
 $ /home/YOU_NAME/deepnlpf_data/output/
 ```
 
-### Other pipeline input files
+### Pipeline String
+You can enter the pipeline as a string.
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Json-->
+```python
+pipeline_json_str = """
+{
+  "lang": "en",
+  "tools": {
+    "stanza": {
+      "pipeline": [
+        "tokenize",
+        "mwt",
+        "pos",
+        "lemma",
+        "ner",
+        "depparse"
+      ]
+    }
+  }
+}
+"""
+
+nlp = Pipeline(_input=pipeline_json_str, pipeline=path_pipeline, _output="file")
+```
+
+<!--yaml-->
+```python
+pipeline_yaml_str = """
+---
+lang: en
+tools:
+  stanza:
+    pipeline:
+    - tokenize
+    - mwt
+    - pos
+    - lemma
+    - ner
+    - depparse
+"""
+
+nlp = Pipeline(_input=pipeline_yaml_str, pipeline=path_pipeline, _output="file")
+```
+
+<!--ini-->
+> Under construction!
+
+<!--xml-->
+> Under construction!
+
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+
+### Pipeline File
 Sometimes our pipeline can get very large, and it would be more interesting to have it in a another format. Therefore, we provide the options to use the file formats ``` .json ```, ``` .yaml ```, ``` .ini ``` e ``` .xml ```. Therefore, create a file with the name ``` custom_pipeline.extension ``` you want to use and write your pipeline in it.
 
 <!--DOCUSAURUS_CODE_TABS-->
@@ -278,6 +335,16 @@ tools:
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
+
+### Pipeline URL
+You can enter the pipeline from a url.
+
+```python
+pipeline_url = "https://raw.githubusercontent.com/deepnlpf/deepnlpf/master/examples/pipelines/json/stanza.json"
+
+nlp = Pipeline(_input=pipeline_url, pipeline=path_pipeline, _output="file")
+nlp.annotation()
+```
 
 
 ## Output
