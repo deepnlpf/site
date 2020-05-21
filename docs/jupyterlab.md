@@ -40,3 +40,16 @@ jupyter lab
 ```
 
 ![alt text](assets/img/jupyterlab_deepnlpfnlpf.png "Jupyter Lab DeepNLPF")
+
+## Run Examples
+
+Jupyter >> Painel Launcher >> Other >> Terminal
+
+Execute command:
+```shell
+python example_stanza.py
+```
+
+![alt text](assets/img/jupyterlab_deepnlpfnlpf_run.png "Jupyter Lab DeepNLPF Run")
+
+More example view in directory examples.
