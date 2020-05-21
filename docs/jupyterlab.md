@@ -27,6 +27,18 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+```shell
+deepnlpf --install stanza
+```
+
+```shell
+python -c "import stanza; stanza.download('en')"
+```
+
+```shell
+deepnlpf --install preprocessing
+```
+
 
 ## Install Jupyter Lab
 - [JupyterLab Documentation](https://jupyterlab.readthedocs.io/en/latest/index.html)
