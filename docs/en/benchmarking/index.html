@@ -57,10 +57,125 @@
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Benchmarking</h1></header><article><div><span><blockquote>
 <p>🚧 Under construction!</p>
 </blockquote>
-<h1><a class="anchor" aria-hidden="true" id="stude-profile"></a><a href="#stude-profile" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Stude Profile</h1>
-<p>Here you will find the scripts used to evaluate Deep LPF</p>
-<p><a href="https://github.com/deepnlpf/benchmarking">Download Scripts</a></p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/site/docs/en/notifications"><span class="arrow-prev">← </span><span>Notifications</span></a><a class="docs-next button" href="/site/docs/en/deploy"><span>Deploy</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/site/" class="nav-home"><img src="/site/img/octopussy_white.png" alt="DeepNLPF" width="66" height="58"/></a><div><h5>DeepNLPF</h5><a href="/site/docs/en/about">About</a><a href="/site/docs/en/install">Guide</a><a href="/site/en/repository">Repository</a><a href="/site/en/support">Support</a></div><div><h5>Community</h5><a href="/site/en/users.html">User Showcase</a></div><div><h5>Connect</h5><a href="/site/blog">Blog</a><a href="https://github.com/deepnlpf">GitHub</a><a class="github-button" href="https://github.com/deepnlpf/deepnlpf/stargazers" data-icon="octicon-star" data-count-href="/deepnlpf/deepnlpf/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><a href="mailto:deepnlpf@gmail.com">deepnlpf@gmail.com</a></div></section><section class="copyright">Copyright © 2020 DeepNLPF.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+<p>In this section you will find information on how to run performance testing experiments on DeepNLPF.
+To proceed, we consider that you have already installed DeepNLPF and the chosen plugins, as well as,
+it is expected that you already know how to use DeepNLPF. <a href="install">Otherwise look at this before</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="overview"></a><a href="#overview" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Overview</h2>
+<p>The main objective here are:</p>
+<ul>
+<li>Check what is the computational cost (Runtime) of third-party NLP tools that run sequentially?</li>
+<li>Check if the parallelism strategy proposed by DeepNLPF optimizes the processing time (Runtime)?</li>
+</ul>
+<p>Variables analyzed:</p>
+<p>✅ CPU Runtime</p>
+<p>❌ RAM memory usage</p>
+<p>❌ Swap memory usage</p>
+<p>❌ Number process</p>
+<p>❌ Number threads</p>
+<h2><a class="anchor" aria-hidden="true" id="dataset"></a><a href="#dataset" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dataset</h2>
+<p>The dataset used in this evaluation was <a href="http://semeval2.fbk.eu/semeval2.php">SemEval 2010</a>.
+From this dataset, 8000 sentences were extracted into a text file.
+From there, three files were generated, the first with 1000 sentences denominated (small dataset),
+the second with 4000 sentences (average datset) and the third remains with 8000 sentences (large dataset).</p>
+<h3><a class="anchor" aria-hidden="true" id="statistic"></a><a href="#statistic" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Statistic</h3>
+<p><b>SemEval Dataset</b><br>
+<b>Total Sentences extracted:</b> 8000<br>
+<b>Total Tokens:</b> 135,886<br>
+<b>Min. Sentence Size:</b> 4 tokens<br>
+<b>Max Sentence Size:</b> 95 tokens<br>
+<b>Average Sentence Size:</b> 17 tokens</p>
+<p><img src="https://raw.githubusercontent.com/deepnlpf/benchmarking/master/img/pt/dataset/view_hist_number_tokens_for_sentences.png" alt="alt text">
+<img src="https://raw.githubusercontent.com/deepnlpf/benchmarking/master/img/pt/dataset/his_freq_tokens_class_gram.png" alt="alt text"></p>
+<h2><a class="anchor" aria-hidden="true" id="computer-config"></a><a href="#computer-config" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Computer Config</h2>
+<p>To carry out the experiments, a notebook with an Intel Core i5 2.3GHz x 4 processor,
+16GB of DDR3 RAM was used, Linux Ubuntu 19.04 operating system with 120GB SSD.</p>
+<h2><a class="anchor" aria-hidden="true" id="stude-profile"></a><a href="#stude-profile" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Stude Profile</h2>
+<p>To carry out this task it will be necessary to do the study of Profiling.
+Is a technique that allows you to identify the most resource-intensive points in an application.
+That is, a dynamic analysis that measures the program's execution time and everything that composes it.
+This means measuring the time spent in each of its functions.
+Providing data on where your program is spending and what area may be worth optimizing.</p>
+<p>The experiments are performed from a Python Wrapper using cProfile, a Python module commonly
+used in Profiling analysis, which is a dynamic analysis that measures the program's execution
+time and everything that composes it.</p>
+<h3><a class="anchor" aria-hidden="true" id="snakeviz"></a><a href="#snakeviz" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>SnakeViz</h3>
+<p>To view the results, the <a href="https://jiffyclub.github.io/snakeviz/">SnakeViz</a> tool was used, a graphic viewer for the output of the cProfile module.
+The SnakeViz Tool provides an interface with interactive graphics, allowing you to navigate the
+processes when selected, thus, monitoring in depth which blocks of code (loops, functions, etc.)
+consume the most processing time. It is also possible to view a complete list of each process,
+functions performed, with their respective execution times and other more comprehensive information.</p>
+<h2><a class="anchor" aria-hidden="true" id="experiments"></a><a href="#experiments" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Experiments</h2>
+<p>The experiments were carried out with the objective of evaluating the performance time of the
+third party NLP tools, considered here individually and, later, to compare the processing times
+when these same tools are processed (instantiated) from DeepNLPF. Therefore, the aim is to
+experimentally validate whether the parallel processing strategy employed by DeepNLPF really
+brings a significant performance improvement.</p>
+<h3><a class="anchor" aria-hidden="true" id="experiment-1"></a><a href="#experiment-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Experiment 1</h3>
+<p>Individual processing of selected NLP tools, just for analysis, lexicon.</p>
+<ul>
+<li>Stanford CoreNLP -  Pipeline: tokenization, pos, lemma, ner, truecase.</li>
+<li>Spacy - Pipeline: pos, tag, shape, label, is_alpha, is_title, like_num.</li>
+<li>CogComp - Pipeline: ner ontonotes.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/deepnlpf/benchmarking/master/img/pt/dataset/experimento%20I/experience_1_analise_lexica.png" alt="alt text"></p>
+<p>Individual processing of selected NLP tools, just for analysis, sintatic.</p>
+<ul>
+<li>Stanford CoreNLP - Pipeline: parse, depparse, dcoref.</li>
+<li>CogComp - Pipeline: shallow parse.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/deepnlpf/benchmarking/master/img/pt/dataset/experimento%20I/experience_1_analise_sintatica.png" alt="alt text"></p>
+<p>Individual processing of selected NLP tools, just for analysis, semantic.</p>
+<ul>
+<li>SEMAFOR - Pipeline: frame parsing semantic.</li>
+<li>CogComp - Pipeline: SRL Nom, SRL VerbeSRL Prep.</li>
+<li>PyWSD - Pipeline: WSD.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/deepnlpf/benchmarking/master/img/pt/dataset/experimento%20I/experience_1_analise_semantica.png" alt="alt text"></p>
+<h3><a class="anchor" aria-hidden="true" id="experiment-2"></a><a href="#experiment-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Experiment 2</h3>
+<p>Individual processing of selected NLP tools, complete pipeline execution.</p>
+<table>
+<thead>
+<tr><th><b>Tools</b></th><th><b>Pipeline</b></th><th><b>Dataset 1</b></th><th><b>Dataset 2</b></th><th><b>Dataset 3</b></th></tr>
+</thead>
+<tbody>
+<tr><td>Stanford CoreNLP</td><td>tokenize, ssplit, pos, lemma, ner, parse, depparse, truecase, dcoref</td><td>270</td><td>775</td><td>1630</td></tr>
+<tr><td>SpaCy</td><td>pos, tag, shape, label, is_alpha, is_title, like_num</td><td>12.3</td><td>46.3</td><td>91.2</td></tr>
+<tr><td>SEMAFOR</td><td>frame parsing semantic</td><td>87.3</td><td>243</td><td>448</td></tr>
+<tr><td>CogCompNLP</td><td>srl nom, srl verb, srl prep, shallow parse, ner ontonotes</td><td>1050</td><td>5110</td><td>9350</td></tr>
+<tr><td>PyWSD</td><td>wsd</td><td>1020</td><td>3760</td><td>7360</td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td><b>Runtime</b></td><td>2439.6</td><td>9935.3 (+40,726%)</td><td>18879.2 (+77,386%)</td></tr>
+</tbody>
+</table>
+<p><a href="https://www.tablesgenerator.com/markdown_tables">Table generation</a>.</p>
+<h3><a class="anchor" aria-hidden="true" id="experiment-3"></a><a href="#experiment-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Experiment 3</h3>
+<p>DeepNLPF, parallel processing of NLP tools, execution, lexical pipeline.</p>
+<ul>
+<li>Stanford CoreNLP: tokenization, pos, lemmaener.</li>
+<li>Spacy: pos, tag, shape, label, is_alpha, is_title, like_num.</li>
+<li>CogComp: ner, ontonotes.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/deepnlpf/benchmarking/master/img/pt/dataset/experimento%20III/experience_3_analise_lexica_comparation.png" alt="alt text"></p>
+<p>DeepNLPF, parallel processing of NLP tools, execution, sintatic pipeline.</p>
+<ul>
+<li>Stanford CoreNLP: parse, deppars, edcoref.</li>
+<li>CogComp:shallow parse.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/deepnlpf/benchmarking/master/img/pt/dataset/experimento%20III/experience_3_analise_sintatica_comparation.png" alt="alt text"></p>
+<p>DeepNLPF, parallel processing of NLP tools, execution, semantic pipeline.</p>
+<ul>
+<li>SEMAFOR: frame parsing semantic.</li>
+<li>CogComp: SRL Nom, SRL VerbeSRL Prep.</li>
+<li>PyWSD: wsd.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/deepnlpf/benchmarking/master/img/pt/dataset/experimento%20III/experience_3_analise_semantica_comparation.png" alt="alt text"></p>
+<h3><a class="anchor" aria-hidden="true" id="experiment-4"></a><a href="#experiment-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Experiment 4</h3>
+<p>Execution time of the complete pipeline of third-party NLP tools executed in a
+standard (sequential) way compared when executed from DeepNLPF.</p>
+<p><img src="https://raw.githubusercontent.com/deepnlpf/benchmarking/master/img/pt/dataset/deepnlp_performace.png" alt="alt text"></p>
+<h2><a class="anchor" aria-hidden="true" id="source"></a><a href="#source" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Source</h2>
+<p><a href="https://github.com/deepnlpf/benchmarking">Github</a></p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/site/docs/en/notifications"><span class="arrow-prev">← </span><span>Notifications</span></a><a class="docs-next button" href="/site/docs/en/deploy"><span>Deploy</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#overview">Overview</a></li><li><a href="#dataset">Dataset</a><ul class="toc-headings"><li><a href="#statistic">Statistic</a></li></ul></li><li><a href="#computer-config">Computer Config</a></li><li><a href="#stude-profile">Stude Profile</a><ul class="toc-headings"><li><a href="#snakeviz">SnakeViz</a></li></ul></li><li><a href="#experiments">Experiments</a><ul class="toc-headings"><li><a href="#experiment-1">Experiment 1</a></li><li><a href="#experiment-2">Experiment 2</a></li><li><a href="#experiment-3">Experiment 3</a></li><li><a href="#experiment-4">Experiment 4</a></li></ul></li><li><a href="#source">Source</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/site/" class="nav-home"><img src="/site/img/octopussy_white.png" alt="DeepNLPF" width="66" height="58"/></a><div><h5>DeepNLPF</h5><a href="/site/docs/en/about">About</a><a href="/site/docs/en/install">Guide</a><a href="/site/en/repository">Repository</a><a href="/site/en/support">Support</a></div><div><h5>Community</h5><a href="/site/en/users.html">User Showcase</a></div><div><h5>Connect</h5><a href="/site/blog">Blog</a><a href="https://github.com/deepnlpf">GitHub</a><a class="github-button" href="https://github.com/deepnlpf/deepnlpf/stargazers" data-icon="octicon-star" data-count-href="/deepnlpf/deepnlpf/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a><a href="mailto:deepnlpf@gmail.com">deepnlpf@gmail.com</a></div></section><section class="copyright">Copyright © 2020 DeepNLPF.</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
