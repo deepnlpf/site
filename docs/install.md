@@ -3,6 +3,8 @@ id: install
 title: Installation
 ---
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/deepnlpf/deepnlpf/master)
+
 <div align="center">
     <a href="#">
         <img alt="License" src="https://img.shields.io/github/license/deepnlpf/deepnlpf">
@@ -24,12 +26,13 @@ DeepNLPF has been implemented and tested using the [Ubuntu](https://ubuntu.com/)
 
 ## System requirements
 <b>Hardware</b>
-* Memoria RAM: Min. 8GB.
+* Memoria RAM: Min. 6GB.
 * CPU Core: Min. Dualcore
 * Disk Space: ~ MB (does not include disk space for IDE/tools).
 
 <b>Platforms</b>
 * [Ubuntu](https://ubuntu.com/).
+* [CetOS](https://www.centos.org/)
 * [Manjaro](https://manjaro.org/).
 
 <b>Requested</b>
