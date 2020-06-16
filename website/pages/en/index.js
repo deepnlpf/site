@@ -47,7 +47,7 @@ class HomeSplash extends React.Component {
         {siteConfig.title}
         <small>
           <translate>
-            A Framework for Integrating Linguistic Analysis and Semantic Annotation of Text Documents.
+            A Framework for Integrating Linguistic Analysis and Semantic Annotation of Text Documents
           </translate>
         </small>
       </h2>
@@ -108,7 +108,7 @@ class Index extends React.Component {
           {
             content: (
               <translate>
-                DeepNLPF provides a component for integrating and customizing linguistic analysis. When building Plugins, you can add any PLN tool, regardless of the programming language in which it was created.
+                DeepNLPF provides a component for integrating and customizing linguistic analysis. When building Plugins, you can add any NLP tool, regardless of the programming language in which it was created.
               </translate>
             ),
             image: `${baseUrl}img/pipeline.png`,
@@ -122,7 +122,7 @@ class Index extends React.Component {
           {
             content: (
               <translate>
-                DeepNLPF includes parallel processing strategies and multithreads to ensure maximum performance. Through the approach taken it is possible to process extremely large texts.
+                DeepNLPF includes parallel processing strategies and multithreading to ensure maximum performance. Through the approach taken, it is possible to process extremely large texts.
               </translate>
             ),
             image: `${baseUrl}img/parallell-pipeline.svg`,
@@ -144,7 +144,7 @@ class Index extends React.Component {
         <h2>Features</h2>
         <MarkdownBlock>
           ```Multiprocessing Pathos Framework``` ```Faster Parallel Ray``` ```DashBoard``` ```Plugins```
-          ```Bot Notification``` ```API RESTFul``` ```CLI Commands``` ```Output Format Jsona and XML``` 
+          ```Bot Notification``` ```API RESTFul``` ```CLI Commands``` ```Output Format JSON and XML``` 
           ```Suport Database JSON and XML``` ``` Data Statistics ```
         </MarkdownBlock>
       </div>
@@ -156,7 +156,7 @@ class Index extends React.Component {
           {
             content: (
               <translate>
-                DeepNLPF has two approaches to optimize execution. By default we use [Multiprocessing Pathos Framework](https://pypi.org/project/pathos/), but if you prefer you can choose to use [Faster Parallel Ray](https://ray.io/) 10x [fast as the first one](https://towardsdatascience.com/10x-faster-parallel-python-without-python-multiprocessing-e5017c93cce1).
+                DeepNLPF has two approaches to optimize execution. By default we use [Multiprocessing Pathos Framework](https://pypi.org/project/pathos/), but if you prefer you can choose to use [Faster Parallel Ray](https://ray.io/) 10x [faster then the first one](https://towardsdatascience.com/10x-faster-parallel-python-without-python-multiprocessing-e5017c93cce1).
               </translate>
             ),
             image: `${baseUrl}img/boost.png`,
@@ -179,7 +179,7 @@ class Index extends React.Component {
           {
             content: (
               <translate>
-                DeepNLPF contains a DashBoard that allows you to view and process textual data without writing any lines of code and with few settings, choosing from various linguistic analyzes coming from a number of successful PLN tools.
+                DeepNLPF provides an integrated DashBoard that allows you to view and process textual data without writing any line of code. Therefore with few settings, you are able to use various linguistic analyzes coming from a number of successful NLP tools.
               </translate>
             ),
             image: `${baseUrl}img/dashboard.png`,
@@ -198,14 +198,14 @@ class Index extends React.Component {
           {
             content: (
               <translate>
-                DeepNLPF has a flexible plugin architecture, allowing the integration of various third party PLN tools, regardless of the programming language in which it was built, it can be integrated into the analysis pipeline.
+                DeepNLPF has a flexible plugin architecture, allowing the integration of different third party NLP tools. Regardless of the programming language in which these tools are built, it can be integrated into the analysis pipeline.
               </translate>
             ),
             image: `${baseUrl}img/plugins22.png`,
             imageAlign: 'left',
             imageAlt: 'Learn how to use this Plugin',
             imageLink: siteConfig.baseUrl + '/en/repository',
-            title: 'Plugin in Play',
+            title: 'Plug and Play',
           },
         ]}
       </Block>
@@ -217,7 +217,7 @@ class Index extends React.Component {
           {
             content: (
               <translate>
-                DeepNLPF has a very simple solution for you to use natural language processing in your web, mobile or desktop application reducing the computational cost. Using the API we have provided you make this hard work for us and consume only the results of the analysis that interests you.
+                DeepNLPF has a very simple solution for you to use natural language processing in your web, mobile or desktop application reducing the computational cost. Using the API we have provided you leave the hard work to us and consume only the results of the analysis that interests you.
               </translate>
             ),
             image: `${baseUrl}img/api.svg`,
@@ -236,7 +236,7 @@ class Index extends React.Component {
           {
             content: (
               <translate>
-                You don't have to spend hours shipping the computer waiting for your dataset to finish processing. BotNotification is responsible for keeping you informed about everything that happens during processing, you are the one who chooses the best way that it can do this, either through (Telegram, Email, Desktop Notifications or even by voice). What's up! liked? Take your time to relax, let BotNotification take care of everything for you.
+                You don't have to spend hours waiting for your computer finish processing the entire dataset. BotNotification is responsible for keeping you informed about everything that happens during processing. You are the one who chooses the best way that it can do this, either through Telegram, Email, Desktop Notifications or even by voice. Did you like it? Take your time to relax, let BotNotification take care of everything for you.
               </translate>
             ),
             image: `${baseUrl}img/bot_notification.png`,
