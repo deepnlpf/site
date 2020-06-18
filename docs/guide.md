@@ -3,7 +3,7 @@ id: guide
 title: How to begin?
 ---
 
-For DeepNLPF to work, it needs a natural language processing tool. It works with [Stanza](https://stanfordnlp.github.io/stanza) or [Stanford CoreNLP](https://stanfordnlp.github.io/CoreNLP/). Install one of the bases to get started.
+To make DeepNLPF works, it needs a natural language processing tool. It works with [Stanza](https://stanfordnlp.github.io/stanza) or [Stanford CoreNLP](https://stanfordnlp.github.io/CoreNLP/). Install one of these bases to get started.
 
 ## Install Stanza NLP Tool Base
 
@@ -25,7 +25,7 @@ deepnlpf --install preprocessing
 
 ## Install Stanford CoreNLP Tool Base
 
-However, if you prefer you can also use Stanford CoreNLP as a base. To do this, simply execute the command on the terminal. If not, skip this step.<br>
+However, if you prefer you can also use Stanford CoreNLP as a base. To do this, simply execute the following command on the terminal. If not, skip this step.<br>
 <br>
 Install requirement [Java 8](#)
 ```shell
@@ -37,7 +37,7 @@ Install Plugin Stanford CoreNLP
 deepnlpf --install stanfordcorenlp
 ```
 
-Now that you have Stanford CoreNLP installed, when you want to use it as a base tool, use the ```tool_base``` parameter.
+Now that you have Stanford CoreNLP installed, when you want to use it as a base tool, use the ```tool_base``` parameter to do.
 
 ```
 nlp = Pipeline(tool_base='stanfordcorenlp')
@@ -65,7 +65,7 @@ To see DeepNLPF single pipeline in action, create a file called ```pipeline.json
 }
 ```
 
-Create a ```hello_world.py``` python file copy the following code block.
+Create a ```hello_world.py``` python file then copy the following code block.
 ```python
 from deepnlpf.pipeline import Pipeline
 
@@ -82,9 +82,9 @@ Run
 $ python hello_world.py
 ```
 
-The result produced will be saved in a text file in the path:
+The result produced will be saved in a text file in the following path:
 ```shell
-$ /home/YOU_NAME/deepnlpf_data/output/
+$ /home/user_name/deepnlpf_data/output/
 ```
 
 ## Input Data
@@ -103,7 +103,7 @@ nlp = Pipeline(_input=sentences, pipeline=path_pipeline, _output="file")
 ```
 
 ### One file
-The supported text file type is ```.txt``` . Enter the path of the directory containing the text file with the sentences to be processed. Make sure that there is only the file in that directory if it will be processed. Do not include the file in the path.
+The supported text file type is ```.txt``` . Enter the path of the directory containing the text file with the sentences to be processed. Make sure that there is only the file witch it will be processed in that directory. Do not include the file in the path.
 
 ```
 /home/user_name/dataset/file.txt
@@ -212,7 +212,7 @@ annotation = nlp.annotate()
 
 The result produced will be saved in a text file in the path:
 ```shell
-$ /home/YOU_NAME/deepnlpf_data/output/
+$ /home/user_name/deepnlpf_data/output/
 ```
 
 ### Pipeline String
@@ -270,7 +270,7 @@ nlp = Pipeline(_input=pipeline_yaml_str, pipeline=path_pipeline, _output="file")
 
 
 ### Pipeline File
-Sometimes our pipeline can get very large, and it would be more interesting to have it in a another format. Therefore, we provide the options to use the file formats ``` .json ```, ``` .yaml ```, ``` .ini ``` e ``` .xml ```. Therefore, create a file with the name ``` custom_pipeline.extension ``` you want to use and write your pipeline in it.
+Sometimes our pipeline can get very large, and it would be more interesting to have it in a another format. Therefore, we provide the options to use these file formats: ``` .json ```, ``` .yaml ```, ``` .ini ``` and ``` .xml ```. Therefore, create a file with the name ``` custom_pipeline.extension ``` you want to use then write your pipeline in it.
 
 <!--DOCUSAURUS_CODE_TABS-->
 <!--Json-->
@@ -349,7 +349,7 @@ nlp.annotation()
 
 ## Output
 
-DeepNLPF contains a parameter ```_output``` to configure the type of data output, which can be in a ```text file```, on the ```screen terminal``` or in the ```browser```. By default the parameter is set to file ```_output="file"```.
+DeepNLPF contains a parameter ```_output``` to configure the type of data output, which can be a ```text file```, on the ```screen terminal``` or in the ```browser```. By default the parameter is set to file ```_output="file"```.
 
 It is used as follows:
 ```python
@@ -370,7 +370,7 @@ nlp = Pipeline(_input=sentence, pipeline=path_pipeline, _output="file", _format=
 ```
 ### File XML
 
-However, sometimes we want to use another format like ```XML```. DeepNLPF makes it easy for you using the ```_format='xml'``` parameter. Following the previous example, just add the parameter ```_format='xml'```, to have the result processed in the desired format.
+However, sometimes we want to use another format like ```XML```. DeepNLPF makes it easy for you using the ```_format='xml'``` parameter. Following the previous example, just add the parameter as ```_format='xml'``` to have the result processed in the desired format.
 
 ```Python
 nlp = Pipeline(_input=sentence, pipeline=path_pipeline, _output="file", _format='xml')

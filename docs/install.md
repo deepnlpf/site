@@ -22,25 +22,24 @@ title: Installation
 
 <br>
 
-DeepNLPF has been implemented and tested using the [Ubuntu](https://ubuntu.com/) 19.04 operating system. However, it may work on other similar linux versions or Windows and MacOS if it satisfies the dependencies on external NLP tools mentioned below "at your own risk".
+DeepNLPF has been implemented and tested using the [Ubuntu](https://ubuntu.com/) 19.04 operating system. However, it may work on other similar linux versions or Windows and MacOS if it satisfies the dependencies on external NLP tools mentioned below "at your own risk". 
 
 ## System requirements
 <b>Hardware</b>
-* Memoria RAM: Min. 6GB.
-* CPU Core: Min. Dualcore
-* Disk Space: ~ MB (does not include disk space for IDE/tools).
+* RAM: 6 GB minimum
+* CPU Core: Dualcore minimum
 
 <b>Platforms</b>
 * [Ubuntu](https://ubuntu.com/).
 * [CetOS](https://www.centos.org/)
 * [Manjaro](https://manjaro.org/).
 
-<b>Requested</b>
+<b>Required</b>
 * [Python 3](https://linuxize.com/post/how-to-install-python-3-7-on-ubuntu-18-04/)
 * [Python 3 Dev](#)
 * [Pip](https://pypi.org/)
 
-To install the system requested (Python 3, Python 3 Dev and Pip), execute the command in the terminal.
+To install required softwares in Ubuntu (Python 3, Python 3 Dev and Pip), execute the following command in the terminal
 ```shell
 sudo apt install python3 python3-pip build-essential python3-dev libgnutls28-dev
 ```
@@ -70,7 +69,7 @@ pip install git+https://github.com/deepnlpf/deepnlpf.git
 ```
 
 ## Installing from Source
-Alternatively, you can also install from source via DeepNLPF git repository, which will give you more flexibility in developing on top of DeepNLPF. For this option, run.
+Alternatively, you can also install from source via DeepNLPF GIT repository, which will give you more flexibility in developing on top of DeepNLPF. For this option, run:
 ```shell
 git clone https://github.com/deepnlpf/deepnlpf.git
 ```

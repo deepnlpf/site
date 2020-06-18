@@ -223,7 +223,7 @@ deepnlpf --deletedataset 5d8f576dd54e23a38cb3e819
 ## Pipeline
 
 ### Run pipeline
-Used the command ```deepnlpf --pipeline [custom_pipeline.json]``` for execute pipeline custom analises languagem.
+Use the command ```deepnlpf --pipeline [custom_pipeline.json]``` to execute a custom language analysis pipeline.
 <!--DOCUSAURUS_CODE_TABS-->
 <!--Shell-->
 ```shell
@@ -235,7 +235,7 @@ After running a custom analysis pipeline, all results are saved to the database.
 
 ### View result analysis
 
-Used the command deepnlf viewannotation [_id_dataset] for view annotation processing the dataset.
+Use the command deepnlf viewannotation [_id_dataset] to view annotation processing the dataset.
 <!--DOCUSAURUS_CODE_TABS-->
 <!--Shell-->
 ```shell
