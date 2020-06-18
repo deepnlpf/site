@@ -127,7 +127,7 @@ class Index extends React.Component {
             imageAlign: 'top',
             title: (
               <translate>
-                Tools NLP
+                NLP Tools
               </translate>
             ),
             imageLink: siteConfig.baseUrl+'docs/en/pluginsnlp',
@@ -135,7 +135,7 @@ class Index extends React.Component {
           {
             content: (
               <translate>
-                Use semantic dictionaries in your pipeline and better results.
+                Use semantic dictionaries in your pipeline and make your results better.
               </translate>
             ),
             image: `${baseUrl}img/dictionary.png`,
