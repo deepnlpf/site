@@ -42,9 +42,57 @@ DeepNLPF has been implemented and tested using the [Ubuntu](https://ubuntu.com/)
 
 To install the system requested (Python 3, Python 3 Dev and Pip), execute the command in the terminal.
 ```shell
-sudo apt install python3 python3-pip build-essential python3-dev libgnutls28-dev
+sudo apt install python3 \
+                 python3-pip \
+                 build-essential \
+                 python3-dev \
+                 python-dev \
+                 libgnutls28-dev \
+                 libcurl4-openssl-dev
 ```
 
+## Installing from Source
+
+Alternatively, you can also install from source via DeepNLPF git repository, which will give you more flexibility in developing on top of DeepNLPF. For this option, run.
+
+Clone the repository.
+
+```shell
+git clone https://github.com/deepnlpf/deepnlpf.git
+```
+
+Access the repository directory.
+```shell
+cd deepnlpf
+```
+
+> Make sure you have installed virtualenv.
+```shell
+sudo apt install python3-virtualenv
+```
+
+Create env (most recommended option.).
+
+```shell
+virtualenv .venv
+```
+
+Activate env (most recommended option.).
+```shell
+source .venv/bin/activate
+```
+
+Install requirements.
+```shell
+
+pip install -r requirements.txt
+```
+
+Install DeepNLPF CLI
+
+```shell
+python setup.py install
+```
 ## Installing Pip
 > Comming soon.
 ```shell
@@ -60,44 +108,14 @@ Unistall
 ```
 pip uninstall deepnlpf
 ```
-
 ## Installing Anaconda
 > Comming soon.
 
 ## Installing from Github
+> Comming soon.
+> 
 ```shell
 pip install git+https://github.com/deepnlpf/deepnlpf.git
-```
-
-## Installing from Source
-Alternatively, you can also install from source via DeepNLPF git repository, which will give you more flexibility in developing on top of DeepNLPF. For this option, run.
-```shell
-git clone https://github.com/deepnlpf/deepnlpf.git
-```
-
-```shell
-cd deepnlpf
-```
-
-```shell
-virtualenv .venv
-```
-
-```shell
-source .venv/bin/activate
-```
-
-```shell
-pip install -r requirements.txt
-```
-
-```shell
-python setup.py install --user
-```
-
-Installing with pip
-```shell
-pip install .
 ```
 
 ## Virtual Machine

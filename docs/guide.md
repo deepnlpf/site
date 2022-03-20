@@ -12,6 +12,9 @@ By default we use Stanza as a base NLP tool. Therefore, it is necessary to insta
 ```shell
 deepnlpf --install stanza
 ```
+🎉 Plugin stanza installed!
+
+All plugins you install via the DeepNLF CLI will be stored in ```/home/username/deepnlpf_data/plugins```.
 
 Download English Model
 ```shell
@@ -22,6 +25,7 @@ Install plugin pre-processing installation.
 ```shell
 deepnlpf --install preprocessing
 ```
+🎉 Plugin preprocessing installed!
 
 ## Install Stanford CoreNLP Tool Base
 
@@ -36,6 +40,7 @@ Install Plugin Stanford CoreNLP
 ```
 deepnlpf --install stanfordcorenlp
 ```
+🎉 Plugin stanfordcorenlp installed!
 
 Now that you have Stanford CoreNLP installed, when you want to use it as a base tool, use the ```tool_base``` parameter.
 
@@ -77,15 +82,76 @@ nlp = Pipeline(_input=sentence, pipeline=path_pipeline, _output="file")
 nlp.annotate()
 ```
 
-Run
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Run-->
 ```shell
-$ python hello_world.py
+python hello_world.py
 ```
+<!--Processing-->
+```shell
+2022-03-20 09:40:57 INFO: Loading these models for language: en (English):
+========================
+| Processor | Package  |
+------------------------
+| tokenize  | combined |
+========================
+
+2022-03-20 09:40:57 INFO: Use device: cpu
+2022-03-20 09:40:57 INFO: Loading: tokenize
+2022-03-20 09:40:57 INFO: Done loading processors!
+Document(s):   0%|          | 0/1 [00:00<?, ?it/s]
+(f pid=38538) 2022-03-20 09:40:58 WARNING: Can not find mwt: default from official model list. Ignoring it.
+(f pid=38538) 2022-03-20 09:40:58 INFO: Loading these models for language: en (English):
+(f pid=38538) =========================
+(f pid=38538) | Processor | Package   |
+(f pid=38538) -------------------------
+(f pid=38538) | tokenize  | combined  |
+(f pid=38538) | pos       | combined  |
+(f pid=38538) | lemma     | combined  |
+(f pid=38538) | depparse  | combined  |
+(f pid=38538) | ner       | ontonotes |
+(f pid=38538) =========================
+(f pid=38538) 
+(f pid=38538) 2022-03-20 09:40:58 INFO: Use device: cpu
+(f pid=38538) 2022-03-20 09:40:58 INFO: Loading: tokenize
+(f pid=38538) 2022-03-20 09:40:58 INFO: Loading: pos
+(f pid=38538) 2022-03-20 09:40:58 INFO: Loading: lemma
+(f pid=38538) 2022-03-20 09:40:58 INFO: Loading: depparse
+(f pid=38538) 2022-03-20 09:40:59 INFO: Loading: ner
+(f pid=38538) 2022-03-20 09:40:59 INFO: Done loading processors!
+Document(s): 100%|██████████| 1/1 [00:02<00:00,  2.01s/it]
+```
+<!--Output-->
+```shell
+/home/username/deepnlpf_data/output/dataset_623720d95008c518b03e6055/document_623720d97bbd82bb84ea1029/stanza.json
+```
+<!--stanza.json-->
+```shell
+{'sentences': [
+        {'_id': 1, 'text': 'Barack Obama was born in Hawaii .', 'annotation': [
+                {'id': 1, 'text': 'Barack', 'lemma': 'Barack', 'upos': 'PROPN', 'xpos': 'NNP', 'feats': 'Number=Sing', 'head': 4, 'deprel': 'nsubj:pass', 'start_char': 0, 'end_char': 6, 'ner': 'B-PERSON'
+                },
+                {'id': 2, 'text': 'Obama', 'lemma': 'Obama', 'upos': 'PROPN', 'xpos': 'NNP', 'feats': 'Number=Sing', 'head': 1, 'deprel': 'flat', 'start_char': 7, 'end_char': 12, 'ner': 'E-PERSON'
+                },
+                {'id': 3, 'text': 'was', 'lemma': 'be', 'upos': 'AUX', 'xpos': 'VBD', 'feats': 'Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin', 'head': 4, 'deprel': 'aux:pass', 'start_char': 13, 'end_char': 16, 'ner': 'O'
+                },
+                {'id': 4, 'text': 'born', 'lemma': 'bear', 'upos': 'VERB', 'xpos': 'VBN', 'feats': 'Tense=Past|VerbForm=Part|Voice=Pass', 'head': 0, 'deprel': 'root', 'start_char': 17, 'end_char': 21, 'ner': 'O'
+                },
+                {'id': 5, 'text': 'in', 'lemma': 'in', 'upos': 'ADP', 'xpos': 'IN', 'head': 6, 'deprel': 'case', 'start_char': 22, 'end_char': 24, 'ner': 'O'
+                },
+                {'id': 6, 'text': 'Hawaii', 'lemma': 'Hawaii', 'upos': 'PROPN', 'xpos': 'NNP', 'feats': 'Number=Sing', 'head': 4, 'deprel': 'obl', 'start_char': 25, 'end_char': 31, 'ner': 'S-GPE'
+                },
+                {'id': 7, 'text': '.', 'lemma': '.', 'upos': 'PUNCT', 'xpos': '.', 'head': 4, 'deprel': 'punct', 'start_char': 32, 'end_char': 33, 'ner': 'O'
+                }
+            ]
+        }
+    ]
+}
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 The result produced will be saved in a text file in the path:
-```shell
-$ /home/YOU_NAME/deepnlpf_data/output/
-```
+```/home/YOU_NAME/deepnlpf_data/output/```
 
 ## Input Data
 DeepNLP has a parameter called ```_input```, this parameter must be used to input the data to be processed. It works automatically to understand what was passed on. For example, you can pass as you enter:

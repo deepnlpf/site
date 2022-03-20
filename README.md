@@ -18,6 +18,10 @@ In you terminal navigate to the ```website``` directory.
 
     cd website
 
-And finaly run the docusaurus server.
+And finally run the docusaurus server.
 
     npm start
+
+    or 
+
+    npm install --no-audit
