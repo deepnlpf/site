@@ -25,3 +25,7 @@ And finally run the docusaurus server.
     or 
 
     npm install --no-audit
+
+Deploy
+
+    GIT_USER=username CURRENT_BRANCH=master npm run publish-gh-pages
