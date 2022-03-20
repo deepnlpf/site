@@ -11,10 +11,11 @@
         "rename-version": "docusaurus-rename-version"
     },
     "devDependencies": {
-        "docusaurus": "^1.14.4"
+        "docusaurus": "^0.0.2"
     },
     "dependencies": {
-        "json": "^9.0.6",
-        "package.json": "^2.0.1"
+        "json": "^11.0.0",
+        "package.json": "^2.0.1",
+        "using": "^1.0.0-alpha-1"
     }
 }
